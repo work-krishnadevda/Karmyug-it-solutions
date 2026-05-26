@@ -29,7 +29,7 @@ export default function ContactView() {
   const faqs = [
     {
       question: 'What is the best way to reach Kamryug?',
-      answer: 'Call us at +91 96695 55811, email vijay@kamryug.com, or fill out the contact form on this page. We respond to all inquiries within 24 hours on business days.'
+      answer: 'Call us at +91 8962241437, email karmyugtechzone@gmail.com, or fill out the contact form on this page. We respond to all inquiries within 24 hours on business days.'
     },
     {
       question: 'What should I prepare before our first call?',
@@ -212,7 +212,7 @@ export default function ContactView() {
                 className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 border-2 border-slate-200 hover:border-blue-400 text-[#2563EB] rounded-full font-extrabold text-[14px] active:scale-[0.985] transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shadow-3xs"
               >
                 <Phone className="w-4 h-4 text-[#2563EB]" strokeWidth={2.5} />
-                <span>Call +91 96695 55811</span>
+                <span>Call+91 8962241437</span>
               </a>
             </div>
 
@@ -330,7 +330,7 @@ export default function ContactView() {
                   <Phone className="w-4 h-4 text-white fill-white" />
                 </span>
                 <div className="flex flex-col text-left leading-tight">
-                  <span className="text-[12px] font-black tracking-tight text-slate-800 font-sans">+91 96695 55811</span>
+                  <span className="text-[12px] font-black tracking-tight text-slate-800 font-sans">++91 8962241437</span>
                   <span className="text-[9.5px] font-semibold text-slate-400 tracking-wide mt-0.5 font-sans">Incoming Call</span>
                 </div>
               </div>
@@ -339,7 +339,7 @@ export default function ContactView() {
               <div className="flex items-center gap-3 justify-between w-full px-1">
                 {/* Accept Button (Green) */}
                 <a
-                  href="tel:+919669555811"
+                  href="tel:+91 8962241437"
                   className="w-8.5 h-8.5 rounded-full bg-[#10B981] flex items-center justify-center text-white shrink-0 shadow-md shadow-emerald-500/20 hover:scale-110 active:scale-95 transition-transform"
                 >
                   <Phone className="w-3.5 h-3.5 fill-white text-white" />
@@ -359,14 +359,14 @@ export default function ContactView() {
               </div>
             </div>
 
-            {/* 2. Direct Mail Card Widget (Right-Mid-Top) with vijay@kamryug.com */}
+            {/* 2. Direct Mail Card Widget (Right-Mid-Top) with kamryug.com */}
             <div className="absolute top-[3%] right-[-4%] sm:right-[1%] flex flex-col items-center select-none anime-satellite-2 z-30 group cursor-pointer hover:scale-105 duration-300 w-[180px] sm:w-[200px] bg-white/80 backdrop-blur-md rounded-[24px] p-4 border border-white/45 shadow-[0_15px_40px_rgba(15,17,26,0.08)]">
               <div className="flex gap-3 items-center w-full">
                 <span className="w-8.5 h-8.5 rounded-full bg-blue-600 flex items-center justify-center shrink-0 border border-blue-100 shadow-md shadow-blue-600/10">
                   <Mail className="w-4 h-4 text-white" />
                 </span>
                 <div className="flex flex-col text-left leading-tight w-full truncate">
-                  <span className="text-[12px] font-black tracking-tight text-slate-800 font-sans truncate">vijay@kamryug.com</span>
+                  <span className="text-[12px] font-black tracking-tight text-slate-800 font-sans truncate">karmyugtechzone@gmail.com</span>
                   <span className="text-[9.5px] font-semibold text-slate-400 tracking-wide mt-0.5 font-sans flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
                     <span>New Message</span>
@@ -509,7 +509,7 @@ export default function ContactView() {
 
               <div className="flex flex-col text-left gap-1 mt-auto w-full">
                 <span className="text-[14px] font-black tracking-tight text-slate-800 font-sans">Call Us</span>
-                <span className="text-[16px] sm:text-[18px] font-extrabold text-[#2563EB] tracking-tight font-sans mt-0.5">+91 96695 55811</span>
+                <span className="text-[16px] sm:text-[18px] font-extrabold text-[#2563EB] tracking-tight font-sans mt-0.5">+91 8962241437</span>
                 <span className="text-[11px] sm:text-[11.5px] text-slate-500 font-semibold leading-normal mt-1 font-sans">Quick support for projects and consultations</span>
               </div>
             </div>
@@ -548,7 +548,7 @@ export default function ContactView() {
 
               <div className="flex flex-col text-left gap-1 mt-auto w-full">
                 <span className="text-[14px] font-black tracking-tight text-slate-800 font-sans">Email Us</span>
-                <span className="text-[16px] sm:text-[18px] font-extrabold text-[#2563EB] tracking-tight font-sans mt-0.5 truncate w-full">vijay@kamryug.com</span>
+                <span className="text-[16px] sm:text-[18px] font-extrabold text-[#2563EB] tracking-tight font-sans mt-0.5 truncate w-full">karmyugtechzone@gmail.com</span>
                 <span className="text-[11px] sm:text-[11.5px] text-slate-500 font-semibold leading-normal mt-1 font-sans">Business inquiries & project discussions</span>
               </div>
             </div>
@@ -673,13 +673,13 @@ export default function ContactView() {
                       Phone Call Consultation
                     </span>
                     <span className="block text-sm sm:text-base font-bold text-slate-800 font-display mt-0.5">
-                      +91 96695 55811
+                      +91 8962241437
                     </span>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:vijay@kamryug.com"
+                  href="mailto:karmyugtechzone@gmail.com"
                   className="flex items-center gap-4 p-4 border border-slate-150 bg-white hover:bg-slate-50 rounded-2xl transition-all w-full shadow-3xs hover:shadow-xs"
                 >
                   <span className="flex-shrink-0 w-10 h-10 bg-blue-50 text-[#2563EB] flex items-center justify-center rounded-xl border border-blue-100/50">
@@ -690,7 +690,7 @@ export default function ContactView() {
                       Direct Email Inbox
                     </span>
                     <span className="block text-sm sm:text-base font-bold text-slate-800 font-display mt-0.5">
-                      vijay@kamryug.com
+                      karmyugtechzone@gmail.com
                     </span>
                   </div>
                 </a>

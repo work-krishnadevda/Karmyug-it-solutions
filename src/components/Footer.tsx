@@ -149,14 +149,14 @@ export default function Footer({ onScrollTo, onOpenContact, onNavigate }: Footer
               <a href="tel:+919669555811" className="flex items-start gap-3 hover:text-white transition-colors group">
                 <Phone className="w-4 h-4 text-[#8b5cf6] mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <span className="block font-medium text-gray-200">+91 96695 55811</span>
+                  <span className="block font-medium text-gray-200">+91 8962241437</span>
                   <span className="block text-[11px] text-slate-400 mt-0.5">Mon - Sat, 10am - 7pm</span>
                 </div>
               </a>
 
-              <a href="mailto:vijay@kamryug.com" className="flex items-center gap-3 hover:text-white transition-colors group">
+              <a href="mailto:karmyugtechzone@gmail.com" className="flex items-center gap-3 hover:text-white transition-colors group">
                 <Mail className="w-4 h-4 text-[#8b5cf6] group-hover:scale-110 transition-transform" />
-                <span className="font-medium text-gray-200 truncate">vijay@kamryug.com</span>
+                <span className="font-medium text-gray-200 truncate">karmyugtechzone@gmail.com</span>
               </a>
 
               <div className="flex items-start gap-3">
