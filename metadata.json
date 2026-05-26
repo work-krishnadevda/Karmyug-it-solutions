@@ -1,0 +1,6 @@
+{
+  "name": "Kamryug IT Solution",
+  "description": "Provider of custom CRM, HRMS, ERP, AI automation, custom software, and digital marketing integrations globally.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
