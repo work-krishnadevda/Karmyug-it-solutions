@@ -47,49 +47,50 @@ export default function Header({ onScrollTo, onOpenContact, activeSection, curre
         <div className="w-full max-w-7xl flex items-center justify-between pointer-events-auto">
           
           {/* Left Side Logo */}
-          <div className="flex items-center justify-start">
-            <a
-              href="#home"
-              onClick={(e) => handleNavClick('logo', e)}
-              className="group flex items-center gap-3 p-1 rounded-full transition-all duration-300"
-              aria-label="Kamryug Home"
-            >
-              {/* Star Logo - 5 point colorful gradient star */}
-              <div className="p-1 bg-white/5 rounded-full flex items-center justify-center">
-                <svg
-                  width="26"
-                  height="26"
-                  viewBox="0 0 100 100"
-                  className="fill-none stroke-[8] stroke-linejoin-round transition-transform duration-500 group-hover:rotate-180"
-                >
-                  <defs>
-                    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#ec4899" />
-                      <stop offset="50%" stopColor="#8b5cf6" />
-                      <stop offset="100%" stopColor="#3b82f6" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M50 5 L63 38 L98 38 L70 59 L81 92 L50 72 L19 92 L30 59 L2 38 L37 38 Z"
-                    stroke="url(#starGrad)"
-                    style={{
-                      strokeDasharray: '350',
-                      strokeDashoffset: '0',
-                      filter: 'drop-shadow(0px 0px 4px rgba(139, 92, 246, 0.5))',
-                    }}
-                  />
-                </svg>
-              </div>
-              <div className="flex flex-col text-left leading-tight">
-                <span className="font-display font-extrabold tracking-wider text-white text-[13.5px]">
-                  KAMRYUG
-                </span>
-                <span className="text-[8px] tracking-widest text-[#a78bfa] font-black uppercase">
-                  IT solutions
-                </span>
-              </div>
-            </a>
-          </div>
+         <div className="hidden md:flex items-center justify-start">
+  <a
+    href="#home"
+    onClick={(e) => handleNavClick('logo', e)}
+    className="group flex items-center gap-3 p-1 rounded-full transition-all duration-300"
+    aria-label="Kamryug Home"
+  >
+    <div className="p-1 bg-white/5 rounded-full flex items-center justify-center">
+      <svg
+        width="26"
+        height="26"
+        viewBox="0 0 100 100"
+        className="fill-none stroke-[8] stroke-linejoin-round transition-transform duration-500 group-hover:rotate-180"
+      >
+        <defs>
+          <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ec4899" />
+            <stop offset="50%" stopColor="#8b5cf6" />
+            <stop offset="100%" stopColor="#3b82f6" />
+          </linearGradient>
+        </defs>
+
+        <path
+          d="M50 5 L63 38 L98 38 L70 59 L81 92 L50 72 L19 92 L30 59 L2 38 L37 38 Z"
+          stroke="url(#starGrad)"
+          style={{
+            strokeDasharray: '350',
+            strokeDashoffset: '0',
+            filter: 'drop-shadow(0px 0px 4px rgba(139, 92, 246, 0.5))',
+          }}
+        />
+      </svg>
+    </div>
+
+    <div className="flex flex-col text-left leading-tight">
+      <span className="font-display font-extrabold tracking-wider text-white text-[13.5px]">
+        KAMRYUG
+      </span>
+      <span className="text-[8px] tracking-widest text-[#a78bfa] font-black uppercase">
+        IT Solutions
+      </span>
+    </div>
+  </a>
+</div>
 
           {/* Desktop Central Navigation Links */}
           <div className="hidden md:flex items-center gap-2.5 font-sans justify-center">
