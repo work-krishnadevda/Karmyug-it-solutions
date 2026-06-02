@@ -64,7 +64,7 @@ export default function Header({ onScrollTo, onOpenContact, activeSection, curre
 
     <div className="flex flex-col text-left leading-tight">
       <span className="font-display font-extrabold tracking-wider text-white text-[13.5px]">
-        KAMRYUG
+        KARMYUG
       </span>
       <span className="text-[8px] tracking-widest text-[#a78bfa] font-black uppercase">
         IT Solutions
