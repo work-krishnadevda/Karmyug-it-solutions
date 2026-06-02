@@ -28,7 +28,7 @@ export default function ContactView() {
 
   const faqs = [
     {
-      question: 'What is the best way to reach Kamryug?',
+      question: 'What is the best way to reach karmyug?',
       answer: 'Call us at +91 8962241437, email karmyugtechzone@gmail.com, or fill out the contact form on this page. We respond to all inquiries within 24 hours on business days.'
     },
     {
@@ -359,7 +359,7 @@ export default function ContactView() {
               </div>
             </div>
 
-            {/* 2. Direct Mail Card Widget (Right-Mid-Top) with kamryug.com */}
+            {/* 2. Direct Mail Card Widget (Right-Mid-Top) with karmyug.com */}
             <div className="absolute top-[3%] right-[-4%] sm:right-[1%] flex flex-col items-center select-none anime-satellite-2 z-30 group cursor-pointer hover:scale-105 duration-300 w-[180px] sm:w-[200px] bg-white/80 backdrop-blur-md rounded-[24px] p-4 border border-white/45 shadow-[0_15px_40px_rgba(15,17,26,0.08)]">
               <div className="flex gap-3 items-center w-full">
                 <span className="w-8.5 h-8.5 rounded-full bg-blue-600 flex items-center justify-center shrink-0 border border-blue-100 shadow-md shadow-blue-600/10">

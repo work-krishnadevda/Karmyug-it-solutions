@@ -52,12 +52,12 @@ export default function Header({ onScrollTo, onOpenContact, activeSection, curre
     href="#home"
     onClick={(e) => handleNavClick('logo', e)}
     className="group flex items-center gap-3 p-1 rounded-full transition-all duration-300"
-    aria-label="Kamryug Home"
+    aria-label="karmyug Home"
   >
    <div className="flex items-center justify-center">
   <img
     src="/karmyug-logo (2).png"
-    alt="Kamryug Logo"
+    alt="karmyug Logo"
     className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
   />
 </div>
@@ -143,7 +143,7 @@ export default function Header({ onScrollTo, onOpenContact, activeSection, curre
                   <path d="M50 5 L63 38 L98 38 L70 59 L81 92 L50 72 L19 92 L30 59 L2 38 L37 38 Z" stroke="url(#starGrad)" />
                 </svg>
               </div>
-              <span className="text-white font-display font-extrabold tracking-wider text-[13px]">KAMRYUG</span>
+              <span className="text-white font-display font-extrabold tracking-wider text-[13px]">karmyug</span>
             </a>
             
             <button

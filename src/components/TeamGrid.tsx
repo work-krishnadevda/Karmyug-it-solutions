@@ -161,7 +161,7 @@ export default function TeamGrid() {
 
                   {/* Email Support Contact link */}
                   <a
-                    href={`mailto:contact@kamryug.com?subject=Contact%20with%20${encodeURIComponent(member.name)}`}
+                    href={`mailto:contact@karmyug.com?subject=Contact%20with%20${encodeURIComponent(member.name)}`}
                     aria-label={`Contact ${member.name}`}
                     className="w-8 h-8 rounded-full border border-slate-200 hover:border-transparent text-slate-400 bg-slate-50/50 hover:bg-[#EA4335] hover:text-white hover:shadow-[0_4px_12px_rgba(234,67,53,0.25)] flex items-center justify-center transition-all duration-200 hover:scale-110"
                   >

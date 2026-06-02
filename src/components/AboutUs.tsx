@@ -52,7 +52,7 @@ export default function AboutUs() {
         {/* Section Heading Left-Aligned styled premiumly */}
         <div className="mb-14 text-left">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A] font-display">
-            About Kamryug
+            About karmyug
           </h2>
           <div className="h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 w-16 rounded-full mt-3.5 shadow-sm" />
         </div>

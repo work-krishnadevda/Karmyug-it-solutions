@@ -204,7 +204,7 @@ export const TEAM_DATA: TeamMember[] = [
 export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: '1',
-    text: 'Kamryug built our e-commerce platform from scratch. Sales doubled within three months of launch.',
+    text: 'karmyug built our e-commerce platform from scratch. Sales doubled within three months of launch.',
     author: 'Rajesh Patel',
     company: 'Lal Sweets',
     stars: 5
@@ -232,7 +232,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
   },
   {
     id: '5',
-    text: 'The LMS handles 10,000+ students without a glitch. Kamryug is our long-term tech partner.',
+    text: 'The LMS handles 10,000+ students without a glitch. karmyug is our long-term tech partner.',
     author: 'Arjun Malhotra',
     company: 'EduSpark',
     stars: 5
@@ -249,7 +249,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
 export const FAQS_DATA: FAQItem[] = [
   {
     id: 'q1',
-    question: 'What does Kamryug IT Solution do?',
+    question: 'What does karmyug IT Solution do?',
     answer: 'We build custom websites, web applications, CRM, HRMS, ERP systems, AI automation, and digital marketing strategies — helping businesses grow online and streamline operations.'
   },
   {
@@ -264,7 +264,7 @@ export const FAQS_DATA: FAQItem[] = [
   },
   {
     id: 'q4',
-    question: 'Who is Kamryug best suited for?',
+    question: 'Who is karmyug best suited for?',
     answer: 'Small businesses, e-commerce brands, healthcare clinics, ed-tech startups, and any company that needs a professional digital presence with real business results.'
   },
   {

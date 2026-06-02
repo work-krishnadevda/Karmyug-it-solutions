@@ -57,7 +57,7 @@ export default function Footer({ onScrollTo, onOpenContact, onNavigate }: Footer
               </div>
               <div>
                 <span className="block font-display font-extrabold tracking-wider text-white text-base">
-                  KAMRYUG
+                  karmyug
                 </span>
                 <span className="block text-[10px] tracking-widest text-[#8b5cf6] font-bold">
                   IT SOLUTIONS
@@ -184,7 +184,7 @@ export default function Footer({ onScrollTo, onOpenContact, onNavigate }: Footer
         {/* Content footer copyright details */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-mono">
           <div>
-            @ {currentYear} Kamryug IT Solution. All rights reserved.
+            @ {currentYear} karmyug IT Solution. All rights reserved.
           </div>
           <div className="flex items-center gap-2 font-display font-black tracking-widest text-[10px] text-[#8b5cf6] uppercase">
             <span>QUALITY ABOVE ALL</span>

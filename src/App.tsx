@@ -99,7 +99,7 @@ export default function App() {
 
               {/* Subheadline description text with premium styling */}
               <p className="mt-6 text-[14px] sm:text-[15.5px] text-slate-500 leading-relaxed font-semibold max-w-[480px]">
-                Kamryug provides high-end technology products, digital marketing strategies, and expert consulting to scale your business internationally.
+                karmyug provides high-end technology products, digital marketing strategies, and expert consulting to scale your business internationally.
               </p>
 
               {/* Action buttons mirroring gold yellow and sleek light-blue borders */}

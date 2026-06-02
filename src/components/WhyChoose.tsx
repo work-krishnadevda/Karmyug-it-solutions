@@ -151,7 +151,7 @@ return (
 
       <div className="text-center mb-8">
         <p className="text-[#00E5FF] text-xs uppercase tracking-[0.35em] font-black mb-2">
-          WHY CHOOSE KAMRYUG
+          WHY CHOOSE karmyug
         </p>
 
         <h2 className="text-3xl md:text-4xl font-black text-white">
