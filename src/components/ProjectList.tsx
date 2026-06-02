@@ -17,7 +17,7 @@ export default function ProjectList({ onStartProject, onViewAllProjects }: Proje
   }).slice(0, 6);
 
   return (
-    <section id="portfolio" className="py-24 bg-gradient-to-b from-[#F8FAFC] to-white scroll-mt-12 relative overflow-hidden select-none border-t border-slate-100">
+    <section id="portfolio" className="py-14 bg-gradient-to-b from-[#F8FAFC] to-white scroll-mt-12 relative overflow-hidden select-none border-t border-slate-100">
       
       {/* 3D and floating Keyframes for backgrounds & overlays */}
       <style dangerouslySetInnerHTML={{ __html: `
@@ -318,13 +318,29 @@ export default function ProjectList({ onStartProject, onViewAllProjects }: Proje
                   </ul>
 
                   {/* Redesigned Button - Coordinate with high end blue/indigo gradient styling */}
-                  <button
-                    onClick={() => onStartProject(project.title)}
-                    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-black text-sm shadow-md shadow-blue-600/15 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 hover:shadow-lg hover:shadow-indigo-600/20 cursor-pointer"
-                  >
-                    <span>Start Your Project</span>
-                    <ArrowUpRight className="w-4.5 h-4.5" />
-                  </button>
+                  <div className="flex flex-wrap items-center gap-4">
+  
+  {/* Start Project Button */}
+  <button
+    onClick={() => onStartProject(project.title)}
+    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-black text-sm shadow-md shadow-blue-600/15 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 hover:shadow-lg hover:shadow-indigo-600/20 cursor-pointer"
+  >
+    <span>Start Your Project</span>
+    <ArrowUpRight className="w-4 h-4" />
+  </button>
+
+  {/* View Project Details Button */}
+  <a
+    href={project.projecturl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white border border-slate-200 text-slate-700 rounded-full font-black text-sm shadow-sm hover:border-blue-500 hover:text-blue-600 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+  >
+    <span>View Project Details</span>
+    <ArrowUpRight className="w-4 h-4" />
+  </a>
+
+</div>
 
                 </div>
 

@@ -89,215 +89,85 @@ export const SERVICES_DATA: ServiceItem[] = [
 
 export const PROJECTS_DATA: ProjectItem[] = [
   {
-    id: 'lal-sweets',
-    title: 'Lal Sweets Ecom Website',
+    id: 'lal-sweet',
+    title: 'ValuXpert Property Valuation Platform',
     category: 'E-COMMERCE',
-    description: 'A modern sweets store with festive branding, smooth checkout, and mobile-first shopping experience.',
-    type: 'website',
-    imageUrl: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=800',
+    description: 'An enterprise-grade platform that streamlines property valuation workflows, field operations, employee management, reporting, and business intelligence from a single dashboard.',
+    type: 'application',
+    projecturl:"https://quixivo.vercel.app/",
+    imageUrl: '/valuxpert website.png',
     bullets: [
-      'Modern sweets store with festive UI and fast load times',
-      'Category-wise product listings with filters and search',
-      'Quick checkout with UPI, cards, and COD options',
-      'SEO-friendly structure with schema markup for products'
+      'Automated case allocation, tracking, approvals, and TAT monitoring',
+      'Mobile-enabled field inspections with GPS and photo verification',
+      'HRMS, payroll, attendance, and workforce management tools',
+      'Advanced MIS reporting, analytics, and operational insightsSEO-friendly structure with schema markup for products'
     ]
   },
-  {
-    id: 'kirtilals',
-    title: 'Kirtilals Luxury Website',
-    category: 'JEWELRY & LIFESTYLE',
-    description: 'Premium jewelry catalog with elegant typography, high-res galleries, and lead capture funnels.',
-    type: 'website',
-    imageUrl: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Luxury look-and-feel with gold-accent design system',
-      'High-resolution product galleries with zoom',
-      'Appointment booking and WhatsApp lead integration',
-      'Multi-language ready architecture for global buyers'
-    ]
-  },
+
   {
     id: 'medicare',
-    title: 'MediCare Plus Portal',
-    category: 'HEALTHCARE',
-    description: 'Patient booking, digital records, and teleconsultation in one HIPAA-aware healthcare portal.',
-    type: 'application',
-    imageUrl: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Online appointment scheduling with doctor profiles',
-      'Secure patient dashboard for reports and history',
-      'Teleconsultation video room integration',
-      'Admin panel for clinics with role-based access'
-    ]
+   title: 'HRMS Crane - Workforce Management System',
+  category: 'HRMS / ENTERPRISE_SAAS',
+  description:
+    'A full-featured enterprise HRMS platform designed to manage employees, attendance, payroll, advances, and expenses with separate Admin and Staff workspaces, built on a modern Next.js architecture.',
+  type: 'application',
+projecturl:"https://quixivo.vercel.app/",
+  imageUrl:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
+
+  bullets: [
+    'Dual workspace system: Admin panel (/admin) and Staff portal (/employee)',
+    'Secure authentication with Supabase email login and custom mobile HMAC session system',
+    'Complete employee lifecycle management with roles, departments, and status control',
+    'Advanced attendance system with GPS/photo punch-in, auto-close, and cron-based scheduling',
+    'Payroll engine with attendance-based salary calculation and Excel export support',
+    'Advance and expense management with approval, rejection, and reimbursement workflow',
+    'Role-based access control with HR shell and admin workspace guards',
+    'Scalable architecture using Next.js 15, Prisma, PostgreSQL, and Supabase',
+    'Automated cron jobs for attendance closure and system reliability',
+    'Comprehensive QA and testing matrix for production-grade stability'
+  ]
   },
-  {
-    id: 'realtyhub',
-    title: 'RealtyHub Properties',
-    category: 'REAL ESTATE',
-    description: 'Property listings with map search, virtual tours, and agent CRM hooks for real estate teams.',
-    type: 'website',
-    imageUrl: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Interactive map-based property discovery',
-      'Advanced filters for budget, location, and type',
-      'Lead forms synced to agent dashboards',
-      'Blog and SEO pages for local market dominance'
-    ]
-  },
-  {
-    id: 'fitlife',
-    title: 'FitLife Studio',
-    category: 'FITNESS & WELLNESS',
-    description: 'Gym and wellness brand site with class schedules, trainer profiles, and membership plans.',
-    type: 'website',
-    imageUrl: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Class timetable with online booking',
-      'Trainer profiles with specializations',
-      'Membership tier comparison and signup',
-      'Before/after gallery and testimonial wall'
-    ]
-  },
-  {
-    id: 'spiceroute',
-    title: 'SpiceRoute Restaurant',
-    category: 'FOOD & HOSPITALITY',
-    description: 'Restaurant website with digital menu, table reservations, and delivery partner integrations.',
-    type: 'website',
-    imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Dynamic menu with dietary tags and specials',
-      'Table reservation with time-slot management',
-      'Zomato/Swiggy order link integration',
-      'Event catering inquiry forms'
-    ]
-  },
-  {
-    id: 'legalease',
-    title: 'LegalEase Partners',
-    category: 'LEGAL SERVICES',
-    description: 'Professional law firm presence with practice areas, case studies, and confidential contact flows.',
-    type: 'website',
-    imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Practice area pages with expert bios',
-      'Case study library with outcome highlights',
-      'Secure client intake forms',
-      'GDPR-compliant privacy and cookie controls'
-    ]
-  },
-  {
-    id: 'buildcraft',
-    title: 'BuildCraft Infra',
-    category: 'CONSTRUCTION',
-    description: 'Construction company portfolio showcasing projects, certifications, and tender inquiries.',
-    type: 'website',
-    imageUrl: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Project portfolio with timeline and budgets',
-      'Certification and safety compliance showcase',
-      'Tender and RFP submission portal',
-      'Careers page with application tracking'
-    ]
-  },
-  {
-    id: 'wanderlust',
-    title: 'Wanderlust Travel Co.',
-    category: 'TRAVEL & TOURISM',
-    description: 'Travel agency with package builder, destination guides, and instant quote requests.',
-    type: 'website',
-    imageUrl: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Curated destination guides with itineraries',
-      'Custom package quote calculator',
-      'Customer review and rating system',
-      'Newsletter and deal alert subscriptions'
-    ]
-  },
-  {
-    id: 'greenharvest',
-    title: 'GreenHarvest Marketplace',
-    category: 'AGRI-TECH',
-    description: 'Farm-to-table marketplace connecting growers with distributors and retail buyers.',
-    type: 'application',
-    imageUrl: 'https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Farmer onboarding with crop catalogues',
-      'Bulk order and logistics coordination',
-      'Price analytics dashboard for buyers',
-      'Mobile-responsive ordering for field agents'
-    ]
-  },
-  {
-    id: 'tradescribe',
-    title: 'TradeScribe Platform',
-    category: 'FINTECH',
-    description: 'Trading analytics dashboard with real-time charts, portfolios, and secure user accounts.',
-    type: 'application',
-    imageUrl: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Real-time market charts with custom indicators',
-      'Portfolio tracking across multiple brokers',
-      'Alerts and watchlists with push notifications',
-      'Bank-grade encryption and 2FA login'
-    ]
-  },
-  {
-    id: 'eduspark',
-    title: 'EduSpark LMS',
-    category: 'EDTECH',
-    description: 'Learning management system with live classes, assignments, quizzes, and progress analytics.',
-    type: 'application',
-    imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Live video classes with attendance tracking',
-      'Assignment upload and automated grading hooks',
-      'Student progress dashboards for parents',
-      'Course marketplace for instructors'
-    ]
-  },
-  {
-    id: 'quickbill',
-    title: 'QuickBill POS',
-    category: 'SAAS / RETAIL',
-    description: 'Point-of-sale and invoicing app for retail stores with inventory and GST billing.',
-    type: 'application',
-    imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Fast billing with barcode scanner support',
-      'Inventory sync across multiple outlets',
-      'GST-compliant invoice generation',
-      'Daily sales reports and export to Excel'
-    ]
-  },
-  {
-    id: 'fleettrack',
-    title: 'FleetTrack Logistics',
-    category: 'LOGISTICS',
-    description: 'Fleet management app with live GPS tracking, route optimization, and driver assignments.',
-    type: 'application',
-    imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Live GPS map with vehicle status',
-      'Route optimization and fuel analytics',
-      'Driver app for proof-of-delivery',
-      'Maintenance reminders and trip history'
-    ]
-  },
-  {
-    id: 'mindcare',
-    title: 'MindCare Wellness App',
-    category: 'HEALTHCARE APP',
-    description: 'Mental wellness app with mood tracking, guided sessions, and therapist booking.',
-    type: 'application',
-    imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800',
-    bullets: [
-      'Daily mood journal with insights',
-      'Guided meditation and breathing modules',
-      'Therapist discovery and session booking',
-      'Anonymous community support groups'
-    ]
-  }
+{
+  id: 'quixivo',
+  title: 'Quixivo Institute Management Platform',
+  category: 'EDTECH / INSTITUTE MANAGEMENT',
+  description: 'An all-in-one management platform designed for coaching institutes, schools, and educational organizations to streamline operations, student management, attendance, fees, communication, and online learning from a single dashboard.',
+  type: 'application',
+  imageUrl: '/quivo 2026-06-02 at 1.53.01 PM.jpeg',
+  projecturl:"https://quixivo.vercel.app/",
+  bullets: [
+    'Centralized dashboard to manage students, staff, batches, and academic operations',
+    'Automated fee collection, payment tracking, reminders, and financial reporting',
+    'Smart attendance management with real-time tracking and analytics',
+    'Integrated live classes, online learning, recordings, and digital study resources',
+    'Manage 3,000+ students efficiently with scalable infrastructure and role-based access',
+    'Student and parent communication through notifications, announcements, and updates',
+    'Performance tracking, examination management, and detailed academic reports',
+    'Cloud-based platform with secure data storage and access from any device'
+  ]
+},
+
+ {
+  id: 'sagar-pet-care-center',
+  title: 'Sagar Pet Care Center',
+  category: 'PET CARE / VETERINARY SERVICES',
+  description: 'A comprehensive pet care center offering dog boarding, grooming, training, veterinary care, vaccinations, emergency support, and pet wellness services for dogs and cats in Ratlam.',
+  type: 'website',
+  projecturl:"https://www.sagarpetcarecenter.in/",
+  imageUrl: '/Screenshot 2026-06-02 145548.png',
+  bullets: [
+    'Safe and secure dog hostel with comfortable boarding facilities and 24/7 supervision',
+    'Professional dog grooming services including bathing, haircuts, nail trimming, and hygiene care',
+    'Expert dog training programs covering obedience, behavior correction, and puppy training',
+    'Veterinary services for dogs and cats including treatment, health checkups, and consultations',
+    'Complete vaccination programs and preventive healthcare for pets',
+    '24/7 emergency pet care support with experienced pet care professionals',
+    'Healthy puppies available with vaccination records and health certifications',
+    'Pet wellness guidance, nutrition consultation, and long-term healthcare support'
+  ]
+}
+  
 ];
 
 export const TEAM_DATA: TeamMember[] = [

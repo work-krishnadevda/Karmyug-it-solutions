@@ -81,7 +81,7 @@ export default function App() {
         <div id="home" className="scroll-mt-24">
           
           {/* Elite Premium Split Hero Section representing exact mockup design */}
-          <section className="relative pt-16 pb-12 lg:pt-20 lg:pb-16 px-6 max-w-7xl mx-auto gap-8 lg:gap-12 grid grid-cols-1 lg:grid-cols-12 items-center select-none overflow-visible font-sans">
+          <section className="relative pt-10 pb-12 lg:pt-20 lg:pb-16 px-6 max-w-7xl mx-auto gap-8 lg:gap-12 grid grid-cols-1 lg:grid-cols-12 items-center select-none overflow-visible font-sans">
             
             {/* Ambient background soft light glows */}
             <div className="absolute top-[-5rem] left-[10%] w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-[120px] pointer-events-none -translate-x-1/2" />
@@ -90,17 +90,11 @@ export default function App() {
             {/* Left Side Content - Match typography & details of mockup */}
             <div className="lg:col-span-6 flex flex-col items-start text-left relative z-15 animate-[fadeIn_0.5s_ease-out]">
               
-              {/* Premium Pill Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/70 border border-slate-200/60 text-slate-600 rounded-full text-xs font-semibold mb-7 tracking-wide select-none backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.02)]">
-                <span className="text-xs">🚀</span>
-                <span className="text-[11.5px] font-extrabold text-[#475569] tracking-wide">Digital Transformation Partner</span>
-              </div>
-              
               {/* Gorgeous 3D-styled display headline with precise gradient color assignments */}
               <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-black tracking-tight text-slate-950 font-display leading-[1.08] max-w-xl">
                 We Help You Grow <br />
                 Your Business With <br />
-                <span className="text-[#3b82f6] bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 bg-clip-text text-transparent drop-shadow-sm font-black">Premium IT</span> <span className="text-[#10b981] bg-gradient-to-r from-emerald-500 via-green-500 to-teal-500 bg-clip-text text-transparent drop-shadow-sm font-black">Solutions</span>
+                <span className="text-[#3b82f6] bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 bg-clip-text text-transparent drop-shadow-sm font-black">AI-Powered</span> <span className="text-[#10b981] bg-gradient-to-r from-emerald-500 via-green-500 to-teal-500 bg-clip-text text-transparent drop-shadow-sm font-black">Custom Software</span>
               </h1>
 
               {/* Subheadline description text with premium styling */}

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FaLock } from "react-icons/fa";
+import { LuClock3 } from "react-icons/lu";
 import { X, CheckCircle2, Send, Phone, Mail } from 'lucide-react';
 
 interface ContactModalProps {
@@ -241,8 +243,8 @@ export default function ContactModal({ isOpen, onClose, preselectedService = 'Ge
               </button>
 
               <div className="pt-4 border-t border-slate-900/80 flex items-center justify-between text-[10px] text-slate-500 font-mono tracking-wider">
-                <span className="inline-flex items-center gap-1.5"><span className="text-brand-purple">🔒</span> Confidential & Secure</span>
-                <span className="inline-flex items-center gap-1.5"><span className="text-pink-500">⏱️</span> Response in &lt; 4 hours</span>
+                <span className="inline-flex items-center gap-1.5"><span className="text-brand-purple"><FaLock size={20}/></span> Confidential & Secure</span>
+                <span className="inline-flex items-center gap-1.5"><span className="text-pink-500"><LuClock3 size={20} /></span> Response in &lt; 4 hours</span>
               </div>
 
             </form>

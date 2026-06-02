@@ -62,7 +62,7 @@ const TEAM_METADATA: Record<string, {
 
 export default function TeamGrid() {
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-slate-50/60 scroll-mt-24 relative overflow-hidden select-none">
+    <section className="py-20 bg-gradient-to-b from-white to-slate-50/60 scroll-mt-24 relative overflow-hidden select-none">
       
       {/* Dynamic Background Grid and Ambient Glow spots */}
       <div className="absolute inset-0 pointer-events-none">

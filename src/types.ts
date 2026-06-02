@@ -13,6 +13,7 @@ export interface ProjectItem {
   description: string;
   bullets: string[];
   imageUrl: string;
+  projecturl: string;
   type: 'website' | 'application';
 }
 
