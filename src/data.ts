@@ -112,9 +112,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     'A full-featured enterprise HRMS platform designed to manage employees, attendance, payroll, advances, and expenses with separate Admin and Staff workspaces, built on a modern Next.js architecture.',
   type: 'application',
 projecturl:"https://quixivo.vercel.app/",
-  imageUrl:
-    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
-
+  imageUrl:"/hrms crane photo.png",
   bullets: [
     'Dual workspace system: Admin panel (/admin) and Staff portal (/employee)',
     'Secure authentication with Supabase email login and custom mobile HMAC session system',
