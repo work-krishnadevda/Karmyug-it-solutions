@@ -94,7 +94,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     category: 'E-COMMERCE',
     description: 'An enterprise-grade platform that streamlines property valuation workflows, field operations, employee management, reporting, and business intelligence from a single dashboard.',
     type: 'application',
-    projecturl:"https://quixivo.vercel.app/",
+    projecturl:"https://valuxpert-landing-page.vercel.app/",
     imageUrl: '/valuxpert website.png',
     bullets: [
       'Automated case allocation, tracking, approvals, and TAT monitoring',
@@ -111,7 +111,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   description:
     'A full-featured enterprise HRMS platform designed to manage employees, attendance, payroll, advances, and expenses with separate Admin and Staff workspaces, built on a modern Next.js architecture.',
   type: 'application',
-projecturl:"https://quixivo.vercel.app/",
+projecturl:"https://karmyug-hrms.vercel.app/",
   imageUrl:"/hrms crane photo.png",
   bullets: [
     'Dual workspace system: Admin panel (/admin) and Staff portal (/employee)',
