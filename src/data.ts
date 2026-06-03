@@ -202,44 +202,44 @@ export const TEAM_DATA: TeamMember[] = [
 export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: '1',
-    text: 'karmyug built our e-commerce platform from scratch. Sales doubled within three months of launch.',
-    author: 'Rajesh Patel',
-    company: 'Lal Sweets',
+    text: 'The ValuXpert platform transformed the way we manage property valuation operations. From automated case allocation to real-time field inspections and comprehensive MIS reporting, everything is now streamlined in one place. The system has significantly improved efficiency, transparency, and turnaround times across our organization.',
+    author: '— Operations Head,',
+    company: ' ValuXpert',
     stars: 5
   },
   {
     id: '2',
-    text: 'Their design team understood our luxury brand perfectly. Online inquiries grew 4x after relaunch.',
-    author: 'Sneha Reddy',
-    company: 'Kirtilals Jewelry',
+    text: 'HRMS Crane has completely modernized our workforce management process. Attendance tracking, payroll calculations, expense approvals, and employee management are now handled effortlessly through a single platform. The reliability, security, and ease of use have made it an essential part of our daily operations.',
+    author: '— HR Director',
+    company: 'HRMS Crane – Workforce Management System',
     stars: 5
   },
   {
     id: '3',
-    text: 'Professional, fast, and always available. The fintech dashboard they delivered exceeded expectations.',
-    author: 'Amit Joshi',
-    company: 'TradeScribe',
+    text: "Managing thousands of students, staff, fees, and academic activities was challenging until we adopted Quixivo. The platform provides everything we need in one dashboard, from attendance and fee management to online learning and communication. It has helped us improve operational efficiency while delivering a better experience for students and parents.",
+    author: '— Founder,',
+    company: ' Educational Institute',
     stars: 5
   },
   {
     id: '4',
-    text: 'From planning to deployment, the process was smooth. Patients love the new booking experience.',
-    author: 'Kavita Nair',
-    company: 'MediCare Plus',
+    text: "Our new website perfectly reflects the quality and care we provide to pets. It has made it easier for pet owners to learn about our services, book consultations, and connect with us. We've seen a noticeable increase in inquiries and customer trust since launching the platform.",
+    author: '— Owner,',
+    company: ' Sagar Pet Care Center',
     stars: 5
   },
   {
     id: '5',
-    text: 'The LMS handles 10,000+ students without a glitch. karmyug is our long-term tech partner.',
-    author: 'Arjun Malhotra',
-    company: 'EduSpark',
+    text: "The GPS-enabled field inspection system and automated approval workflows have dramatically reduced manual effort. Our teams can now track every case in real time and deliver reports faster than ever before.",
+    author: '— Regional Operations Manager',
+    company: 'ValuXpert',
     stars: 5
   },
   {
     id: '6',
-    text: 'Marketplace UX is intuitive for farmers and buyers alike. Onboarding was seamless.',
-    author: 'Deepa Iyer',
-    company: 'GreenHarvest',
+    text: "What impressed us most was the seamless integration of attendance, advances, expenses, and payroll into one unified system. It has significantly improved our workforce management process.",
+    author: '— Chief Operations Officer',
+    company: 'HRMS Crane – Workforce Management System',
     stars: 5
   }
 ];
