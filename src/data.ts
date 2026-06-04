@@ -153,7 +153,7 @@ projecturl:"https://karmyug-hrms.vercel.app/",
   description: 'A comprehensive pet care center offering dog boarding, grooming, training, veterinary care, vaccinations, emergency support, and pet wellness services for dogs and cats in Ratlam.',
   type: 'website',
   projecturl:"https://www.sagarpetcarecenter.in/",
-  imageUrl: '/sagar-pet-shop.png',
+  imageUrl: '/public/sagar-pet-shop.png',
   bullets: [
     'Safe and secure dog hostel with comfortable boarding facilities and 24/7 supervision',
     'Professional dog grooming services including bathing, haircuts, nail trimming, and hygiene care',
