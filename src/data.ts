@@ -188,7 +188,7 @@ export const TEAM_DATA: TeamMember[] = [
     name: 'Vijay Singh Sisodiya',
     role: 'Forward Deployed Engineer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/public/7.jpg'
+    imageUrl: '/7.jpg'
   },
     {
     id: 'ashish pandey',
