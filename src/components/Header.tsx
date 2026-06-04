@@ -59,7 +59,7 @@ export default function Header({
             >
               <div className="flex items-center justify-center">
                 <img
-                  src="/src/assets/images/logo.png"
+                  src="/logo.png"
                   alt="karmyug Logo"
                   className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
