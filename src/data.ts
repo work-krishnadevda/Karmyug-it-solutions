@@ -95,7 +95,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     description: 'An enterprise-grade platform that streamlines property valuation workflows, field operations, employee management, reporting, and business intelligence from a single dashboard.',
     type: 'application',
     projecturl:"https://valuxpert-landing-page.vercel.app/",
-    imageUrl: '/valuxpert.png',
+    imageUrl: '/public/valuxpert.png',
     bullets: [
       'Automated case allocation, tracking, approvals, and TAT monitoring',
       'Mobile-enabled field inspections with GPS and photo verification',
@@ -153,7 +153,7 @@ projecturl:"https://karmyug-hrms.vercel.app/",
   description: 'A comprehensive pet care center offering dog boarding, grooming, training, veterinary care, vaccinations, emergency support, and pet wellness services for dogs and cats in Ratlam.',
   type: 'website',
   projecturl:"https://www.sagarpetcarecenter.in/",
-  imageUrl: '/public/sagar-pet-shop.png',
+  imageUrl: '/sagar-pet-shop.png',
   bullets: [
     'Safe and secure dog hostel with comfortable boarding facilities and 24/7 supervision',
     'Professional dog grooming services including bathing, haircuts, nail trimming, and hygiene care',
