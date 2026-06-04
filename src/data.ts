@@ -174,14 +174,14 @@ export const TEAM_DATA: TeamMember[] = [
     name: 'Shubham Pandey',
     role: 'Founder | CEO',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/public/8.jpg'
+    imageUrl: '/8.jpg'
   },
     {
     id: 'krishna Singh Devda',
     name: 'krishna Singh Devda',
     role: 'Co - Founder | Full Stack Product Engineer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/public/4.jpg'
+    imageUrl: '/4.jpg'
   },
   {
     id: 'Vijay Singh Sisodiya',
@@ -195,35 +195,35 @@ export const TEAM_DATA: TeamMember[] = [
     name: 'Ashish Pandey',
     role: ' Director of Creative & Digital Media',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/public/9.jpg'
+    imageUrl: '/9.jpg'
   },
   {
     id: 'Dharmraj-patidar',
     name: 'Dharmraj patidar',
     role: 'junior Java Script Developer',
     description: 'Leads product vision and client strategy with 8+ years in IT consulting.',
-    imageUrl: '/public/1.jpg'
+    imageUrl: '/1.jpg'
   },
   {
     id: 'deepak keer',
     name: 'Deepak keer',
     role: 'junior Java Script Developer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/public/6.jpg'
+    imageUrl: '/6.jpg'
   },
    {
     id: 'Neha Gandhi',
     name: 'Neha Gandhi',
     role: 'junior Java Script Developer',
     description: 'Architects scalable web and cloud solutions for startups and enterprises.',
-    imageUrl: '/public/3.jpg'
+    imageUrl: '/3.jpg'
   },
   {
     id: 'Pawan-chouhan',
     name: 'Pawan chouhan',
     role: 'junior Java Script Developer',
     description: 'Drives brand growth through data-led campaigns and creative storytelling.',
-    imageUrl: '/public/2.jpg'
+    imageUrl: '/2.jpg'
   },
  
 
@@ -232,7 +232,7 @@ export const TEAM_DATA: TeamMember[] = [
     name: 'Rishabh Sharma',
     role: 'junior Java Script Developer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/public/5.jpg'
+    imageUrl: '/5.jpg'
   },
   
   
