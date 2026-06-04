@@ -172,63 +172,63 @@ export const TEAM_DATA: TeamMember[] = [
   {
     id: 'Dharmraj-patidar',
     name: 'Dharmraj patidar',
-    role: 'FOUNDER & CEO',
+    role: 'junior Java Script Developer',
     description: 'Leads product vision and client strategy with 8+ years in IT consulting.',
     imageUrl: '/public/1.jpg'
   },
   {
-    id: 'Pawan chouhan',
+    id: 'Pawan-chouhan',
     name: 'Pawan chouhan',
-    role: 'HEAD OF MARKETING',
+    role: 'junior Java Script Developer',
     description: 'Drives brand growth through data-led campaigns and creative storytelling.',
     imageUrl: '/public/2.jpg'
   },
   {
     id: 'Neha Gandhi',
     name: 'Neha Gandhi',
-    role: 'LEAD DEVELOPER',
+    role: 'junior Java Script Developer',
     description: 'Architects scalable web and cloud solutions for startups and enterprises.',
     imageUrl: '/public/3.jpg'
   },
   {
-    id: 'krishna kumar',
-    name: 'Krishna Kumar',
-    role: 'UX & DESIGN LEAD',
+    id: 'krishna Singh Devda',
+    name: 'krishna Singh Devda',
+    role: 'Co - Founder | Full Stack Product Engineer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
     imageUrl: '/public/4.jpg'
   },
   {
     id: 'rishabh sharma',
     name: 'Rishabh Sharma',
-    role: 'UX & DESIGN LEAD',
+    role: 'junior Java Script Developer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
     imageUrl: '/public/5.jpg'
   },
   {
-    id: 'deepak verma',
-    name: 'Deepak Verma',
-    role: 'UX & DESIGN LEAD',
+    id: 'deepak keer',
+    name: 'Deepak keer',
+    role: 'junior Java Script Developer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
     imageUrl: '/public/6.jpg'
   },
   {
-    id: 'vijay kumar',
-    name: 'Vijay Kumar',
-    role: 'UX & DESIGN LEAD',
+    id: 'Vijay Singh Sisodiya',
+    name: 'Vijay Singh Sisodiya',
+    role: 'Forward Deployed Engineer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
     imageUrl: '/public/7.jpg'
   },
   {
-    id: 'shubham sir',
-    name: 'Shubham Sir',
-    role: 'UX & DESIGN LEAD',
+    id: 'Shubham Pandey',
+    name: 'Shubham Pandey',
+    role: 'Founder | CEO',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
     imageUrl: '/public/8.jpg'
   },
   {
-    id: 'ashish sir',
-    name: 'Ashish Sir',
-    role: 'UX & DESIGN LEAD',
+    id: 'ashish pandey',
+    name: 'Ashish Pandey',
+    role: ' Director of Creative & Digital Media',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
     imageUrl: '/public/9.jpg'
   }
