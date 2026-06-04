@@ -9,8 +9,10 @@ import {
 
 export default function AboutUs() {
   return (
-    <section id="about" className="py-24 bg-[#FAFBFD] scroll-mt-24 border-t border-slate-200/80 relative overflow-hidden select-none">
-      
+<section
+  id="about"
+  className="py-16 sm:py-20 lg:py-24 bg-[#FAFBFD] scroll-mt-24 border-t border-slate-200/80 relative overflow-hidden"
+>      
       {/* 3D Isometric / Orthographic Shapes for Background Ambience */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes floatAbout1 {
@@ -58,8 +60,7 @@ export default function AboutUs() {
         </div>
 
         {/* 5-Column Responsive Layout - side by side on Desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 xl:gap-7 items-stretch">
-          
+<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 sm:gap-6 items-stretch">          
           {/* Card 1: Our Mission */}
           <div className="bg-white border border-slate-200 rounded-[28px] p-7 flex flex-col justify-between group hover:border-blue-400 hover:shadow-[0_20px_40px_rgba(59,130,246,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full">
             <div className="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-blue-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
