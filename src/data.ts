@@ -204,6 +204,13 @@ export const TEAM_DATA: TeamMember[] = [
     description: 'Leads product vision and client strategy with 8+ years in IT consulting.',
     imageUrl: '/public/1.jpg'
   },
+  {
+    id: 'deepak keer',
+    name: 'Deepak keer',
+    role: 'junior Java Script Developer',
+    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    imageUrl: '/public/6.jpg'
+  },
    {
     id: 'Neha Gandhi',
     name: 'Neha Gandhi',
@@ -227,13 +234,7 @@ export const TEAM_DATA: TeamMember[] = [
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
     imageUrl: '/public/5.jpg'
   },
-  {
-    id: 'deepak keer',
-    name: 'Deepak keer',
-    role: 'junior Java Script Developer',
-    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/public/6.jpg'
-  },
+  
   
  
 
