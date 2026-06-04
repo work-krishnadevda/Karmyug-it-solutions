@@ -170,7 +170,7 @@ projecturl:"https://karmyug-hrms.vercel.app/",
 
 export const TEAM_DATA: TeamMember[] = [
   {
-    id: 'Dharmraj patidar',
+    id: 'Dharmraj-patidar',
     name: 'Dharmraj patidar',
     role: 'FOUNDER & CEO',
     description: 'Leads product vision and client strategy with 8+ years in IT consulting.',
