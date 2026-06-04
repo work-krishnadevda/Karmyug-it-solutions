@@ -170,32 +170,67 @@ projecturl:"https://karmyug-hrms.vercel.app/",
 
 export const TEAM_DATA: TeamMember[] = [
   {
-    id: 'vijay-kumar',
-    name: 'Vijay Kumar',
+    id: 'Dharmraj patidar',
+    name: 'Dharmraj patidar',
     role: 'FOUNDER & CEO',
     description: 'Leads product vision and client strategy with 8+ years in IT consulting.',
-    imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300'
+    imageUrl: '/public/1.jpg'
   },
   {
-    id: 'priya-sharma',
-    name: 'Priya Sharma',
+    id: 'Pawan chouhan',
+    name: 'Pawan chouhan',
     role: 'HEAD OF MARKETING',
     description: 'Drives brand growth through data-led campaigns and creative storytelling.',
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300'
+    imageUrl: '/public/2.jpg'
   },
   {
-    id: 'rahul-mehta',
-    name: 'Rahul Mehta',
+    id: 'Neha Gandhi',
+    name: 'Neha Gandhi',
     role: 'LEAD DEVELOPER',
     description: 'Architects scalable web and cloud solutions for startups and enterprises.',
-    imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300'
+    imageUrl: '/public/3.jpg'
   },
   {
-    id: 'anita-desai',
-    name: 'Anita Desai',
+    id: 'krishna kumar',
+    name: 'Krishna Kumar',
     role: 'UX & DESIGN LEAD',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300'
+    imageUrl: '/public/4.jpg'
+  },
+  {
+    id: 'rishabh sharma',
+    name: 'Rishabh Sharma',
+    role: 'UX & DESIGN LEAD',
+    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    imageUrl: '/public/5.jpg'
+  },
+  {
+    id: 'deepak verma',
+    name: 'Deepak Verma',
+    role: 'UX & DESIGN LEAD',
+    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    imageUrl: '/public/6.jpg'
+  },
+  {
+    id: 'vijay kumar',
+    name: 'Vijay Kumar',
+    role: 'UX & DESIGN LEAD',
+    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    imageUrl: '/public/7.jpg'
+  },
+  {
+    id: 'shubham sir',
+    name: 'Shubham Sir',
+    role: 'UX & DESIGN LEAD',
+    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    imageUrl: '/public/8.jpg'
+  },
+  {
+    id: 'ashish sir',
+    name: 'Ashish Sir',
+    role: 'UX & DESIGN LEAD',
+    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    imageUrl: '/public/9.jpg'
   }
 ];
 

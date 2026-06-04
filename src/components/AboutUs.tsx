@@ -6,14 +6,14 @@ import {
   Gem, 
   Star 
 } from 'lucide-react';
-
+ 
 export default function AboutUs() {
   return (
-<section
-  id="about"
-  className="py-16 sm:py-20 lg:py-24 bg-[#FAFBFD] scroll-mt-24 border-t border-slate-200/80 relative overflow-hidden"
->      
-      {/* 3D Isometric / Orthographic Shapes for Background Ambience */}
+    <section
+      id="about"
+      className="py-12 sm:py-16 lg:py-20 xl:py-24 bg-[#FAFBFD] scroll-mt-24 border-t border-slate-200/80 relative overflow-hidden"
+    >
+      {/* Animations */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes floatAbout1 {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -29,8 +29,6 @@ export default function AboutUs() {
         .anime-about-float-2 {
           animation: floatAbout2 12s ease-in-out infinite;
         }
-
-        /* Isometric Cylinder/Prisms CSS */
         .prism-cylinder {
           transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
           transform-style: preserve-3d;
@@ -44,101 +42,103 @@ export default function AboutUs() {
           transform: scale3d(1.1, 1.1, 1.25);
         }
       `}} />
-
-      {/* Background Soft Interactive Radial Glows */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-12 right-20 w-[450px] h-[450px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
-        {/* Section Heading Left-Aligned styled premiumly */}
-        <div className="mb-14 text-left">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A] font-display">
+ 
+      {/* Background Glows */}
+      <div className="absolute top-1/4 left-4 sm:left-10 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-blue-500/5 rounded-full blur-[80px] sm:blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-8 sm:bottom-12 right-4 sm:right-20 w-56 sm:w-80 lg:w-[450px] h-56 sm:h-80 lg:h-[450px] bg-indigo-500/5 rounded-full blur-[90px] sm:blur-[120px] pointer-events-none" />
+ 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+ 
+        {/* Section Heading */}
+        <div className="mb-8 sm:mb-10 lg:mb-14 text-left">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#0F172A] font-display">
             About karmyug
           </h2>
-          <div className="h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 w-16 rounded-full mt-3.5 shadow-sm" />
+          <div className="h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 w-12 sm:w-16 rounded-full mt-3 sm:mt-3.5 shadow-sm" />
         </div>
-
-        {/* 5-Column Responsive Layout - side by side on Desktop */}
-<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 sm:gap-6 items-stretch">          
+ 
+        {/* Cards Grid
+            Mobile:  1 col
+            sm:      2 col
+            lg:      3 col
+            xl:      5 col  */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5 xl:gap-4 items-stretch">
+ 
           {/* Card 1: Our Mission */}
-          <div className="bg-white border border-slate-200 rounded-[28px] p-7 flex flex-col justify-between group hover:border-blue-400 hover:shadow-[0_20px_40px_rgba(59,130,246,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full">
+          <div className="bg-white border border-slate-200 rounded-[20px] sm:rounded-[24px] xl:rounded-[28px] p-5 sm:p-6 lg:p-7 flex flex-col justify-between group hover:border-blue-400 hover:shadow-[0_20px_40px_rgba(59,130,246,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full">
             <div className="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-blue-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div>
-              {/* Glossy 3D-feeling Blue Rocket Icon container */}
-              <div className="mb-6 relative w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-sky-400 flex items-center justify-center shadow-[0_10px_25px_rgba(59,130,246,0.3)] rotate-[-4deg] group-hover:rotate-0 transition-transform duration-300">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/30 to-transparent" />
-                <Rocket className="w-6 h-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
+              <div className="mb-4 sm:mb-5 lg:mb-6 relative w-12 h-12 sm:w-13 sm:h-13 lg:w-14 lg:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-500 to-sky-400 flex items-center justify-center shadow-[0_10px_25px_rgba(59,130,246,0.3)] rotate-[-4deg] group-hover:rotate-0 transition-transform duration-300">
+                <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/30 to-transparent" />
+                <Rocket className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
               </div>
-              <h3 className="text-base sm:text-[17px] font-black tracking-tight text-slate-900 font-display mb-3">
+              <h3 className="text-sm sm:text-[15px] lg:text-[17px] font-black tracking-tight text-slate-900 font-display mb-2 sm:mb-3">
                 Our Mission
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed font-semibold">
+              <p className="text-[12px] sm:text-xs lg:text-[13px] text-slate-500 leading-relaxed font-semibold">
                 Empower businesses with reliable, AI-ready software — from websites and marketing to CRM, HRMS, ERP, and workflow automation — so teams work smarter and scale with confidence.
               </p>
             </div>
           </div>
-
+ 
           {/* Card 2: Our Vision */}
-          <div className="bg-white border border-slate-200 rounded-[28px] p-7 flex flex-col justify-between group hover:border-[#10B981] hover:shadow-[0_20px_40px_rgba(16,185,129,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full">
+          <div className="bg-white border border-slate-200 rounded-[20px] sm:rounded-[24px] xl:rounded-[28px] p-5 sm:p-6 lg:p-7 flex flex-col justify-between group hover:border-[#10B981] hover:shadow-[0_20px_40px_rgba(16,185,129,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full">
             <div className="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div>
-              {/* Glossy 3D-feeling Green Eye Icon container */}
-              <div className="mb-6 relative w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-400 flex items-center justify-center shadow-[0_10px_25px_rgba(16,185,129,0.3)] rotate-[4deg] group-hover:rotate-0 transition-transform duration-300">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/30 to-transparent" />
-                <Eye className="w-6 h-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
+              <div className="mb-4 sm:mb-5 lg:mb-6 relative w-12 h-12 sm:w-13 sm:h-13 lg:w-14 lg:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-400 flex items-center justify-center shadow-[0_10px_25px_rgba(16,185,129,0.3)] rotate-[4deg] group-hover:rotate-0 transition-transform duration-300">
+                <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/30 to-transparent" />
+                <Eye className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
               </div>
-              <h3 className="text-base sm:text-[17px] font-black tracking-tight text-slate-900 font-display mb-3">
+              <h3 className="text-sm sm:text-[15px] lg:text-[17px] font-black tracking-tight text-slate-900 font-display mb-2 sm:mb-3">
                 Our Vision
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed font-semibold">
+              <p className="text-[12px] sm:text-xs lg:text-[13px] text-slate-500 leading-relaxed font-semibold">
                 To be the trusted technology partner for startups and enterprises across India and globally, known for custom solutions that deliver measurable business impact.
               </p>
             </div>
           </div>
-
+ 
           {/* Card 3: AI-First Philosophy */}
-          <div className="bg-white border border-slate-200 rounded-[28px] p-7 flex flex-col justify-between group hover:border-amber-400 hover:shadow-[0_20px_40px_rgba(245,158,11,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full">
+          <div className="bg-white border border-slate-200 rounded-[20px] sm:rounded-[24px] xl:rounded-[28px] p-5 sm:p-6 lg:p-7 flex flex-col justify-between group hover:border-amber-400 hover:shadow-[0_20px_40px_rgba(245,158,11,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full">
             <div className="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-amber-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div>
-              {/* Glossy 3D-feeling Orange CPU Icon container */}
-              <div className="mb-6 relative w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-400 flex items-center justify-center shadow-[0_10px_25px_rgba(245,158,11,0.3)] rotate-[-3deg] group-hover:rotate-0 transition-transform duration-300">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/30 to-transparent" />
-                <Cpu className="w-6 h-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
+              <div className="mb-4 sm:mb-5 lg:mb-6 relative w-12 h-12 sm:w-13 sm:h-13 lg:w-14 lg:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-500 to-orange-400 flex items-center justify-center shadow-[0_10px_25px_rgba(245,158,11,0.3)] rotate-[-3deg] group-hover:rotate-0 transition-transform duration-300">
+                <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/30 to-transparent" />
+                <Cpu className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
               </div>
-              <h3 className="text-base sm:text-[17px] font-black tracking-tight text-slate-900 font-display mb-3">
+              <h3 className="text-sm sm:text-[15px] lg:text-[17px] font-black tracking-tight text-slate-900 font-display mb-2 sm:mb-3">
                 AI-First Philosophy
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed font-semibold">
+              <p className="text-[12px] sm:text-xs lg:text-[13px] text-slate-500 leading-relaxed font-semibold">
                 We believe in an AI-first, human-centered approach: automate what should be automated, keep people in control, and build software that grows with your business.
               </p>
             </div>
           </div>
-
-          {/* Card 4: Our Values */}
-          <div className="bg-white border border-slate-200 rounded-[28px] p-7 flex flex-col justify-between group hover:border-rose-400 hover:shadow-[0_20px_40px_rgba(244,63,94,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full">
+ 
+          {/* Card 4: Our Values
+              On sm (2-col), this is card 4 → sits alone on the second row, left-aligned.
+              On lg (3-col), cards 4+5 share the third row.
+              On xl (5-col), all in one row. */}
+          <div className="bg-white border border-slate-200 rounded-[20px] sm:rounded-[24px] xl:rounded-[28px] p-5 sm:p-6 lg:p-7 flex flex-col justify-between group hover:border-rose-400 hover:shadow-[0_20px_40px_rgba(244,63,94,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full">
             <div className="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-rose-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div>
-              {/* Glossy 3D-feeling Red Jewel/Gem Icon container */}
-              <div className="mb-6 relative w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500 to-red-400 flex items-center justify-center shadow-[0_10px_25px_rgba(244,63,94,0.3)] rotate-[6deg] group-hover:rotate-0 transition-transform duration-300">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/30 to-transparent" />
-                <Gem className="w-6 h-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
+              <div className="mb-4 sm:mb-5 lg:mb-6 relative w-12 h-12 sm:w-13 sm:h-13 lg:w-14 lg:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-rose-500 to-red-400 flex items-center justify-center shadow-[0_10px_25px_rgba(244,63,94,0.3)] rotate-[6deg] group-hover:rotate-0 transition-transform duration-300">
+                <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/30 to-transparent" />
+                <Gem className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
               </div>
-              <h3 className="text-base sm:text-[17px] font-black tracking-tight text-slate-900 font-display mb-4">
+              <h3 className="text-sm sm:text-[15px] lg:text-[17px] font-black tracking-tight text-slate-900 font-display mb-3 sm:mb-4">
                 Our Values
               </h3>
-              
-              {/* Beautiful custom-styled Star Bullet points exactly matching design */}
-              <ul className="space-y-3.5 pr-2">
+              <ul className="space-y-2.5 sm:space-y-3 sm:space-y-3.5 pr-1 sm:pr-2">
                 {[
                   'Quality & transparency',
                   'Client ownership',
                   'Innovation with ROI focus',
                   'Long-term support'
                 ].map((val, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-slate-600 font-bold text-[12px] sm:text-[12.5px] leading-tight select-none">
-                    <div className="w-[18px] h-[18px] rounded-full bg-amber-500/[0.08] flex items-center justify-center shrink-0 border border-amber-500/10">
-                      <Star className="w-2.5 h-2.5 text-amber-500 fill-amber-500" strokeWidth={3} />
+                  <li key={idx} className="flex items-center gap-2 sm:gap-3 text-slate-600 font-bold text-[11px] sm:text-[12px] lg:text-[12.5px] leading-tight select-none">
+                    <div className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] rounded-full bg-amber-500/[0.08] flex items-center justify-center shrink-0 border border-amber-500/10">
+                      <Star className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-amber-500 fill-amber-500" strokeWidth={3} />
                     </div>
                     <span>{val}</span>
                   </li>
@@ -146,97 +146,77 @@ export default function AboutUs() {
               </ul>
             </div>
           </div>
-
-          {/* Card 5: Modern Stats Section containing Custom CSS 3D Isometric Cylinders */}
-          <div className="bg-white border border-[#4F46E5]/15 rounded-[28px] p-7 flex flex-col justify-between group hover:border-[#4F46E5] hover:shadow-[0_22px_45px_rgba(79,70,229,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full min-h-[320px] sm:min-h-[auto]">
-            {/* Visual Glass Edge Light Highlight inside stats card */}
-            <div className="absolute inset-[1px] rounded-[27px] pointer-events-none border border-transparent group-hover:border-[#4f46e5]/10 transition-colors" />
-
+ 
+          {/* Card 5: Stats
+              On sm (2-col): spans 2 cols to fill the row nicely.
+              On lg (3-col): 1 col, shares row with card 4.
+              On xl (5-col): 1 col. */}
+          <div className="sm:col-span-2 lg:col-span-1 bg-white border border-[#4F46E5]/15 rounded-[20px] sm:rounded-[24px] xl:rounded-[28px] p-5 sm:p-6 lg:p-7 flex flex-col justify-between group hover:border-[#4F46E5] hover:shadow-[0_22px_45px_rgba(79,70,229,0.06)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden h-full min-h-[280px] sm:min-h-[260px] lg:min-h-[auto]">
+            <div className="absolute inset-[1px] rounded-[19px] sm:rounded-[23px] xl:rounded-[27px] pointer-events-none border border-transparent group-hover:border-[#4f46e5]/10 transition-colors" />
+ 
             <div className="relative z-10 flex flex-col h-full justify-between">
               <div>
-                <p className="text-[9.5px] font-black uppercase tracking-[0.16em] text-slate-400 mb-4 font-mono select-none">
+                <p className="text-[9px] sm:text-[9.5px] font-black uppercase tracking-[0.16em] text-slate-400 mb-3 sm:mb-4 font-mono select-none">
                   Years of Excellence
                 </p>
-                
-                {/* Stat block 1 */}
-                <div className="mb-4">
-                  <div className="text-[34px] font-black text-slate-900 font-display leading-none mb-0.5 tracking-tight group-hover:text-blue-600 transition-colors">
+ 
+                <div className="mb-3 sm:mb-4">
+                  <div className="text-[28px] sm:text-[30px] lg:text-[34px] font-black text-slate-900 font-display leading-none mb-0.5 tracking-tight group-hover:text-blue-600 transition-colors">
                     8+
                   </div>
-                  <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                  <div className="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                     Years Experience
                   </div>
                 </div>
-
-                {/* Subdued dash separator */}
-                <div className="w-10 h-[1.5px] border-t border-dashed border-slate-200 my-4" />
-
-                {/* Stat block 2 */}
+ 
+                <div className="w-8 sm:w-10 h-[1.5px] border-t border-dashed border-slate-200 my-3 sm:my-4" />
+ 
                 <div>
-                  <div className="text-[34px] font-black text-slate-900 font-display leading-none mb-0.5 tracking-tight group-hover:text-emerald-600 transition-colors">
+                  <div className="text-[28px] sm:text-[30px] lg:text-[34px] font-black text-slate-900 font-display leading-none mb-0.5 tracking-tight group-hover:text-emerald-600 transition-colors">
                     500+
                   </div>
-                  <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                  <div className="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                     Projects Delivered
                   </div>
                 </div>
               </div>
-
-              {/* 3D Isometric Cylinder/Column Chart rendered beautifully via purely responsive HTML/Tailwind CSS at bottom-right of card */}
-              <div className="absolute bottom-[-15px] right-[-10px] w-36 h-36 flex items-end justify-center pointer-events-none pb-4 relative z-5">
-                
-                {/* Isometric coordinate sandbox Container (Leaning Isometric projection perspective effect matching reference) */}
-                <div className="relative w-28 h-20 flex gap-2 items-end select-none">
-                  
-                  {/* Left Column (Red) - Stands represent 3D cuboids */}
-                  <div className="relative w-4 group/bar h-10 transition-transform duration-300 select-none cursor-default mb-1 pl-1">
-                    {/* Shadow underneath */}
-                    <div className="absolute -bottom-1 -left-1 w-5 h-2 bg-slate-900/10 blur-[3px] rounded-full filter" />
-                    
-                    {/* Cuboid 3D structure using purely CSS angles and shadows */}
-                    <div className="relative h-full w-3.5 bg-rose-500 rounded-sm shadow-[inset_1px_1px_rgba(255,255,255,0.2)]">
-                      {/* Top cap (Glossy light reflection) */}
+ 
+              {/* 3D Bar Chart — repositioned for sm wide layout */}
+              <div className="absolute bottom-[-15px] right-[-10px] w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 flex items-end justify-center pointer-events-none pb-3 sm:pb-4 relative z-5">
+                <div className="relative w-20 sm:w-24 lg:w-28 h-16 sm:h-18 lg:h-20 flex gap-1.5 sm:gap-2 items-end select-none">
+ 
+                  {/* Left Column (Red) */}
+                  <div className="relative w-3 sm:w-4 group/bar h-8 sm:h-10 transition-transform duration-300 select-none cursor-default mb-1 pl-0.5 sm:pl-1">
+                    <div className="absolute -bottom-1 -left-1 w-4 sm:w-5 h-1.5 sm:h-2 bg-slate-900/10 blur-[3px] rounded-full filter" />
+                    <div className="relative h-full w-3 sm:w-3.5 bg-rose-500 rounded-sm shadow-[inset_1px_1px_rgba(255,255,255,0.2)]">
                       <div className="absolute -top-[3px] inset-x-[0.5px] h-1 bg-rose-400 rounded-t-sm rotate-[12deg] shadow-sm" />
-                      {/* Side angle depth */}
-                      <div className="absolute inset-y-0 right-0 w-[2.5px] bg-red-700/40 rounded-r-sm" />
+                      <div className="absolute inset-y-0 right-0 w-[2px] sm:w-[2.5px] bg-red-700/40 rounded-r-sm" />
                     </div>
                   </div>
-
-                  {/* Middle Column (Gold/Yellow) */}
-                  <div className="relative w-4 group/bar h-16 transition-transform duration-300 select-none cursor-default mb-1">
-                    {/* Shadow underneath */}
-                    <div className="absolute -bottom-1 -left-1 w-6 h-2 bg-slate-900/10 blur-[3px] rounded-full filter" />
-                    
-                    {/* Cuboid 3D structure */}
-                    <div className="relative h-full w-3.5 bg-amber-500 rounded-sm shadow-[inset_1px_1px_rgba(255,255,255,0.2)]">
-                      {/* Top cap */}
+ 
+                  {/* Middle Column (Gold) */}
+                  <div className="relative w-3 sm:w-4 group/bar h-12 sm:h-16 transition-transform duration-300 select-none cursor-default mb-1">
+                    <div className="absolute -bottom-1 -left-1 w-5 sm:w-6 h-1.5 sm:h-2 bg-slate-900/10 blur-[3px] rounded-full filter" />
+                    <div className="relative h-full w-3 sm:w-3.5 bg-amber-500 rounded-sm shadow-[inset_1px_1px_rgba(255,255,255,0.2)]">
                       <div className="absolute -top-[3px] inset-x-[0.5px] h-1 bg-amber-300 rounded-t-sm rotate-[12deg] shadow-sm" />
-                      {/* Side angle depth */}
-                      <div className="absolute inset-y-0 right-0 w-[2.5px] bg-amber-700/45 rounded-r-sm" />
+                      <div className="absolute inset-y-0 right-0 w-[2px] sm:w-[2.5px] bg-amber-700/45 rounded-r-sm" />
                     </div>
                   </div>
-
-                  {/* Right Column (Blue) - Tallest */}
-                  <div className="relative w-4 group/bar h-24 transition-transform duration-300 select-none cursor-default">
-                    {/* Shadow underneath */}
-                    <div className="absolute -bottom-1 -left-1 w-6 h-2.5 bg-slate-900/20 blur-[4px] rounded-full filter" />
-                    
-                    {/* Cuboid 3D structure */}
-                    <div className="relative h-full w-4 bg-gradient-to-t from-blue-600 to-sky-500 rounded-md shadow-[inset_1px_1.5px_rgba(255,255,255,0.25)]">
-                      {/* Top cap */}
-                      <div className="absolute -top-[4px] inset-x-[0.5px] h-1.5 bg-sky-300 rounded-t-sm rotate-[12deg] shadow-sm" />
-                      {/* Side angle depth */}
-                      <div className="absolute inset-y-0 right-0 w-[3px] bg-blue-800/45 rounded-r-md" />
+ 
+                  {/* Right Column (Blue) — Tallest */}
+                  <div className="relative w-3 sm:w-4 group/bar h-18 sm:h-24 transition-transform duration-300 select-none cursor-default">
+                    <div className="absolute -bottom-1 -left-1 w-5 sm:w-6 h-2 sm:h-2.5 bg-slate-900/20 blur-[4px] rounded-full filter" />
+                    <div className="relative h-full w-3 sm:w-4 bg-gradient-to-t from-blue-600 to-sky-500 rounded-sm sm:rounded-md shadow-[inset_1px_1.5px_rgba(255,255,255,0.25)]">
+                      <div className="absolute -top-[3px] sm:-top-[4px] inset-x-[0.5px] h-1 sm:h-1.5 bg-sky-300 rounded-t-sm rotate-[12deg] shadow-sm" />
+                      <div className="absolute inset-y-0 right-0 w-[2px] sm:w-[3px] bg-blue-800/45 rounded-r-sm sm:rounded-r-md" />
                     </div>
                   </div>
-
+ 
                 </div>
-
               </div>
-
             </div>
           </div>
-
+ 
         </div>
       </div>
     </section>
