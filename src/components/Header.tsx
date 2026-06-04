@@ -48,8 +48,8 @@ export default function Header({
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full bg-slate-950/90 border-b border-slate-900 shadow-[0_4px_30px_rgba(0,0,0,0.15)] backdrop-blur-md py-3 sm:py-4 px-4 sm:px-6 lg:px-8 flex justify-center pointer-events-none transition-all duration-300">
-        <div className="w-full max-w-7xl flex items-center justify-between pointer-events-auto gap-4">
+      <header className="sticky top-0 z-40 w-full bg-slate-950/90 border-b border-slate-900 shadow-[0_4px_30px_rgba(0,0,0,0.15)] backdrop-blur-md py-4 px-6 flex justify-center pointer-events-none transition-all duration-300">
+        <div className="w-full max-w-7xl flex items-center justify-between pointer-events-auto">
           <div className="hidden md:flex items-center justify-start">
             <a
               href="#home"
@@ -58,15 +58,15 @@ export default function Header({
               aria-label="karmyug Home"
             >
               <div className="flex items-center justify-center">
-               <img
-  src="/logo.png"
-  alt="karmyug Logo"
-  className="h-8 lg:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-/>
+                <img
+                  src="/logo.png"
+                  alt="karmyug Logo"
+                  className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
 
               <div className="flex flex-col text-left leading-tight">
-                <span className="font-display font-extrabold tracking-wider text-white text-xs lg:text-[13.5px]">
+                <span className="font-display font-extrabold tracking-wider text-white text-[13.5px]">
                   KARMYUG
                 </span>
                 <span className="text-[8px] tracking-widest text-[#a78bfa] font-black uppercase">
@@ -77,11 +77,11 @@ export default function Header({
           </div>
 
           {/* Desktop Central Navigation Links */}
-          <div className="hidden md:flex items-center gap-1 lg:gap-2.5 font-sans justify-center">
+          <div className="hidden md:flex items-center gap-2.5 font-sans justify-center">
             <a
               href="#home"
               onClick={(e) => handleNavClick("home", e)}
-              className={`text-xs lg:text-[13px] font-bold px-3 lg:px-4 py-2 rounded-full transition-all duration-200 ${
+              className={`text-[13px] font-bold px-4 py-2 rounded-full transition-all duration-200 ${
                 currentPage === "home" && activeSection === "home"
                   ? "bg-white/10 text-white shadow-inner shadow-white/5"
                   : "text-slate-300 hover:text-white hover:bg-white/5"
@@ -92,7 +92,7 @@ export default function Header({
             <a
               href="#services"
               onClick={(e) => handleNavClick("services", e)}
-              className={`text-xs lg:text-[13px] font-bold px-3 lg:px-4 py-2 rounded-full transition-all duration-200 ${
+              className={`text-[13px] font-bold px-4 py-2 rounded-full transition-all duration-200 ${
                 currentPage === "services"
                   ? "bg-white/10 text-white shadow-inner shadow-white/5"
                   : "text-slate-300 hover:text-white hover:bg-white/5"
@@ -103,7 +103,7 @@ export default function Header({
             <a
               href="#portfolio"
               onClick={(e) => handleNavClick("portfolio", e)}
-              className={`text-xs lg:text-[13px] font-bold px-3 lg:px-4 py-2 rounded-full transition-all duration-200 ${
+              className={`text-[13px] font-bold px-4 py-2 rounded-full transition-all duration-200 ${
                 currentPage === "portfolio"
                   ? "bg-white/10 text-white shadow-inner shadow-white/5"
                   : "text-slate-300 hover:text-white hover:bg-white/5"
@@ -114,7 +114,7 @@ export default function Header({
             <a
               href="#contact"
               onClick={(e) => handleNavClick("contact", e)}
-              className={`text-xs lg:text-[13px] font-bold px-3 lg:px-4 py-2 rounded-full transition-all duration-200 ${
+              className={`text-[13px] font-bold px-4 py-2 rounded-full transition-all duration-200 ${
                 currentPage === "contact"
                   ? "bg-white/10 text-white shadow-inner shadow-white/5"
                   : "text-slate-300 hover:text-white hover:bg-white/5"
@@ -128,7 +128,7 @@ export default function Header({
           <div className="hidden md:flex items-center justify-end">
             <button
               onClick={onOpenContact}
-              className="px-4 lg:px-5 py-2 lg:py-2.5 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 hover:brightness-105 active:scale-[0.97] text-white font-extrabold text-[11px] lg:text-[12px] tracking-wide rounded-full shadow-md shadow-blue-600/15 hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="px-5 py-2.5 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 hover:brightness-105 active:scale-[0.97] text-white font-extrabold text-[12px] tracking-wide rounded-full shadow-md shadow-blue-600/15 hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               Get Free Consultation
             </button>
@@ -161,7 +161,7 @@ export default function Header({
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-300 hover:text-white p-2 bg-white/5 rounded-lg transition-all"
+              className="text-gray-300 hover:text-white focus:outline-none p-1.5 bg-white/5 rounded-md"
               aria-label="Toggle menu"
             >
               <svg
@@ -193,26 +193,7 @@ export default function Header({
 
       {/* Mobile Drawer Navigation overlay */}
       {mobileMenuOpen && (
-        <div       className="
-      fixed
-      top-0
-      right-0
-      h-screen
-      w-[85%]
-      max-w-sm
-      bg-slate-950
-      border-l
-      border-white/10
-      z-[60]
-      md:hidden
-      flex
-      flex-col
-      shadow-2xl
-      animate-in
-      slide-in-from-right
-      duration-300
-    "
->
+        <div className="fixed inset-0 z-50 bg-brand-dark/95 backdrop-blur-lg flex flex-col justify-center items-center gap-8 md:hidden">
           <button
             onClick={() => setMobileMenuOpen(false)}
             className="absolute top-6 right-6 text-gray-400 hover:text-white p-2"
@@ -235,7 +216,7 @@ export default function Header({
           <a
             href="#home"
             onClick={(e) => handleNavClick("home", e)}
-            className={`text-xl sm:text-2xl font-semibold px-6 py-2 rounded-full ${
+            className={`text-2xl font-semibold px-6 py-2 rounded-full ${
               currentPage === "home"
                 ? "bg-brand-purple text-white"
                 : "text-gray-300"
@@ -246,7 +227,7 @@ export default function Header({
           <a
             href="#services"
             onClick={(e) => handleNavClick("services", e)}
-            className={`text-xl sm:text-2xl font-semibold px-6 py-2 rounded-full ${
+            className={`text-2xl font-semibold px-6 py-2 rounded-full ${
               currentPage === "services"
                 ? "bg-brand-purple text-white"
                 : "text-gray-300"
@@ -257,7 +238,7 @@ export default function Header({
           <a
             href="#portfolio"
             onClick={(e) => handleNavClick("portfolio", e)}
-            className={`text-xl sm:text-2xl font-semibold px-6 py-2 rounded-full ${
+            className={`text-2xl font-semibold px-6 py-2 rounded-full ${
               currentPage === "portfolio"
                 ? "bg-brand-purple text-white"
                 : "text-gray-300"
@@ -268,7 +249,7 @@ export default function Header({
           <a
             href="#contact"
             onClick={(e) => handleNavClick("contact", e)}
-            className={`text-xl sm:text-2xl font-semibold px-6 py-2 rounded-full ${
+            className={`text-2xl font-semibold px-6 py-2 rounded-full ${
               currentPage === "contact"
                 ? "bg-brand-purple text-white"
                 : "text-gray-300"
@@ -282,7 +263,7 @@ export default function Header({
               setMobileMenuOpen(false);
               onOpenContact();
             }}
-           className="mt-4 w-full max-w-xs px-6 py-3 bg-brand-purple text-white font-medium rounded-full shadow-lg shadow-brand-purple/30 hover:bg-brand-deep transition-all"
+            className="mt-4 px-8 py-3 bg-brand-purple text-white font-medium rounded-full shadow-lg shadow-brand-purple/30 hover:bg-brand-deep transition-all"
           >
             Get Free Consultation
           </button>

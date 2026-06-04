@@ -1,38 +1,30 @@
-import React, { useState } from "react";
-import { PROJECTS_DATA } from "../data";
-import { ProjectItem } from "../types";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import React, { useState } from 'react';
+import { PROJECTS_DATA } from '../data';
+import { ProjectItem } from '../types';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
 interface ProjectListProps {
   onStartProject: (projectName: string) => void;
   onViewAllProjects?: () => void;
 }
 
-export default function ProjectList({
-  onStartProject,
-  onViewAllProjects,
-}: ProjectListProps) {
-  const [activeTab, setActiveTab] = useState<"all" | "website" | "application">(
-    "all",
-  );
+export default function ProjectList({ onStartProject, onViewAllProjects }: ProjectListProps) {
+  const [activeTab, setActiveTab] = useState<'all' | 'website' | 'application'>('all');
 
   const filteredProjects = PROJECTS_DATA.filter((project) => {
-    if (activeTab === "all") return true;
+    if (activeTab === 'all') return true;
     return project.type === activeTab;
   }).slice(0, 6);
 
   return (
-    <section
-  id="portfolio"
-  className="py-8 lg:py-9 bg-gradient-to-b from-[#F8FAFC] to-white scroll-mt-12 relative overflow-hidden select-none border-t border-slate-100"
->
+    <section id="portfolio" className="py-14 bg-gradient-to-b from-[#F8FAFC] to-white scroll-mt-12 relative overflow-hidden select-none border-t border-slate-100">
+      
       {/* 3D and floating Keyframes for backgrounds & overlays */}
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
+      <style dangerouslySetInnerHTML={{ __html: `
         @keyframes subtleHologramFloat {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-12px) rotate(4deg); }}
+          50% { transform: translateY(-12px) rotate(4deg); }
+        }
         @keyframes subtleHologramFloatReverse {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           50% { transform: translateY(12px) rotate(-4deg); }
@@ -118,9 +110,7 @@ export default function ProjectList({
         .anime-center-orbit-track {
           animation: centerOrbit 25s linear infinite;
         }
-      `,
-        }}
-      />
+      `}} />
 
       {/* Decorative halos in background */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[550px] bg-gradient-radial from-blue-400/5 via-indigo-400/0 to-transparent rounded-full blur-[100px] pointer-events-none -z-10" />
@@ -130,89 +120,59 @@ export default function ProjectList({
       {/* ==========================================
           DYNAMIC 3D ELEMENTS ON SIDES (PRECISE & APPROPRIATE SIZE)
          ========================================== */}
-
+      
       {/* Left Margin: Glass 3D Diamond/Prism Shape */}
-      <div className="hidden 2xl:flex absolute top-[18%] left-8 w-24 h-24 items-center justify-center anime-3d-float-1 pointer-events-none z-10 opacity-70">
+      <div className="hidden xl:flex absolute top-[18%] left-8 w-24 h-24 items-center justify-center anime-3d-float-1 pointer-events-none z-10 opacity-70">
         <div className="relative w-16 h-16 preserve-3d anime-spin-3d-left">
           {/* Top Face */}
-          <div
-            className="absolute inset-0 bg-blue-500/15 border border-white/40 shadow-inner rounded-sm backdrop-blur-3xs"
-            style={{ transform: "translateZ(16px)" }}
-          />
+          <div className="absolute inset-0 bg-blue-500/15 border border-white/40 shadow-inner rounded-sm backdrop-blur-3xs" style={{ transform: 'translateZ(16px)' }} />
           {/* Bottom Face */}
-          <div
-            className="absolute inset-0 bg-indigo-600/10 border border-white/10 rounded-sm"
-            style={{ transform: "translateZ(-16px) rotateY(180deg)" }}
-          />
+          <div className="absolute inset-0 bg-indigo-600/10 border border-white/10 rounded-sm" style={{ transform: 'translateZ(-16px) rotateY(180deg)' }} />
           {/* Outer Side Faces */}
-          <div
-            className="absolute inset-x-0 top-0 bottom-0 bg-indigo-500/15 border border-white/25 rounded-sm origin-left"
-            style={{ transform: "rotateY(90deg) translateZ(-16px)" }}
-          />
-          <div
-            className="absolute inset-x-0 top-0 bottom-0 bg-blue-400/20 border border-white/30 rounded-sm origin-right"
-            style={{ transform: "rotateY(-90deg) translateZ(-16px)" }}
-          />
+          <div className="absolute inset-x-0 top-0 bottom-0 bg-indigo-500/15 border border-white/25 rounded-sm origin-left" style={{ transform: 'rotateY(90deg) translateZ(-16px)' }} />
+          <div className="absolute inset-x-0 top-0 bottom-0 bg-blue-400/20 border border-white/30 rounded-sm origin-right" style={{ transform: 'rotateY(-90deg) translateZ(-16px)' }} />
           {/* Subtle bottom shadow */}
-          <div
-            className="absolute w-12 h-12 bg-indigo-900/10 rounded-full blur-sm -bottom-10 left-2 transform"
-            style={{ transform: "rotateX(90deg) translateZ(-30px)" }}
-          />
+          <div className="absolute w-12 h-12 bg-indigo-900/10 rounded-full blur-sm -bottom-10 left-2 transform" style={{ transform: 'rotateX(90deg) translateZ(-30px)' }} />
         </div>
       </div>
 
       {/* Right Margin: Glass 3D Floating Double Cube Ring */}
-      <div className="hidden 2xl:flex absolute bottom-[25%] right-8 w-28 h-28 items-center justify-center anime-3d-float-2 pointer-events-none z-10 opacity-70">
+      <div className="hidden xl:flex absolute bottom-[25%] right-8 w-28 h-28 items-center justify-center anime-3d-float-2 pointer-events-none z-10 opacity-70">
         <div className="relative w-16 h-16 preserve-3d anime-spin-3d-right">
           {/* 3D Emerald-Green Core Accent Cube */}
-          <div
-            className="absolute inset-2 bg-emerald-400/20 border border-white/45 shadow-sm rounded-md backdrop-blur-3xs"
-            style={{ transform: "translateZ(10px)" }}
-          />
-          <div
-            className="absolute inset-2 bg-teal-500/15 border border-white/20 rounded-md"
-            style={{ transform: "translateZ(-10px) rotateY(180deg)" }}
-          />
+          <div className="absolute inset-2 bg-emerald-400/20 border border-white/45 shadow-sm rounded-md backdrop-blur-3xs" style={{ transform: 'translateZ(10px)' }} />
+          <div className="absolute inset-2 bg-teal-500/15 border border-white/20 rounded-md" style={{ transform: 'translateZ(-10px) rotateY(180deg)' }} />
           {/* Transparent Outer Frame Plate */}
-          <div
-            className="absolute inset-0 border border-blue-400/30 rounded-lg bg-blue-400/5"
-            style={{ transform: "translateZ(-20px)" }}
-          />
-          <div
-            className="absolute inset-0 border border-indigo-400/30 rounded-lg bg-indigo-550/5"
-            style={{ transform: "translateZ(20px)" }}
-          />
+          <div className="absolute inset-0 border border-blue-400/30 rounded-lg bg-blue-400/5" style={{ transform: 'translateZ(-20px)' }} />
+          <div className="absolute inset-0 border border-indigo-400/30 rounded-lg bg-indigo-550/5" style={{ transform: 'translateZ(20px)' }} />
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6">
+        
         {/* Header (Aligned perfectly in color coordination) */}
-        <div className="text-center max-w-3xl mx-auto mb-8 lg:mb-10 select-none flex flex-col items-center">
+        <div className="text-center max-w-3xl mx-auto mb-12 select-none flex flex-col items-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50/60 border border-blue-100/30 text-blue-600 rounded-full text-[10px] font-bold mb-4 tracking-widest uppercase">
             <span>OUR PORTFOLIO</span>
           </div>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black">
-            Our Top{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 bg-clip-text text-transparent">
-              Projects
-            </span>
+          
+          <h2 className="text-4xl font-black tracking-tight text-slate-900 font-display sm:text-5xl">
+            Our Top <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 bg-clip-text text-transparent">Projects</span>
           </h2>
-
-          <p className="mt-3 text-sm sm:text-[15px] text-slate-500 max-w-2xl mx-auto leading-relaxed font-semibold">
-            Explore websites and applications we have designed, built, and
-            launched for brands across India and beyond.
+          
+          <p className="mt-4 text-sm sm:text-[15px] text-slate-500 max-w-2xl mx-auto leading-relaxed font-semibold">
+            Explore websites and applications we have designed, built, and launched for brands across India and beyond.
           </p>
         </div>
 
         {/* Categories Tab Selector */}
-        <div className="flex justify-center mb-10 lg:mb-12">
+        <div className="flex justify-center mb-16">
           <div className="bg-white p-1 rounded-full border border-slate-100 flex items-center shadow-sm">
             {[
-              { label: "All", value: "all" },
-              { label: "Websites", value: "website" },
-              { label: "Applications", value: "application" },
+              { label: 'All', value: 'all' },
+              { label: 'Websites', value: 'website' },
+              { label: 'Applications', value: 'application' }
             ].map((tab) => {
               const isActive = activeTab === tab.value;
               return (
@@ -221,8 +181,8 @@ export default function ProjectList({
                   onClick={() => setActiveTab(tab.value as any)}
                   className={`px-7 py-2.5 rounded-full text-xs sm:text-[13px] font-bold tracking-wide transition-all cursor-pointer ${
                     isActive
-                      ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md shadow-blue-600/15 scale-[1.02]"
-                      : "text-slate-500 hover:text-blue-600"
+                      ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md shadow-blue-600/15 scale-[1.02]'
+                      : 'text-slate-500 hover:text-blue-600'
                   }`}
                 >
                   {tab.label}
@@ -233,24 +193,28 @@ export default function ProjectList({
         </div>
 
         {/* Projects List with Alternating Layout */}
-        <div className="space-y-16 lg:space-y-20">
+        <div className="space-y-28">
           {filteredProjects.map((project, index) => {
             const isEven = index % 2 === 0;
             return (
               <div
                 key={project.id}
-                className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
-                  isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+                className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-16 ${
+                  isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 }`}
               >
+                
                 {/* Visual Image Screen Container (UPGRADED TO MODERN 3D HOVER TILT VIEWPORT) */}
-                <div className="w-full h-64 sm:h-72 md:h-80 lg:h-[340px] object-cover object-center">
-                  <div
+                <div className="w-full lg:w-1/2 flex items-center justify-center">
+                  <div 
                     className="relative w-full overflow-visible preserve-3d group cursor-pointer"
-                    style={{ perspective: "1200px" }}
+                    style={{ perspective: '1200px' }}
                   >
+                    
                     {/* Perspective card boundary box */}
-                    <div className="relative overflow-hidden rounded-3xl border border-slate-150/80 bg-white shadow-lg shadow-slate-100 project-card-3d">
+                    <div 
+                      className="relative overflow-hidden rounded-3xl border border-slate-150/80 bg-white shadow-lg shadow-slate-100 project-card-3d"
+                    >
                       {/* Glossy overlay on top of project visual */}
                       <div className="absolute inset-0 bg-gradient-to-tr from-white/12 via-white/5 to-transparent opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-500 z-10" />
 
@@ -264,113 +228,87 @@ export default function ProjectList({
                         referrerPolicy="no-referrer"
                         className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-[1.04] transition-transform duration-700"
                       />
-
+                      
                       {/* Subtle elegant gradient backdrop strip at the very bottom */}
                       <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-slate-950/25 to-transparent pointer-events-none" />
+
                     </div>
 
                     {/* ==========================================
                         INTERACTIVE FLOATING 3D ELEMENTS (BREAKS OUT OVER CARD)
                        ========================================== */}
-                    {isEven ? (
+                     {isEven ? (
                       /* 3D Glass Amber Hex-Prism on the outer border representing fine technical design */
-                      <div
+                      <div 
                         className="absolute -right-5 -bottom-5 w-16 h-16 preserve-3d pointer-events-none z-20 transition-all duration-500 ease-out group-hover:scale-130 group-hover:translate-x-3 group-hover:-translate-y-5 filter drop-shadow-[0_12px_24px_rgba(245,158,11,0.28)]"
-                        style={{ transform: "translateZ(45px)" }}
+                        style={{ transform: 'translateZ(45px)' }}
                       >
                         <div className="relative w-full h-full preserve-3d anime-float-normal">
                           <div className="absolute inset-0 preserve-3d animate-[slowSpinRight_10s_linear_infinite]">
                             {/* Prism faces resembling fine crystal geometry */}
-                            <div
-                              className="absolute inset-0 bg-amber-500/35 border border-white/65 backdrop-blur-3xs rounded-md"
-                              style={{ transform: "translateZ(16px)" }}
-                            />
-                            <div
-                              className="absolute inset-0 bg-yellow-400/20 border border-white/45 backdrop-blur-3xs rounded-md"
-                              style={{
-                                transform: "rotateY(90deg) translateZ(16px)",
-                              }}
-                            />
-                            <div
-                              className="absolute inset-0 bg-gradient-to-tr from-white/40 to-amber-300/30 border border-white/60 backdrop-blur-3xs rounded-md"
-                              style={{
-                                transform: "rotateX(90deg) translateZ(16px)",
-                              }}
-                            />
-                            <div
-                              className="absolute inset-0 bg-amber-600/30 border border-white/20 rounded-md"
-                              style={{
-                                transform: "translateZ(-16px) rotateY(180deg)",
-                              }}
-                            />
+                            <div className="absolute inset-0 bg-amber-500/35 border border-white/65 backdrop-blur-3xs rounded-md" style={{ transform: 'translateZ(16px)' }} />
+                            <div className="absolute inset-0 bg-yellow-400/20 border border-white/45 backdrop-blur-3xs rounded-md" style={{ transform: 'rotateY(90deg) translateZ(16px)' }} />
+                            <div className="absolute inset-0 bg-gradient-to-tr from-white/40 to-amber-300/30 border border-white/60 backdrop-blur-3xs rounded-md" style={{ transform: 'rotateX(90deg) translateZ(16px)' }} />
+                            <div className="absolute inset-0 bg-amber-600/30 border border-white/20 rounded-md" style={{ transform: 'translateZ(-16px) rotateY(180deg)' }} />
                           </div>
                         </div>
                       </div>
                     ) : (
                       /* 3D Glass Cyan-Emerald double frame block on the left border */
-                      <div
+                      <div 
                         className="absolute -left-5 -bottom-5 w-16 h-16 preserve-3d pointer-events-none z-20 transition-all duration-500 ease-out group-hover:scale-130 group-hover:-translate-x-3 group-hover:-translate-y-5 filter drop-shadow-[0_12px_24px_rgba(59,130,246,0.28)]"
-                        style={{ transform: "translateZ(55px)" }}
+                        style={{ transform: 'translateZ(55px)' }}
                       >
                         <div className="relative w-full h-full preserve-3d anime-float-reverse">
                           <div className="absolute inset-0 preserve-3d animate-[slowSpinLeft_12s_linear_infinite]">
-                            <div
-                              className="absolute inset-0 bg-blue-500/35 border border-white/70 backdrop-blur-3xs rounded-xl"
-                              style={{ transform: "translateZ(14px)" }}
-                            />
-                            <div
-                              className="absolute inset-1 bg-indigo-600/20 border border-white/30 rounded-xl"
-                              style={{
-                                transform: "translateZ(-14px) rotateY(180deg)",
-                              }}
-                            />
-                            <div
-                              className="absolute inset-0 border border-emerald-400/40 rounded-full bg-emerald-400/5"
-                              style={{ transform: "rotateX(45deg)" }}
-                            />
+                            <div className="absolute inset-0 bg-blue-500/35 border border-white/70 backdrop-blur-3xs rounded-xl" style={{ transform: 'translateZ(14px)' }} />
+                            <div className="absolute inset-1 bg-indigo-600/20 border border-white/30 rounded-xl" style={{ transform: 'translateZ(-14px) rotateY(180deg)' }} />
+                            <div className="absolute inset-0 border border-emerald-400/40 rounded-full bg-emerald-400/5" style={{ transform: 'rotateX(45deg)' }} />
                           </div>
                         </div>
                       </div>
                     )}
 
                     {/* Tiny micro particles/spheres floating in front orbits */}
-                    <div
+                    <div 
                       className="absolute top-10 right-8 w-5.5 h-5.5 bg-gradient-to-br from-indigo-400/25 to-purple-400/25 border border-white/35 backdrop-blur-3xs rounded-full pointer-events-none z-20 transition-all duration-700 ease-out group-hover:translate-y-[-12px] group-hover:scale-125"
-                      style={{ transform: "translateZ(25px)" }}
+                      style={{ transform: 'translateZ(25px)' }}
                     />
-                    <div
+                    <div 
                       className="absolute bottom-1/4 left-10 w-4 h-4 bg-gradient-to-tr from-emerald-400/25 to-teal-400/25 border border-white/35 backdrop-blur-3xs rounded-full pointer-events-none z-20 transition-all duration-750 ease-out group-hover:translate-x-[-15px] group-hover:scale-130"
-                      style={{ transform: "translateZ(35px)" }}
+                      style={{ transform: 'translateZ(35px)' }}
                     />
 
                     {/* Floor 3D ambient shadow */}
                     <div className="absolute -bottom-4 inset-x-8 h-4 bg-slate-950/5 rounded-full blur-md -z-10 group-hover:scale-x-[1.03] group-hover:bg-slate-950/8 transition-all duration-500" />
+
                   </div>
                 </div>
 
                 {/* Content Side */}
                 <div className="w-full lg:w-1/2 flex flex-col items-start select-none">
+                  
                   {/* Category badge - coordinate with new color theme */}
                   <span className="text-[10.5px] font-black tracking-widest text-blue-600 bg-blue-50 border border-blue-100/30 px-3.5 py-1.5 rounded-full mb-5 uppercase">
                     {project.category}
                   </span>
 
                   {/* Title */}
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 mb-4 font-display leading-tight">
+                  <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4 font-display leading-tight">
                     {project.title}
                   </h3>
 
                   {/* Main Paragraph */}
-                  <p className="text-slate-500 mb-6 leading-relaxed font-semibold text-sm sm:text-[14.5px]">
+                  <p className="text-slate-500 mb-8 leading-relaxed font-semibold text-sm sm:text-[14.5px]">
                     {project.description}
                   </p>
 
                   {/* Bullets with exquisite matching color theme numbers */}
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-6 w-full">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-9 w-full">
                     {project.bullets.map((bullet, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <span className="flex-shrink-0 flex items-center justify-center p-1 bg-blue-50 text-blue-600 text-[10px] sm:text-xs font-mono font-black w-6 h-6 rounded-md border border-blue-100/40 shadow-3xs">
-                          {String(idx + 1).padStart(2, "0")}
+                          {String(idx + 1).padStart(2, '0')}
                         </span>
                         <span className="text-sm font-semibold text-slate-600 leading-snug">
                           {bullet}
@@ -381,34 +319,38 @@ export default function ProjectList({
 
                   {/* Redesigned Button - Coordinate with high end blue/indigo gradient styling */}
                   <div className="flex flex-wrap items-center gap-4">
-                    {/* Start Project Button */}
-                    <button
-                      onClick={() => onStartProject(project.title)}
-                      className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-black text-sm shadow-md shadow-blue-600/15 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 hover:shadow-lg hover:shadow-indigo-600/20 cursor-pointer"
-                    >
-                      <span>Start Your Project</span>
-                      <ArrowUpRight className="w-4 h-4" />
-                    </button>
+  
+  {/* Start Project Button */}
+  <button
+    onClick={() => onStartProject(project.title)}
+    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-black text-sm shadow-md shadow-blue-600/15 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 hover:shadow-lg hover:shadow-indigo-600/20 cursor-pointer"
+  >
+    <span>Start Your Project</span>
+    <ArrowUpRight className="w-4 h-4" />
+  </button>
 
-                    {/* View Project Details Button */}
-                    <a
-                      href={project.projecturl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white border border-slate-200 text-slate-700 rounded-full font-black text-sm shadow-sm hover:border-blue-500 hover:text-blue-600 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
-                    >
-                      <span>View Project Details</span>
-                      <ArrowUpRight className="w-4 h-4" />
-                    </a>
-                  </div>
+  {/* View Project Details Button */}
+  <a
+    href={project.projecturl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white border border-slate-200 text-slate-700 rounded-full font-black text-sm shadow-sm hover:border-blue-500 hover:text-blue-600 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+  >
+    <span>View Project Details</span>
+    <ArrowUpRight className="w-4 h-4" />
+  </a>
+
+</div>
+
                 </div>
+
               </div>
             );
           })}
         </div>
 
         {/* View All Projects link (aligned with new coordinates) */}
-        <div className="text-center mt-14 lg:mt-16">
+        <div className="text-center mt-24">
           <button
             onClick={onViewAllProjects}
             className="inline-flex items-center gap-2 font-black text-sm sm:text-base text-blue-600 hover:text-indigo-600 font-display group/all cursor-pointer transition-colors"
@@ -417,6 +359,7 @@ export default function ProjectList({
             <ArrowRight className="w-4.5 h-4.5 transition-transform duration-300 group-hover/all:translate-x-1" />
           </button>
         </div>
+
       </div>
     </section>
   );
