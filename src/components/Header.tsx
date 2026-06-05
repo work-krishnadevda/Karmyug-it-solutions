@@ -57,13 +57,13 @@ export default function Header({
               className="group flex items-center gap-3 p-1 rounded-full transition-all duration-300"
               aria-label="karmyug Home"
             >
-              <div className="flex items-center justify-center">
-                <img
-                  src="/logo.png"
-                  alt="karmyug Logo"
-                  className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+        <div className="flex items-center justify-center">
+<img
+  src="/logo.png"
+  alt="karmyug Logo"
+  className="block h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+/>
+</div>
 
               <div className="flex flex-col text-left leading-tight">
                 <span className="font-display font-extrabold tracking-wider text-white text-[13.5px]">
