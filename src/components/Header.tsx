@@ -61,7 +61,7 @@ export default function Header({
 <img
   src="/logo.png"
   alt="karmyug Logo"
-  className="block h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+  className="block h-8 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
 />
 </div>
 

@@ -7,6 +7,7 @@ import PortfolioView from "./components/PortfolioView";
 import ContactView from "./components/ContactView";
 import WhyChoose from "./components/WhyChoose";
 import AboutUs from "./components/AboutUs";
+import OurClient from "./components/ourclient";
 import TeamGrid from "./components/TeamGrid";
 import TestimonialsGrid from "./components/TestimonialsGrid";
 import FAQSection from "./components/FAQSection";
@@ -31,6 +32,7 @@ import {
   Clock,
 } from "lucide-react";
 import HowWeWork from "./components/HowWeWork";
+import OurClients from "./components/ourclient";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
@@ -811,6 +813,9 @@ export default function App() {
 
           {/* About Section */}
           <AboutUs />
+
+            {/* Clients Logos Section */}
+          <OurClients />
 
           {/* Projects section */}
           <ProjectList
