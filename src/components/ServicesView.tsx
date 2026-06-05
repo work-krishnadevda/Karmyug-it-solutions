@@ -531,7 +531,7 @@ export default function ServicesView({ onOpenContact }: ServicesViewProps) {
           </div>
 
           {/* 4 Stats Cards matching user screenshot layout perfectly */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 mt-16 sm:mt-20 w-full relative z-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 mt-16 sm:mt-20 w-full relative z-10">
             
             {/* Stat 1: Clients Served */}
             <div className="bg-white border border-slate-100/85 p-5 rounded-2xl shadow-[0_4px_25px_rgba(15,23,42,0.015)] flex flex-row items-center gap-4 hover:border-blue-200/60 hover:shadow-[0_8px_30px_rgba(15,23,42,0.03)] transition-all duration-300">
@@ -630,7 +630,8 @@ export default function ServicesView({ onOpenContact }: ServicesViewProps) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-7">
+          {/* UPDATED: Changed grid-cols-1 to grid-cols-2 for mobile screens */}
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-7">
             {ALL_SERVICES_DETAILS.map((service) => (
               <div
                 key={service.id}
@@ -686,271 +687,265 @@ export default function ServicesView({ onOpenContact }: ServicesViewProps) {
       </section>
 
       {/* Not Sure Where to Start campaign banner banner (Completely Redesigned with Isometric 3D High Fidelity Layout) */}
-      <section className="py-16 bg-[#F8FAFC]/50 flex justify-center selection:bg-blue-500/20 select-none border-t border-slate-100">
-        <div className="w-full max-w-7xl px-6">
-          
-          <div className="relative rounded-[32px] bg-gradient-to-b from-[#030C1E] to-[#010610] border border-slate-800/80 p-8 md:p-10 lg:p-12 overflow-hidden shadow-2xl shadow-indigo-950/20 flex flex-col lg:flex-row items-center justify-between gap-10">
-            
-            {/* Ambient Backlight radial glow behind the banner text */}
-            <div className="absolute top-[20%] left-[10%] w-[350px] h-[350px] bg-sky-500/[0.04] rounded-full blur-[90px] pointer-events-none" />
-            <div className="absolute bottom-[10%] right-[30%] w-[400px] h-[400px] bg-emerald-500/[0.03]/40 rounded-full blur-[110px] pointer-events-none" />
-            
-            {/* 3D styling for background elements */}
-            <style dangerouslySetInnerHTML={{ __html: `
-              @keyframes innerNotSureFloat {
-                0%, 100% { transform: translateY(0px) rotate(0deg); }
-                50% { transform: translateY(-7px) rotate(1.5deg); }
-              }
-              .anime-not-sure-avatar {
-                animation: innerNotSureFloat 5s ease-in-out infinite;
-              }
-              .preserve-3d-ns {
-                transform-style: preserve-3d;
-              }
-            `}} />
+    <section className="py-16 bg-[#F8FAFC]/50 flex justify-center selection:bg-blue-500/20 select-none border-t border-slate-100">
+  <div className="w-full max-w-7xl px-6">
+    <div className="relative rounded-[32px] bg-gradient-to-b from-[#030C1E] to-[#010610] border border-slate-800/80 p-8 md:p-10 lg:p-12 overflow-hidden shadow-2xl shadow-indigo-950/20 flex flex-col lg:flex-row items-center justify-between gap-10">
+      
+      {/* Ambient Backlight radial glow behind the banner text */}
+      <div className="absolute top-[20%] left-[10%] w-[350px] h-[350px] bg-sky-500/[0.04] rounded-full blur-[90px] pointer-events-none" />
+      <div className="absolute bottom-[10%] right-[30%] w-[400px] h-[400px] bg-emerald-500/[0.03]/40 rounded-full blur-[110px] pointer-events-none" />
+      
+      {/* 3D styling for background elements */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes innerNotSureFloat {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-7px) rotate(1.5deg); }
+        }
+        .anime-not-sure-avatar {
+          animation: innerNotSureFloat 5s ease-in-out infinite;
+        }
+        .preserve-3d-ns {
+          transform-style: preserve-3d;
+        }
+      `}} />
 
-            {/* =========================================================
-                COLUMN 1: LITERAL CONTENT DETAILS
-               ========================================================= */}
-            <div className="w-full lg:w-[32%] flex flex-col items-start text-left relative z-10 select-none">
+      {/* =========================================================
+          COLUMN 1: LITERAL CONTENT DETAILS
+         ========================================================= */}
+      <div className="w-full lg:w-[32%] flex flex-col items-start text-left relative z-10 select-none">
+        <span className="text-[11px] font-black tracking-widest text-[#38BDF8] uppercase mb-3.5">
+          NEED GUIDANCE?
+        </span>
+
+        <h3 className="text-3xl sm:text-[35px] font-black text-white leading-[1.12] tracking-tight font-display">
+          Not Sure <br className="hidden sm:inline" />Where to Start?
+        </h3>
+
+        <p className="mt-3.5 text-xs sm:text-[13.5px] text-slate-400 font-semibold leading-relaxed max-w-[340px]">
+          Book a free consultation and we'll recommend the right mix of services for your stage and budget.
+        </p>
+
+        <button
+          onClick={onOpenContact}
+          className="mt-7 inline-flex items-center gap-2 px-6.5 py-3.5 bg-gradient-to-r from-[#FBBF24] to-[#FACC15] hover:from-[#FCD34D] hover:to-[#FBBF24] text-slate-950 rounded-full font-black text-xs sm:text-[13px] shadow-lg shadow-amber-500/10 hover:shadow-amber-500/25 transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
+        >
+          <span>Get Free Consultation</span>
+          <span className="font-extrabold sm:text-sm ml-1">→</span>
+        </button>
+      </div>
+
+      {/* =========================================================
+          COLUMN 2: 3 ORBS CAROUSEL LIST (Expert Advice, No Obligation, Best Roadmap)
+         ========================================================= */}
+      <div className="w-full lg:w-[38%] grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 justify-items-center relative z-10 py-6 lg:py-0 border-y lg:border-y-0 border-slate-800/40">
+        
+        {/* Orb 1: Expert Advice */}
+        <div className="flex flex-col items-center text-center w-full">
+          <div className="relative w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-sky-500/10 border border-sky-500/20 flex items-center justify-center shadow-[0_0_15px_rgba(56,189,248,0.12)] hover:scale-105 transition-transform duration-300">
+            <div className="absolute inset-1 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.35)_0%,rgba(56,189,248,0.01)_70%)] rounded-full pointer-events-none" />
+            <Shield className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5 text-sky-400" strokeWidth={2.5} />
+          </div>
+          <h4 className="text-[11px] sm:text-[13px] font-black text-white mt-2.5 sm:mt-3 mb-1 font-display tracking-tight leading-tight">Expert Advice</h4>
+          <p className="text-[8.5px] sm:text-[10px] text-slate-400/90 leading-snug font-semibold max-w-[130px] px-1 sm:px-0">Get tailored guidance from our experts</p>
+        </div>
+
+        {/* Orb 2: No Obligation */}
+        <div className="flex flex-col items-center text-center w-full">
+          <div className="relative w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.12)] hover:scale-105 transition-transform duration-300">
+            <div className="absolute inset-1 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.35)_0%,rgba(16,185,129,0.01)_70%)] rounded-full pointer-events-none" />
+            <ClipboardSignature className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5 text-emerald-400" strokeWidth={2.5} />
+          </div>
+          <h4 className="text-[11px] sm:text-[13px] font-black text-white mt-2.5 sm:mt-3 mb-1 font-display tracking-tight leading-tight">No Obligation</h4>
+          <p className="text-[8.5px] sm:text-[10px] text-slate-400/90 leading-snug font-semibold max-w-[130px] px-1 sm:px-0">100% free consultation with no commitment</p>
+        </div>
+
+        {/* Orb 3: Best Roadmap */}
+        <div className="flex flex-col items-center text-center w-full">
+          <div className="relative w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shadow-[0_0_15px_rgba(245,158,11,0.12)] hover:scale-105 transition-transform duration-300">
+            <div className="absolute inset-1 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.35)_0%,rgba(245,158,11,0.01)_70%)] rounded-full pointer-events-none" />
+            <TrendingUp className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5 text-amber-400" strokeWidth={2.5} />
+          </div>
+          <h4 className="text-[11px] sm:text-[13px] font-black text-white mt-2.5 sm:mt-3 mb-1 font-display tracking-tight leading-tight">Best Roadmap</h4>
+          <p className="text-[8.5px] sm:text-[10px] text-slate-400/90 leading-snug font-semibold max-w-[130px] px-1 sm:px-0">Clear roadmap for your business growth</p>
+        </div>
+
+      </div>
+
+      {/* =========================================================
+          COLUMN 3: MAJESTIC PREMIUM ISOMETRIC 3D SCENE
+         ========================================================= */}
+      <div className="w-full lg:w-[28%] flex items-center justify-center py-4 lg:py-0 relative z-10 shrink-0 select-none overflow-visible">
+        <div className="relative w-72 h-60 preserve-3d-ns anime-not-sure-avatar" style={{ perspective: '1100px' }}>
+          <div className="relative w-full h-full preserve-3d-ns" style={{ transform: 'rotateX(25deg) rotateY(-22deg) rotateZ(-2deg)' }}>
+            
+            {/* Bottom shadow of 3D floor onto dark space */}
+            <div className="absolute top-[120px] left-6 w-56 h-36 bg-slate-950/40 rounded-full blur-[8px] -z-10" />
+
+            {/* ==========================================
+                1. THE FUTURISTIC WORKSTATION (DESK)
+               ========================================== */}
+            {/* Table Top Surface */}
+            <div 
+              className="absolute top-[105px] left-14 w-44 h-24 bg-gradient-to-tr from-[#EDEDED] to-[#FBFBFB] rounded-xl border-t border-r border-white/80 shadow-[inset_0_1.5px_rgba(255,255,255,0.8),0_12px_24px_rgba(0,0,0,0.3)] flex items-center justify-center preserve-3d-ns"
+              style={{ transform: 'translateZ(15px)' }}
+            >
+              {/* Tiny visual paper sheet on table */}
+              <div className="absolute top-3 right-4 w-12 h-14 bg-white/50 border border-slate-200 rounded-sm shadow-2xs rotate-6" />
+            </div>
+
+            {/* Silver Support Legs (Extruded Cylindrical Blocks) */}
+            <div className="absolute top-[125px] left-[70px] w-1.5 h-20 bg-slate-300 rounded-sm border-r border-[#94A3B8]" style={{ transform: 'rotateX(90deg) translateZ(10px)' }} />
+            <div className="absolute top-[125px] left-[215px] w-1.5 h-20 bg-slate-300 rounded-sm border-r border-[#94A3B8]" style={{ transform: 'rotateX(90deg) translateZ(10px)' }} />
+            <div className="absolute top-[200px] left-[75px] w-1.5 h-20 bg-slate-400 rounded-sm border-r border-[#64748B]" style={{ transform: 'rotateX(90deg) translateZ(10px)' }} />
+            <div className="absolute top-[200px] left-[220px] w-1.5 h-20 bg-slate-400 rounded-sm border-r border-[#64748B]" style={{ transform: 'rotateX(90deg) translateZ(10px)' }} />
+
+            {/* ==========================================
+                2. DIGITAL BLUE REVOLVING CHAIR & SIT DEVELOPER
+               ========================================== */}
+            {/* Rounded blue ergonomic task chair */}
+            <div 
+              className="absolute top-[155px] left-28 w-16 h-16 bg-gradient-to-tr from-[#1E40AF] to-[#2563EB] rounded-full border border-sky-300/35 shadow-lg flex items-center justify-center preserve-3d-ns"
+              style={{ transform: 'translateZ(24px)' }}
+            >
+              {/* Chair Armrest layers */}
+              <div className="absolute -left-1 w-2.5 h-10 bg-[#1D4ED8] rounded-full border-r border-white/15" />
+              <div className="absolute -right-1 w-2.5 h-10 bg-[#1D4ED8] rounded-full border-l border-white/15" />
+
+              {/* Sitting Developer Head & body accent */}
+              <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#10B981] to-[#34D399] border-t border-emerald-300/40 flex items-center justify-center text-white/90 text-[10px] font-black font-sans uppercase shadow-[inset_0_1.5px_rgba(255,255,255,0.3)]">
+                DEV
+              </div>
+            </div>
+
+            {/* Base support shaft for the chair */}
+            <div className="absolute top-[210px] left-[142px] w-2 h-10 bg-slate-500 rounded-sm" style={{ transform: 'rotateX(90deg) translateZ(10px)' }} />
+
+
+            {/* ==========================================
+                3. CODER TABLE ACCESSORY (THE LAPTOP WITH SCREEN)
+               ========================================== */}
+            {/* Keyboard bottom base plate on table */}
+            <div 
+              className="absolute top-[125px] left-[125px] w-13 h-9 bg-[#1E293B] rounded-[3px] border border-slate-700 shadow-sm flex items-center justify-center"
+              style={{ transform: 'translateZ(16.5px)' }}
+            >
+              {/* Keyboard layout details with fine code grids */}
+              <div className="w-[44px] h-[28px] bg-[#020617] rounded-[1.5px] grid grid-cols-5 gap-[1px] p-[1.5px] border border-slate-800">
+                <div className="bg-[#475569]/50 rounded-[0.5px] col-span-2"></div>
+                <div className="bg-[#475569]/30 rounded-[0.5px]"></div>
+                <div className="bg-[#475569]/40 rounded-[0.5px] col-span-2"></div>
+                <div className="bg-[#10B981]/80 rounded-[0.5px] animate-pulse"></div>
+                <div className="bg-[#475569]/60 rounded-[0.5px]"></div>
+                <div className="bg-[#475569]/30 rounded-[0.5px] col-span-3"></div>
+              </div>
+            </div>
+
+            {/* Upright opening screen with glowing code editor layout */}
+            <div 
+              className="absolute top-[110px] left-[125px] w-13 h-9 bg-slate-900 border border-sky-400/45 rounded-[3px] p-[1.5px] shadow-[0_0_15px_rgba(56,189,248,0.25)] flex flex-col justify-between"
+              style={{ transform: 'translate3d(0px, -2px, 24px) rotateX(-50deg)' }}
+            >
+              {/* Glowing blue mini rows */}
+              <div className="w-full h-1.5 bg-[#0284C7] rounded-[1px] mb-[1.5px] flex items-center px-1"><span className="w-2 h-[1px] bg-white rounded-full"></span></div>
+              <div className="flex-1 flex flex-col gap-[1.5px] p-[1px]">
+                <div className="w-[85%] h-[2px] bg-slate-700 rounded-full"></div>
+                <div className="w-[50%] h-[2px] bg-[#10B981] rounded-full animate-pulse"></div>
+                <div className="w-[70%] h-[2px] bg-sky-400 rounded-full"></div>
+                <div className="w-[40%] h-[2px] bg-[#F59E0B] rounded-full"></div>
+              </div>
+            </div>
+
+
+            {/* ==========================================
+                4. ORANGE MULTI-LAYER SERVER BOX (ON FLOOR OR CORNER)
+               ========================================== */}
+            {/* Isometric orange box at left margin of design */}
+            <div className="absolute top-[165px] left-[4px] preserve-3d-ns">
+              {/* Depth Sides */}
+              <div className="absolute w-12 h-14 bg-[#C2410C] rounded-lg" style={{ transform: 'translateZ(-10px)' }} />
+              <div className="absolute w-12 h-14 bg-[#EA580C] rounded-lg" style={{ transform: 'translateZ(-5px)' }} />
               
-              <span className="text-[11px] font-black tracking-widest text-[#38BDF8] uppercase mb-3.5">
-                NEED GUIDANCE?
-              </span>
-
-              <h3 className="text-3xl sm:text-[35px] font-black text-white leading-[1.12] tracking-tight font-display">
-                Not Sure <br className="hidden sm:inline" />Where to Start?
-              </h3>
-
-              <p className="mt-3.5 text-xs sm:text-[13.5px] text-slate-400 font-semibold leading-relaxed max-w-[340px]">
-                Book a free consultation and we'll recommend the right mix of services for your stage and budget.
-              </p>
-
-              <button
-                onClick={onOpenContact}
-                className="mt-7 inline-flex items-center gap-2 px-6.5 py-3.5 bg-gradient-to-r from-[#FBBF24] to-[#FACC15] hover:from-[#FCD34D] hover:to-[#FBBF24] text-slate-950 rounded-full font-black text-xs sm:text-[13px] shadow-lg shadow-amber-500/10 hover:shadow-amber-500/25 transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
+              {/* Upper face plate */}
+              <div 
+                className="absolute w-12 h-14 bg-gradient-to-tr from-[#EA580C] to-[#F97316] rounded-lg border border-orange-300/35 shadow-inner flex flex-col items-center justify-center p-1.5"
+                style={{ transform: 'translateZ(0px)' }}
               >
-                <span>Get Free Consultation</span>
-                <span className="font-extrabold sm:text-sm ml-1">→</span>
-              </button>
+                {/* Technical lines & system port lights */}
+                <div className="w-full flex justify-between px-1 mb-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1E3A8A]" />
+                </div>
+                <div className="w-full h-1 bg-black/35 rounded-sm mb-1" />
+                <div className="w-full h-1 bg-black/35 rounded-sm" />
+              </div>
             </div>
 
-            {/* =========================================================
-                COLUMN 2: 3 ORBS CAROUSEL LIST (Expert Advice, No Obligation, Best Roadmap)
-               ========================================================= */}
-            <div className="w-full lg:w-[38%] flex flex-col sm:flex-row gap-6 sm:gap-4 md:gap-6 justify-center items-center relative z-10 py-4 lg:py-0 border-y lg:border-y-0 border-slate-800/40">
+
+            {/* ==========================================
+                5. FUTURISTIC FLOATING HOLOGRAPHIC COCKPIT SCREEN
+               ========================================== */}
+            <div 
+              className="absolute top-1 right-[2px] w-[148px] h-[92px] bg-[#030C21]/80 backdrop-blur-md rounded-xl border border-sky-500/30 p-2 shadow-[0_0_25px_rgba(56,189,248,0.25)] flex flex-col preserve-3d-ns hover:scale-105 transition-all duration-300"
+              style={{ transform: 'translate3d(0px, 0px, 48px) rotateY(-10deg) rotateX(5deg)' }}
+            >
+              {/* Header bar */}
+              <div className="flex items-center justify-between mb-1.5 pb-1 border-b border-slate-800/60">
+                <span className="text-[7.5px] font-black text-sky-450 uppercase tracking-tighter">ANALYTICS GRID</span>
+                <div className="flex gap-[1.5px]">
+                  <span className="w-[3px] h-[3px] rounded-full bg-rose-500" />
+                  <span className="w-[3px] h-[3px] rounded-full bg-yellow-500" />
+                  <span className="w-[3px] h-[3px] rounded-full bg-emerald-500" />
+                </div>
+              </div>
+
+              {/* Chart mock inside */}
+              <div className="flex-1 flex gap-1 items-end p-[1.5px] bg-[#020617]/50 rounded border border-slate-900 leading-none">
+                {/* Bar charts growing with pulses */}
+                <div className="w-2.5 bg-sky-500/20 hover:bg-sky-500 rounded-[1px] transition-all" style={{ height: '35%' }}></div>
+                <div className="w-2.5 bg-emerald-500/40 hover:bg-emerald-500 rounded-[1px] transition-all" style={{ height: '75%' }}></div>
+                <div className="w-2.5 bg-blue-500/60 hover:bg-blue-500 rounded-[1px] transition-all" style={{ height: '55%' }}></div>
+                <div className="w-2.5 bg-[#FFA000]/50 hover:bg-amber-500 rounded-[1px] transition-all" style={{ height: '40%' }}></div>
+                <div className="w-2.5 bg-rose-500/40 hover:bg-rose-500 rounded-[1px] transition-all" style={{ height: '90%' }}></div>
+                
+                {/* Floating percentage label indicator in center */}
+                <span className="absolute right-1.5 bottom-1 text-[8.5px] font-mono font-black text-[#10B981] animate-pulse">98.4%</span>
+              </div>
+            </div>
+
+
+            {/* ==========================================
+                6. THE STANDING ADVISOR FIGURINE IN SUIT
+               ========================================== */}
+            {/* Multi-layered character figurine gesturing towards the hologram */}
+            <div 
+              className="absolute top-[45px] left-[15px] preserve-3d-ns"
+              style={{ transform: 'translateZ(30px) rotateY(15deg)' }}
+            >
+              {/* Head */}
+              <div className="w-6.5 h-6.5 rounded-full bg-[#E2E8F0] border-t border-white/60 shadow-md mb-0.5" />
               
-              {/* Orb 1: Expert Advice */}
-              <div className="flex-1 flex flex-col items-center text-center w-[130px] sm:w-auto">
-                <div className="relative w-14 h-14 rounded-full bg-sky-500/10 border border-sky-500/20 flex items-center justify-center shadow-[0_0_15px_rgba(56,189,248,0.12)] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-1 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.35)_0%,rgba(56,189,248,0.01)_70%)] rounded-full pointer-events-none" />
-                  <Shield className="w-5.5 h-5.5 text-sky-400" strokeWidth={2.5} />
-                </div>
-                <h4 className="text-[13px] font-black text-white mt-3 mb-1 font-display tracking-tight">Expert Advice</h4>
-                <p className="text-[10px] text-slate-400/90 leading-relaxed font-semibold max-w-[130px]">Get tailored guidance from our experts</p>
+              {/* Torso/Jumpsuit Blue body */}
+              <div className="w-7 h-11 bg-gradient-to-tr from-[#1D4ED8] to-[#3B82F6] rounded-lg border-t border-sky-400/40 shadow-md relative flex items-center justify-center">
+                {/* Golden tie */}
+                <div className="absolute top-1 w-1 h-4 bg-amber-400 rounded-sm" />
+                
+                {/* Gesturing Arm outreach towards the screen */}
+                <div className="absolute top-[3px] -right-2.5 w-4 h-2 bg-[#2563EB] rounded-full border border-sky-400/40 rotate-[35deg]" />
               </div>
 
-              {/* Orb 2: No Obligation */}
-              <div className="flex-1 flex flex-col items-center text-center w-[130px] sm:w-auto mt-2 sm:mt-0">
-                <div className="relative w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.12)] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-1 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.35)_0%,rgba(16,185,129,0.01)_70%)] rounded-full pointer-events-none" />
-                  <ClipboardSignature className="w-5.5 h-5.5 text-emerald-400" strokeWidth={2.5} />
-                </div>
-                <h4 className="text-[13px] font-black text-white mt-3 mb-1 font-display tracking-tight">No Obligation</h4>
-                <p className="text-[10px] text-slate-400/90 leading-relaxed font-semibold max-w-[130px]">100% free consultation with no commitment</p>
+              {/* Left/Right Legs */}
+              <div className="flex gap-1 justify-center mt-0.5">
+                <div className="w-2.5 h-7 bg-[#1E3A8A] rounded-b-sm border-r border-[#1e40af]" />
+                <div className="w-2.5 h-7 bg-[#1E3A8A] rounded-b-sm" />
               </div>
-
-              {/* Orb 3: Best Roadmap */}
-              <div className="flex-1 flex flex-col items-center text-center w-[130px] sm:w-auto mt-2 sm:mt-0">
-                <div className="relative w-14 h-14 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shadow-[0_0_15px_rgba(245,158,11,0.12)] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-1 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.35)_0%,rgba(245,158,11,0.01)_70%)] rounded-full pointer-events-none" />
-                  <TrendingUp className="w-5.5 h-5.5 text-amber-400" strokeWidth={2.5} />
-                </div>
-                <h4 className="text-[13px] font-black text-white mt-3 mb-1 font-display tracking-tight">Best Roadmap</h4>
-                <p className="text-[10px] text-slate-400/90 leading-relaxed font-semibold max-w-[130px]">Clear roadmap for your business growth</p>
-              </div>
-
             </div>
-
-            {/* =========================================================
-                COLUMN 3: MAJESTIC PREMIUM ISOMETRIC 3D SCENE
-               ========================================================= */}
-            <div className="w-full lg:w-[28%] flex items-center justify-center py-4 lg:py-0 relative z-10 shrink-0 select-none overflow-visible">
-              
-              <div className="relative w-72 h-60 preserve-3d-ns anime-not-sure-avatar" style={{ perspective: '1100px' }}>
-                <div className="relative w-full h-full preserve-3d-ns" style={{ transform: 'rotateX(25deg) rotateY(-22deg) rotateZ(-2deg)' }}>
-                  
-                  {/* Bottom shadow of 3D floor onto dark space */}
-                  <div className="absolute top-[120px] left-6 w-56 h-36 bg-slate-950/40 rounded-full blur-[8px] -z-10" />
-
-                  {/* ==========================================
-                      1. THE FUTURISTIC WORKSTATION (DESK)
-                     ========================================== */}
-                  {/* Table Top Surface */}
-                  <div 
-                    className="absolute top-[105px] left-14 w-44 h-24 bg-gradient-to-tr from-[#EDEDED] to-[#FBFBFB] rounded-xl border-t border-r border-white/80 shadow-[inset_0_1.5px_rgba(255,255,255,0.8),0_12px_24px_rgba(0,0,0,0.3)] flex items-center justify-center preserve-3d-ns"
-                    style={{ transform: 'translateZ(15px)' }}
-                  >
-                    {/* Tiny visual paper sheet on table */}
-                    <div className="absolute top-3 right-4 w-12 h-14 bg-white/50 border border-slate-200 rounded-sm shadow-2xs rotate-6" />
-                  </div>
-
-                  {/* Silver Support Legs (Extruded Cylindrical Blocks) */}
-                  <div className="absolute top-[125px] left-[70px] w-1.5 h-20 bg-slate-300 rounded-sm border-r border-[#94A3B8]" style={{ transform: 'rotateX(90deg) translateZ(10px)' }} />
-                  <div className="absolute top-[125px] left-[215px] w-1.5 h-20 bg-slate-300 rounded-sm border-r border-[#94A3B8]" style={{ transform: 'rotateX(90deg) translateZ(10px)' }} />
-                  <div className="absolute top-[200px] left-[75px] w-1.5 h-20 bg-slate-400 rounded-sm border-r border-[#64748B]" style={{ transform: 'rotateX(90deg) translateZ(10px)' }} />
-                  <div className="absolute top-[200px] left-[220px] w-1.5 h-20 bg-slate-400 rounded-sm border-r border-[#64748B]" style={{ transform: 'rotateX(90deg) translateZ(10px)' }} />
-
-                  {/* ==========================================
-                      2. DIGITAL BLUE REVOLVING CHAIR & SIT DEVELOPER
-                     ========================================== */}
-                  {/* Rounded blue ergonomic task chair */}
-                  <div 
-                    className="absolute top-[155px] left-28 w-16 h-16 bg-gradient-to-tr from-[#1E40AF] to-[#2563EB] rounded-full border border-sky-300/35 shadow-lg flex items-center justify-center preserve-3d-ns"
-                    style={{ transform: 'translateZ(24px)' }}
-                  >
-                    {/* Chair Armrest layers */}
-                    <div className="absolute -left-1 w-2.5 h-10 bg-[#1D4ED8] rounded-full border-r border-white/15" />
-                    <div className="absolute -right-1 w-2.5 h-10 bg-[#1D4ED8] rounded-full border-l border-white/15" />
-
-                    {/* Sitting Developer Head & body accent */}
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#10B981] to-[#34D399] border-t border-emerald-300/40 flex items-center justify-center text-white/90 text-[10px] font-black font-sans uppercase shadow-[inset_0_1.5px_rgba(255,255,255,0.3)]">
-                      DEV
-                    </div>
-                  </div>
-
-                  {/* Base support shaft for the chair */}
-                  <div className="absolute top-[210px] left-[142px] w-2 h-10 bg-slate-500 rounded-sm" style={{ transform: 'rotateX(90deg) translateZ(10px)' }} />
-
-
-                  {/* ==========================================
-                      3. CODER TABLE ACCESSORY (THE LAPTOP WITH SCREEN)
-                     ========================================== */}
-                  {/* Keyboard bottom base plate on table */}
-                  <div 
-                    className="absolute top-[125px] left-[125px] w-13 h-9 bg-[#1E293B] rounded-[3px] border border-slate-700 shadow-sm flex items-center justify-center"
-                    style={{ transform: 'translateZ(16.5px)' }}
-                  >
-                    {/* Keyboard layout details with fine code grids */}
-                    <div className="w-[44px] h-[28px] bg-[#020617] rounded-[1.5px] grid grid-cols-5 gap-[1px] p-[1.5px] border border-slate-800">
-                      <div className="bg-[#475569]/50 rounded-[0.5px] col-span-2"></div>
-                      <div className="bg-[#475569]/30 rounded-[0.5px]"></div>
-                      <div className="bg-[#475569]/40 rounded-[0.5px] col-span-2"></div>
-                      <div className="bg-[#10B981]/80 rounded-[0.5px] animate-pulse"></div>
-                      <div className="bg-[#475569]/60 rounded-[0.5px]"></div>
-                      <div className="bg-[#475569]/30 rounded-[0.5px] col-span-3"></div>
-                    </div>
-                  </div>
-
-                  {/* Upright opening screen with glowing code editor layout */}
-                  <div 
-                    className="absolute top-[110px] left-[125px] w-13 h-9 bg-slate-900 border border-sky-400/45 rounded-[3px] p-[1.5px] shadow-[0_0_15px_rgba(56,189,248,0.25)] flex flex-col justify-between"
-                    style={{ transform: 'translate3d(0px, -2px, 24px) rotateX(-50deg)' }}
-                  >
-                    {/* Glowing blue mini rows */}
-                    <div className="w-full h-1.5 bg-[#0284C7] rounded-[1px] mb-[1.5px] flex items-center px-1"><span className="w-2 h-[1px] bg-white rounded-full"></span></div>
-                    <div className="flex-1 flex flex-col gap-[1.5px] p-[1px]">
-                      <div className="w-[85%] h-[2px] bg-slate-700 rounded-full"></div>
-                      <div className="w-[50%] h-[2px] bg-[#10B981] rounded-full animate-pulse"></div>
-                      <div className="w-[70%] h-[2px] bg-sky-400 rounded-full"></div>
-                      <div className="w-[40%] h-[2px] bg-[#F59E0B] rounded-full"></div>
-                    </div>
-                  </div>
-
-
-                  {/* ==========================================
-                      4. ORANGE MULTI-LAYER SERVER BOX (ON FLOOR OR CORNER)
-                     ========================================== */}
-                  {/* Isometric orange box at left margin of design */}
-                  <div className="absolute top-[165px] left-[4px] preserve-3d-ns">
-                    {/* Depth Sides */}
-                    <div className="absolute w-12 h-14 bg-[#C2410C] rounded-lg" style={{ transform: 'translateZ(-10px)' }} />
-                    <div className="absolute w-12 h-14 bg-[#EA580C] rounded-lg" style={{ transform: 'translateZ(-5px)' }} />
-                    
-                    {/* Upper face plate */}
-                    <div 
-                      className="absolute w-12 h-14 bg-gradient-to-tr from-[#EA580C] to-[#F97316] rounded-lg border border-orange-300/35 shadow-inner flex flex-col items-center justify-center p-1.5"
-                      style={{ transform: 'translateZ(0px)' }}
-                    >
-                      {/* Technical lines & system port lights */}
-                      <div className="w-full flex justify-between px-1 mb-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#1E3A8A]" />
-                      </div>
-                      <div className="w-full h-1 bg-black/35 rounded-sm mb-1" />
-                      <div className="w-full h-1 bg-black/35 rounded-sm" />
-                    </div>
-                  </div>
-
-
-                  {/* ==========================================
-                      5. FUTURISTIC FLOATING HOLOGRAPHIC COCKPIT SCREEN
-                     ========================================== */}
-                  <div 
-                    className="absolute top-1 right-[2px] w-[148px] h-[92px] bg-[#030C21]/80 backdrop-blur-md rounded-xl border border-sky-500/30 p-2 shadow-[0_0_25px_rgba(56,189,248,0.25)] flex flex-col preserve-3d-ns hover:scale-105 transition-all duration-300"
-                    style={{ transform: 'translate3d(0px, 0px, 48px) rotateY(-10deg) rotateX(5deg)' }}
-                  >
-                    {/* Header bar */}
-                    <div className="flex items-center justify-between mb-1.5 pb-1 border-b border-slate-800/60">
-                      <span className="text-[7.5px] font-black text-sky-450 uppercase tracking-tighter">ANALYTICS GRID</span>
-                      <div className="flex gap-[1.5px]">
-                        <span className="w-[3px] h-[3px] rounded-full bg-rose-500" />
-                        <span className="w-[3px] h-[3px] rounded-full bg-yellow-500" />
-                        <span className="w-[3px] h-[3px] rounded-full bg-emerald-500" />
-                      </div>
-                    </div>
-
-                    {/* Chart mock inside */}
-                    <div className="flex-1 flex gap-1 items-end p-[1.5px] bg-[#020617]/50 rounded border border-slate-900 leading-none">
-                      {/* Bar charts growing with pulses */}
-                      <div className="w-2.5 bg-sky-500/20 hover:bg-sky-500 rounded-[1px] transition-all" style={{ height: '35%' }}></div>
-                      <div className="w-2.5 bg-emerald-500/40 hover:bg-emerald-500 rounded-[1px] transition-all" style={{ height: '75%' }}></div>
-                      <div className="w-2.5 bg-blue-500/60 hover:bg-blue-500 rounded-[1px] transition-all" style={{ height: '55%' }}></div>
-                      <div className="w-2.5 bg-[#FFA000]/50 hover:bg-amber-500 rounded-[1px] transition-all" style={{ height: '40%' }}></div>
-                      <div className="w-2.5 bg-rose-500/40 hover:bg-rose-500 rounded-[1px] transition-all" style={{ height: '90%' }}></div>
-                      
-                      {/* Floating percentage label indicator in center */}
-                      <span className="absolute right-1.5 bottom-1 text-[8.5px] font-mono font-black text-[#10B981] animate-pulse">98.4%</span>
-                    </div>
-                  </div>
-
-
-                  {/* ==========================================
-                      6. THE STANDING ADVISOR FIGURINE IN SUIT
-                     ========================================== */}
-                  {/* Multi-layered character figurine gesturing towards the hologram */}
-                  <div 
-                    className="absolute top-[45px] left-[15px] preserve-3d-ns"
-                    style={{ transform: 'translateZ(30px) rotateY(15deg)' }}
-                  >
-                    {/* Head */}
-                    <div className="w-6.5 h-6.5 rounded-full bg-[#E2E8F0] border-t border-white/60 shadow-md mb-0.5" />
-                    
-                    {/* Torso/Jumpsuit Blue body */}
-                    <div className="w-7 h-11 bg-gradient-to-tr from-[#1D4ED8] to-[#3B82F6] rounded-lg border-t border-sky-400/40 shadow-md relative flex items-center justify-center">
-                      {/* Golden tie */}
-                      <div className="absolute top-1 w-1 h-4 bg-amber-400 rounded-sm" />
-                      
-                      {/* Gesturing Arm outreach towards the screen */}
-                      <div className="absolute top-[3px] -right-2.5 w-4 h-2 bg-[#2563EB] rounded-full border border-sky-400/40 rotate-[35deg]" />
-                    </div>
-
-                    {/* Left/Right Legs */}
-                    <div className="flex gap-1 justify-center mt-0.5">
-                      <div className="w-2.5 h-7 bg-[#1E3A8A] rounded-b-sm border-r border-[#1e40af]" />
-                      <div className="w-2.5 h-7 bg-[#1E3A8A] rounded-b-sm" />
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-
 
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Services FAQ Section */}
       <section className="py-24 bg-gradient-to-b from-white to-[#F8FAFC] scroll-mt-24 select-none relative overflow-hidden border-t border-slate-100">
