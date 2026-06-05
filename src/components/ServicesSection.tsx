@@ -234,78 +234,66 @@ export default function ServicesSection({ onStartProject, onViewAllServices }: S
         </div>
 
         {/* 8-Card Grid (4 columns on Desktop) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
-          {SERVICES_DATA.filter((s) => [
-            'digital-marketing',
-            'business-growth',
-            'crm-development',
-            'hrms-development',
-            'ai-automation',
-            'web-app-development',
-            'cloud-devops',
-            'cybersecurity'
-          ].includes(s.id)).map((service) => {
-            const description = SERVICES_DESCRIPTIONS[service.id] || service.description;
-            const bullets = SERVICES_BULLETS[service.id] || [];
+       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-7">
+  {SERVICES_DATA.filter((s) => [
+    'digital-marketing',
+    'business-growth',
+    'crm-development',
+    'hrms-development',
+    'ai-automation',
+    'web-app-development',
+    'cloud-devops',
+    'cybersecurity'
+  ].includes(s.id)).map((service) => {
+    const description = SERVICES_DESCRIPTIONS[service.id] || service.description;
+    const bullets = SERVICES_BULLETS[service.id] || [];
 
-            return (
-              <div
-                key={service.id}
-                className="bg-white border border-slate-200 rounded-[24px] p-7 flex flex-col justify-between group h-full cursor-pointer relative transition-all duration-300 ease-out hover:border-blue-400 hover:shadow-[0_22px_45px_rgba(59,130,246,0.08)] hover:-translate-y-2.5 active:scale-[0.99]"
-              >
-                {/* Micro reflection top highlight boundary inside cards on hover */}
-                <div className="absolute inset-0 rounded-[24px] pointer-events-none border border-transparent group-hover:border-blue-500/10 transition-colors duration-300" />
-                
-                {/* Card subtle background tint pulse on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-indigo-50/0 group-hover:from-blue-500/[0.005] group-hover:to-indigo-500/[0.015] rounded-[24px] transition-all duration-300 pointer-events-none" />
+    return (
+      <div
+        key={service.id}
+        // Responsive padding: p-4 for mobile, p-7 for desktop (md and up)
+        className="bg-white border border-slate-200 rounded-[20px] p-4 md:p-7 flex flex-col justify-between group h-full transition-all duration-300"
+      >
+        <div>
+          {/* Icon - Hidden or smaller on mobile to save space */}
+          <div className="mb-3 scale-75 origin-left md:scale-100">
+            <GlossyIcon type={service.id} />
+          </div>
 
-                <div>
-                  {/* Glossy 3D Icon Container */}
-                  <div className="mb-6 inline-block">
-                    <GlossyIcon type={service.id} />
-                  </div>
+          <h3 className="text-[14px] md:text-[17px] font-black text-slate-900 mb-2 leading-tight">
+            {service.title}
+          </h3>
 
-                  {/* Title */}
-                  <h3 className="text-[16px] sm:text-[17px] font-black text-slate-900 mb-2.5 tracking-tight font-display transition-colors duration-200 group-hover:text-blue-600">
-                    {service.title}
-                  </h3>
+          <p className="text-[10px] md:text-[13px] text-slate-500 leading-relaxed mb-4 line-clamp-3">
+            {description}
+          </p>
 
-                  {/* Description */}
-                  <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed mb-6 font-medium">
-                    {description}
-                  </p>
-
-                  {/* Bullet Lists */}
-                  {bullets.length > 0 && (
-                    <ul className="space-y-2 mb-6">
-                      {bullets.map((bullet, idx) => (
-                        <li 
-                          key={idx} 
-                          className="flex items-center gap-2.5 text-slate-600 font-semibold text-[11.5px] sm:text-[12px] leading-none group/bul cursor-default"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] group-hover:bg-blue-500 transition-colors duration-300 shrink-0" />
-                          <span className="group-hover/bul:text-slate-900 transition-colors duration-150">{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-
-                {/* Explore Service Action Trigger */}
-                <div className="pt-4 border-t border-slate-100 mt-auto">
-                  <button
-                    onClick={() => onStartProject(service.title)}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#3B82F6] group-hover:text-[#1D4ED8] group/btn cursor-pointer transition-colors duration-150"
-                  >
-                    <span>Explore Service</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1.5" />
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+          {/* Only show bullets if there is space, or remove on mobile */}
+          {bullets.length > 0 && (
+            <ul className="hidden md:block space-y-1.5 mb-4">
+              {bullets.map((bullet, idx) => (
+                <li key={idx} className="flex items-center gap-2 text-slate-600 text-[12px]">
+                  <span className="w-1 h-1 rounded-full bg-[#10B981]" />
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
+        <div className="pt-3 border-t border-slate-100 mt-auto">
+          <button
+            onClick={() => onStartProject(service.title)}
+            className="flex items-center gap-1 text-[10px] md:text-xs font-bold text-[#3B82F6]"
+          >
+            Explore
+            <ArrowRight className="w-3 h-3" />
+          </button>
+        </div>
+      </div>
+    );
+  })}
+</div>
         {/* View All CTA Button (Kept exactly as requested) */}
         <div className="text-center mt-16 font-display">
           <button
@@ -318,6 +306,7 @@ export default function ServicesSection({ onStartProject, onViewAllServices }: S
         </div>
 
       </div>
+
     </section>
   );
 }

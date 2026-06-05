@@ -63,10 +63,10 @@ export default function ContactModal({ isOpen, onClose, preselectedService = 'Ge
       />
 
       {/* Modal Container */}
-      <div className="relative bg-[#0f111a] w-full max-w-lg rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] border border-slate-800/80 overflow-hidden transform transition-all duration-300 animate-[scaleUp_0.3s_ease] font-sans">
+      <div className="relative bg-[#0f111a] w-full max-w-lg rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] border border-slate-800/80 overflow-y-auto max-h-[90vh] transform transition-all duration-300 animate-[scaleUp_0.3s_ease] font-sans my-4">
         
         {/* Colorful top accent glow line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-brand-purple to-pink-500" />
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-brand-purple to-pink-500 z-10" />
         
         {/* Soft radial glow behind the top */}
         <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-48 h-32 bg-brand-purple/10 rounded-full blur-3xl pointer-events-none animate-pulse" />

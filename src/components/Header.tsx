@@ -20,7 +20,6 @@ export default function Header({
   const navItems = [
     { name: "Home", id: "home" },
     { name: "Services", id: "services" },
-    { name: "Logo", id: "logo" },
     { name: "Portfolio", id: "portfolio" },
     { name: "Contact", id: "contact" },
   ];
@@ -50,6 +49,7 @@ export default function Header({
     <>
       <header className="sticky top-0 z-40 w-full bg-slate-950/90 border-b border-slate-900 shadow-[0_4px_30px_rgba(0,0,0,0.15)] backdrop-blur-md py-4 px-6 flex justify-center pointer-events-none transition-all duration-300">
         <div className="w-full max-w-7xl flex items-center justify-between pointer-events-auto">
+          {/* Desktop Logo */}
           <div className="hidden md:flex items-center justify-start">
             <a
               href="#home"
@@ -78,50 +78,21 @@ export default function Header({
 
           {/* Desktop Central Navigation Links */}
           <div className="hidden md:flex items-center gap-2.5 font-sans justify-center">
-            <a
-              href="#home"
-              onClick={(e) => handleNavClick("home", e)}
-              className={`text-[13px] font-bold px-4 py-2 rounded-full transition-all duration-200 ${
-                currentPage === "home" && activeSection === "home"
-                  ? "bg-white/10 text-white shadow-inner shadow-white/5"
-                  : "text-slate-300 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              Home
-            </a>
-            <a
-              href="#services"
-              onClick={(e) => handleNavClick("services", e)}
-              className={`text-[13px] font-bold px-4 py-2 rounded-full transition-all duration-200 ${
-                currentPage === "services"
-                  ? "bg-white/10 text-white shadow-inner shadow-white/5"
-                  : "text-slate-300 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              Services
-            </a>
-            <a
-              href="#portfolio"
-              onClick={(e) => handleNavClick("portfolio", e)}
-              className={`text-[13px] font-bold px-4 py-2 rounded-full transition-all duration-200 ${
-                currentPage === "portfolio"
-                  ? "bg-white/10 text-white shadow-inner shadow-white/5"
-                  : "text-slate-300 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              Portfolio
-            </a>
-            <a
-              href="#contact"
-              onClick={(e) => handleNavClick("contact", e)}
-              className={`text-[13px] font-bold px-4 py-2 rounded-full transition-all duration-200 ${
-                currentPage === "contact"
-                  ? "bg-white/10 text-white shadow-inner shadow-white/5"
-                  : "text-slate-300 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              Contact
-            </a>
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => handleNavClick(item.id, e)}
+                className={`text-[13px] font-bold px-4 py-2 rounded-full transition-all duration-200 ${
+                  currentPage === item.id &&
+                  (item.id !== "home" || activeSection === "home")
+                    ? "bg-white/10 text-white shadow-inner shadow-white/5"
+                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                }`}
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
 
           {/* Desktop Right Side CTA Action Button */}
@@ -154,14 +125,14 @@ export default function Header({
                   />
                 </svg>
               </div>
-              <span className="text-white font-display font-extrabold tracking-wider text-[13px]">
+              <span className="text-white font-display font-extrabold tracking-wider text-[13px] uppercase">
                 karmyug
               </span>
             </a>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none p-1.5 bg-white/5 rounded-md"
+              className="text-gray-300 hover:text-white focus:outline-none p-1.5 bg-white/5 rounded-md transition-colors"
               aria-label="Toggle menu"
             >
               <svg
@@ -191,82 +162,71 @@ export default function Header({
         </div>
       </header>
 
-      {/* Mobile Drawer Navigation overlay */}
+      {/* Premium Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-brand-dark/95 backdrop-blur-lg flex flex-col justify-center items-center gap-8 md:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(false)}
-            className="absolute top-6 right-6 text-gray-400 hover:text-white p-2"
-          >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <div className="fixed inset-0 z-50 bg-slate-950/98 backdrop-blur-xl flex flex-col justify-between items-center py-12 px-6 md:hidden animate-in fade-in zoom-in-95 duration-200">
+          
+          {/* Top Section: Close Button */}
+          <div className="w-full flex justify-end">
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-slate-400 hover:text-white p-2.5 bg-white/5 hover:bg-white/10 rounded-full transition-colors duration-200"
+              aria-label="Close menu"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
 
-          <a
-            href="#home"
-            onClick={(e) => handleNavClick("home", e)}
-            className={`text-2xl font-semibold px-6 py-2 rounded-full ${
-              currentPage === "home"
-                ? "bg-brand-purple text-white"
-                : "text-gray-300"
-            }`}
-          >
-            Home
-          </a>
-          <a
-            href="#services"
-            onClick={(e) => handleNavClick("services", e)}
-            className={`text-2xl font-semibold px-6 py-2 rounded-full ${
-              currentPage === "services"
-                ? "bg-brand-purple text-white"
-                : "text-gray-300"
-            }`}
-          >
-            Services
-          </a>
-          <a
-            href="#portfolio"
-            onClick={(e) => handleNavClick("portfolio", e)}
-            className={`text-2xl font-semibold px-6 py-2 rounded-full ${
-              currentPage === "portfolio"
-                ? "bg-brand-purple text-white"
-                : "text-gray-300"
-            }`}
-          >
-            Portfolio
-          </a>
-          <a
-            href="#contact"
-            onClick={(e) => handleNavClick("contact", e)}
-            className={`text-2xl font-semibold px-6 py-2 rounded-full ${
-              currentPage === "contact"
-                ? "bg-brand-purple text-white"
-                : "text-gray-300"
-            }`}
-          >
-            Contact
-          </a>
+          {/* Middle Section: Navigation Links */}
+          <nav className="flex flex-col items-center gap-8 w-full -mt-10">
+            {navItems.map((item) => {
+              const isActive = currentPage === item.id;
+              return (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  onClick={(e) => handleNavClick(item.id, e)}
+                  className={`relative text-3xl font-light tracking-wide transition-colors duration-300 ${
+                    isActive ? "text-white font-medium" : "text-slate-400 hover:text-white"
+                  }`}
+                >
+                  {item.name}
+                  {/* Premium glowing dot indicator for active state */}
+                  {isActive && (
+                    <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]"></span>
+                  )}
+                </a>
+              );
+            })}
+          </nav>
 
-          <button
-            onClick={() => {
-              setMobileMenuOpen(false);
-              onOpenContact();
-            }}
-            className="mt-4 px-8 py-3 bg-brand-purple text-white font-medium rounded-full shadow-lg shadow-brand-purple/30 hover:bg-brand-deep transition-all"
-          >
-            Get Free Consultation
-          </button>
+          {/* Bottom Section: CTA */}
+          <div className="w-full flex flex-col items-center gap-6 mt-auto">
+            {/* Subtle divider */}
+            <div className="w-12 h-[1px] bg-white/10"></div>
+            
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenContact();
+              }}
+              className="w-full max-w-[280px] px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 text-white font-semibold text-lg rounded-full shadow-[0_8px_30px_rgba(59,130,246,0.25)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.4)] active:scale-95 transition-all duration-300"
+            >
+              Get Free Consultation
+            </button>
+          </div>
         </div>
       )}
     </>

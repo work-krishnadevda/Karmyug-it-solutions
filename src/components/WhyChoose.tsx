@@ -82,14 +82,14 @@ export default function WhyChoose({}: WhyChooseProps) {
     },
   ];
 
-return (
-  <section
-    id="why"
-    className="relative overflow-hidden py-12 lg:py-16 bg-[#03091e] border-t border-slate-900"
-  >
-    <style
-      dangerouslySetInnerHTML={{
-        __html: `
+  return (
+    <section
+      id="why"
+      className="relative overflow-hidden py-12 lg:py-16 bg-[#03091e] border-t border-slate-900"
+    >
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
           @keyframes floatOrb {
             0%,100% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
@@ -117,76 +117,75 @@ return (
             animation: pulseGlow 4s ease-in-out infinite;
           }
         `,
-      }}
-    />
+        }}
+      />
 
-    {/* Background Orbs */}
+      {/* Background Orbs */}
 
-    <div className="absolute top-10 left-10 w-[260px] h-[260px] bg-cyan-500/10 rounded-full blur-[120px] orb-float" />
+      <div className="absolute top-10 left-10 w-[260px] h-[260px] bg-cyan-500/10 rounded-full blur-[120px] orb-float" />
 
-    <div className="absolute bottom-0 right-10 w-[280px] h-[280px] bg-blue-500/10 rounded-full blur-[120px] orb-float" />
+      <div className="absolute bottom-0 right-10 w-[280px] h-[280px] bg-blue-500/10 rounded-full blur-[120px] orb-float" />
 
-    <div className="absolute top-16 right-1/4 w-[200px] h-[200px] bg-purple-500/10 rounded-full blur-[90px] orb-float" />
+      <div className="absolute top-16 right-1/4 w-[200px] h-[200px] bg-purple-500/10 rounded-full blur-[90px] orb-float" />
 
-    {/* Rotating Rings */}
+      {/* Rotating Rings */}
 
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <div className="relative w-[420px] h-[420px]">
-        <div className="absolute inset-0 border border-cyan-500/10 rounded-full ring-rotate" />
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="relative w-[420px] h-[420px]">
+          <div className="absolute inset-0 border border-cyan-500/10 rounded-full ring-rotate" />
 
-        <div className="absolute inset-8 border border-blue-500/10 rounded-full ring-rotate" />
+          <div className="absolute inset-8 border border-blue-500/10 rounded-full ring-rotate" />
 
-        <div className="absolute inset-16 border border-purple-500/10 rounded-full ring-rotate" />
-      </div>
-    </div>
-
-    {/* Particles */}
-
-    <div className="absolute top-20 left-1/4 w-2 h-2 bg-cyan-400 rounded-full glow-pulse" />
-    <div className="absolute top-40 right-1/3 w-2 h-2 bg-blue-400 rounded-full glow-pulse" />
-    <div className="absolute bottom-20 left-1/3 w-2 h-2 bg-purple-400 rounded-full glow-pulse" />
-
-    <div className="max-w-7xl mx-auto px-6 relative z-10">
-      {/* Header */}
-
-      <div className="text-center mb-8">
-        <p className="text-[#00E5FF] text-xs uppercase tracking-[0.35em] font-black mb-2">
-          WHY CHOOSE karmyug
-        </p>
-
-        <h2 className="text-3xl md:text-4xl font-black text-white">
-          Your Success Is Our Mission
-        </h2>
-
-        <p className="mt-2 text-slate-400 max-w-xl mx-auto text-sm">
-          We build websites, applications and enterprise software that help
-          businesses automate operations, improve efficiency and scale faster.
-        </p>
+          <div className="absolute inset-16 border border-purple-500/10 rounded-full ring-rotate" />
+        </div>
       </div>
 
-      {/* Feature Grid */}
+      {/* Particles */}
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {features.map((item, index) => (
-          <div
-            key={index}
-            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-xl p-5 hover:border-cyan-500/30 hover:-translate-y-1 transition-all duration-500"
-          >
+      <div className="absolute top-20 left-1/4 w-2 h-2 bg-cyan-400 rounded-full glow-pulse" />
+      <div className="absolute top-40 right-1/3 w-2 h-2 bg-blue-400 rounded-full glow-pulse" />
+      <div className="absolute bottom-20 left-1/3 w-2 h-2 bg-purple-400 rounded-full glow-pulse" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        {/* Header */}
+
+        <div className="text-center mb-8">
+          <p className="text-[#00E5FF] text-[10px] sm:text-xs uppercase tracking-[0.35em] font-black mb-2">
+            WHY CHOOSE karmyug
+          </p>
+
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white">
+            Your Success Is Our Mission
+          </h2>
+
+          <p className="mt-2 text-slate-400 max-w-xl mx-auto text-xs sm:text-sm">
+            We build websites, applications and enterprise software that help
+            businesses automate operations, improve efficiency and scale faster.
+          </p>
+        </div>
+
+        {/* Feature Grid - CHANGED TO grid-cols-3 FOR MOBILE */}
+        <div className="grid grid-cols-3 gap-2 sm:gap-4">
+          {features.map((item, index) => (
             <div
-              className={`w-11 h-11 rounded-xl flex items-center justify-center border ${item.border} ${item.bg} mb-3`}
+              key={index}
+              className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-xl p-2.5 sm:p-5 hover:border-cyan-500/30 hover:-translate-y-1 transition-all duration-500 flex flex-col items-center text-center sm:items-start sm:text-left"
             >
-              <item.icon className={`w-5 h-5 ${item.color}`} />
+              <div
+                className={`w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl flex items-center justify-center border ${item.border} ${item.bg} mb-2 sm:mb-3 shrink-0`}
+              >
+                <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${item.color}`} />
+              </div>
+
+              <p className="text-slate-300 text-[9px] sm:text-sm leading-tight sm:leading-relaxed font-medium group-hover:text-white transition-colors break-words">
+                {item.text}
+              </p>
+
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
-
-            <p className="text-slate-300 text-sm leading-relaxed font-medium group-hover:text-white transition-colors">
-              {item.text}
-            </p>
-
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 }
