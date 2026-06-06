@@ -1,12 +1,9 @@
-
 import React, { useRef, useState, useEffect } from "react";
 import { TEAM_DATA } from '../data';
 import { 
   Linkedin, 
-  Twitter, 
   Youtube,
   Sparkles,
-  Mail,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
@@ -85,7 +82,6 @@ const THEMES = [
     imageBg: 'from-fuchsia-500/10 to-pink-400/5',
   },
 ];
-
 
 export default function PremiumTeamCoverflow() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -230,6 +226,22 @@ export default function PremiumTeamCoverflow() {
                   {/* Subtle Background Glow for Active Card */}
                   <div className={`absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 transition-opacity duration-700 -z-10 ${isActive ? "opacity-100" : "opacity-0"}`} />
 
+                  {/* LinkedIn Logo (Top Right Corner) */}
+                  <a
+                    href={member.linkedinUrl || "#"} // Make sure linkedinUrl exists in your TEAM_DATA
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabIndex={isActive ? 0 : -1}
+                    onClick={(e) => e.stopPropagation()} // Prevents the card's scrollToIndex from firing when clicking the link
+                    className={`absolute top-6 right-6 transition-colors duration-300 z-30 ${
+                      isActive 
+                        ? "text-slate-400 hover:text-blue-600" 
+                        : "text-slate-300 pointer-events-none"
+                    }`}
+                  >
+                    <Linkedin className="w-6 h-6" />
+                  </a>
+
                   {/* Avatar */}
                   <div className="relative mb-6">
                     <img
@@ -249,19 +261,7 @@ export default function PremiumTeamCoverflow() {
                   <p className="mt-5 text-sm text-slate-500 leading-relaxed max-w-[260px] h-[60px]">
                     {member.description}
                   </p>
-
-                  {/* Social Links */}
-                  <div className="mt-8 pt-6 border-t border-slate-100/80 w-full flex justify-center gap-4">
-                    {[Linkedin, Twitter, Mail].map((Icon, i) => (
-                      <button 
-                        key={i} 
-                        tabIndex={isActive ? 0 : -1} // Prevent tabbing into inactive cards
-                        className={`transition-colors ${isActive ? "text-slate-400 hover:text-blue-600" : "text-slate-300 pointer-events-none"}`}
-                      >
-                        <Icon className="w-5 h-5" />
-                      </button>
-                    ))}
-                  </div>
+                  
                 </div>
               </div>
             );
@@ -287,5 +287,3 @@ export default function PremiumTeamCoverflow() {
     </section>
   );
 }
-
-

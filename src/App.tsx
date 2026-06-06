@@ -860,10 +860,10 @@ export default function App() {
                   <span className="text-lg leading-none">➔</span>
                 </button>
                 <a
-                  href="tel:+919669555811"
+                  href="tel:+918962241437"
                   className="w-full sm:w-auto inline-flex items-center justify-center px-9 py-4 bg-white hover:bg-[#FAFBFD] border border-slate-200 text-slate-700 font-extrabold text-sm sm:text-base rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-3xs"
                 >
-                  Call +91 96695 55811
+                  Call +91 8962241437
                 </a>
               </div>
             </div>

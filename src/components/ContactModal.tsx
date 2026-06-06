@@ -35,11 +35,26 @@ export default function ContactModal({ isOpen, onClose, preselectedService = 'Ge
     e.preventDefault();
     setLoading(true);
 
-    // Simulate reliable API post
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 1200);
+    // Format the WhatsApp message
+    const whatsappMessage = `*New Discovery Call Proposal*
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Company:* ${formData.company || 'N/A'}
+*Service:* ${formData.service}
+*Message:* ${formData.message || 'N/A'}`;
+
+    // Encode the message for the URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // WhatsApp API URL (Updated to 8962241437 with 91 country code)
+    const whatsappUrl = `https://wa.me/918962241437?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+
+    setLoading(false);
+    setSubmitted(true);
   };
 
   const services = [
@@ -106,11 +121,11 @@ export default function ContactModal({ isOpen, onClose, preselectedService = 'Ge
               <div className="mt-8 pt-6 border-t border-slate-900 w-full flex flex-col items-center gap-3">
                 <p className="text-[10px] text-slate-500 font-mono tracking-widest uppercase">Need immediate assistance?</p>
                 <a
-                  href="tel:+919669555811"
+                  href="tel:+918962241437"
                   className="inline-flex items-center gap-2 text-sm font-extrabold text-[#c084fc] hover:text-[#d8b4fe] transition-colors"
                 >
                   <Phone className="w-4 h-4 text-brand-purple" />
-                  <span>Call +91 96695 55811</span>
+                  <span>Call +91 89622 41437</span>
                 </a>
               </div>
 

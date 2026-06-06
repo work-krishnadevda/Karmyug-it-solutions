@@ -23,6 +23,7 @@ export interface TeamMember {
   role: string;
   description: string;
   imageUrl: string;
+  linkedinUrl: string;
 }
 
 export interface Testimonial {

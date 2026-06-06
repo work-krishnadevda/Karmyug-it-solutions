@@ -172,58 +172,66 @@ export const TEAM_DATA: TeamMember[] = [
    {
     id: 'Shubham Pandey',
     name: 'Shubham Pandey',
-    role: 'Founder | CEO',
+    role: 'co-founder',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/8.jpg'
+    imageUrl: '/8.jpg',
+    linkedinUrl:"https://www.linkedin.com/in/shubham-pandey-cofounder",
   },
     {
     id: 'krishna Singh Devda',
     name: 'krishna Singh Devda',
     role: 'Co - Founder | Full Stack Product Engineer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/4.jpg'
+    imageUrl: '/4.jpg',
+    linkedinUrl:"https://www.linkedin.com/in/krishna-singh-devda",
   },
   {
     id: 'Vijay Singh Sisodiya',
     name: 'Vijay Singh Sisodiya',
     role: 'Forward Deployed Engineer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/7.jpg'
+    imageUrl: '/7.jpg',
+    linkedinUrl:"https://www.linkedin.com/in/vijay-singh-b97469369",
   },
     {
     id: 'ashish pandey',
     name: 'Ashish Pandey',
     role: ' Director of Creative & Digital Media',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/9.jpg'
+    imageUrl: '/9.jpg',
+    linkedinUrl:"https://www.linkedin.com/in/aashishpandeycreative"
   },
   {
     id: 'Dharmraj-patidar',
     name: 'Dharmraj patidar',
     role: 'junior Java Script Developer',
     description: 'Leads product vision and client strategy with 8+ years in IT consulting.',
-    imageUrl: '/1.jpg'
+    imageUrl: '/1.jpg',
+    linkedinUrl:"https://www.linkedin.com/in/dharmarajpatidar"
   },
   {
     id: 'deepak keer',
     name: 'Deepak keer',
     role: 'junior Java Script Developer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/6.jpg'
+    imageUrl: '/6.jpg',
+    linkedinUrl:"https://www.linkedin.com/in/deepak-keer-1276a4361",
   },
    {
     id: 'Neha Gandhi',
     name: 'Neha Gandhi',
     role: 'junior Java Script Developer',
     description: 'Architects scalable web and cloud solutions for startups and enterprises.',
-    imageUrl: '/3.jpg'
+    imageUrl: '/3.jpg',
+    linkedinUrl:"https://www.linkedin.com/in/neha-gandhi-103529399",
   },
   {
     id: 'Pawan-chouhan',
     name: 'Pawan chouhan',
     role: 'junior Java Script Developer',
     description: 'Drives brand growth through data-led campaigns and creative storytelling.',
-    imageUrl: '/2.jpg'
+    imageUrl: '/2.jpg',
+    linkedinUrl:"https://www.linkedin.com/in/pawan-chouhan31",
   },
  
 
@@ -232,7 +240,16 @@ export const TEAM_DATA: TeamMember[] = [
     name: 'Rishabh Sharma',
     role: 'junior Java Script Developer',
     description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/5.jpg'
+    imageUrl: '/5.jpg',
+    linkedinUrl:"https://www.linkedin.com/in/rishabh-sharma-63a439366",
+  },
+    {
+    id: 'tamanna parihar',
+    name: 'Tamanna Parihar',
+    role: 'HR Manager',
+    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    imageUrl: '/tamanhHR.png',
+    linkedinUrl:"https://www.linkedin.com/in/tamanna-parihar-768461403",
   },
   
   

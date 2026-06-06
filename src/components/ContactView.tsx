@@ -29,7 +29,7 @@ export default function ContactView() {
   const faqs = [
     {
       question: 'What is the best way to reach karmyug?',
-      answer: 'Call us at +91 8962241437, email karmyugtechzone@gmail.com, or fill out the contact form on this page. We respond to all inquiries within 24 hours on business days.'
+      answer: 'Call us at +91 8962241437, email contact@karmyug.co, or fill out the contact form on this page. We respond to all inquiries within 24 hours on business days.'
     },
     {
       question: 'What should I prepare before our first call?',
@@ -366,7 +366,7 @@ export default function ContactView() {
                   <Mail className="w-4 h-4 text-white" />
                 </span>
                 <div className="flex flex-col text-left leading-tight w-full truncate">
-                  <span className="text-[12px] font-black tracking-tight text-slate-800 font-sans truncate">karmyugtechzone@gmail.com</span>
+                  <span className="text-[12px] font-black tracking-tight text-slate-800 font-sans truncate">contact@karmyug.co</span>
                   <span className="text-[9.5px] font-semibold text-slate-400 tracking-wide mt-0.5 font-sans flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
                     <span>New Message</span>
@@ -551,7 +551,7 @@ export default function ContactView() {
 
         {/* Text Section at Bottom */}
         <div className="flex flex-col text-left gap-0.5 w-full mt-auto">
-          <span className="text-[13px] sm:text-[15px] font-extrabold text-slate-900 tracking-tight font-sans leading-none truncate w-full">karmyugtech...</span>
+          <span className="text-[13px] sm:text-[15px] font-extrabold text-slate-900 tracking-tight font-sans leading-none truncate w-full">contact@karmyug.co</span>
           <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-400 uppercase mt-1">Email Us</span>
         </div>
       </div>
@@ -677,7 +677,7 @@ export default function ContactView() {
                 </a>
 
                 <a
-                  href="mailto:karmyugtechzone@gmail.com"
+                  href="mailto:contact@karmyug.co"
                   className="flex items-center gap-4 p-4 border border-slate-150 bg-white hover:bg-slate-50 rounded-2xl transition-all w-full shadow-3xs hover:shadow-xs"
                 >
                   <span className="flex-shrink-0 w-10 h-10 bg-blue-50 text-[#2563EB] flex items-center justify-center rounded-xl border border-blue-100/50">
@@ -688,7 +688,7 @@ export default function ContactView() {
                       Direct Email Inbox
                     </span>
                     <span className="block text-sm sm:text-base font-bold text-slate-800 font-display mt-0.5">
-                      karmyugtechzone@gmail.com
+                      contact@karmyug.co
                     </span>
                   </div>
                 </a>
