@@ -228,11 +228,11 @@ export default function PremiumTeamCoverflow() {
 
                   {/* LinkedIn Logo (Top Right Corner) */}
                   <a
-                    href={member.linkedinUrl || "#"} // Make sure linkedinUrl exists in your TEAM_DATA
+                    href={member.linkedinUrl || "#"} 
                     target="_blank"
                     rel="noopener noreferrer"
                     tabIndex={isActive ? 0 : -1}
-                    onClick={(e) => e.stopPropagation()} // Prevents the card's scrollToIndex from firing when clicking the link
+                    onClick={(e) => e.stopPropagation()} 
                     className={`absolute top-6 right-6 transition-colors duration-300 z-30 ${
                       isActive 
                         ? "text-slate-400 hover:text-blue-600" 
@@ -242,12 +242,12 @@ export default function PremiumTeamCoverflow() {
                     <Linkedin className="w-6 h-6" />
                   </a>
 
-                  {/* Avatar */}
+                  {/* Avatar - Updated w-24 h-24 to w-32 h-32 */}
                   <div className="relative mb-6">
                     <img
                       src={member.imageUrl}
                       alt={member.name}
-                      className={`w-24 h-24 rounded-full object-cover border-[4px] border-white transition-all duration-700 ${isActive ? "shadow-lg" : "shadow-sm"}`}
+                      className={`w-32 h-32 rounded-full object-cover border-[4px] border-white transition-all duration-700 ${isActive ? "shadow-lg" : "shadow-sm"}`}
                     />
                   </div>
 
