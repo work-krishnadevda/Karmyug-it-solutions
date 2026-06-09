@@ -42,6 +42,29 @@ export default function App() {
   const [contactOpen, setContactOpen] = useState(false);
   const [selectedService, setSelectedService] = useState("General Inquiry");
 
+  // ==========================================
+  // DYNAMIC SEO TITLE HOOK
+  // Updates browser tab title based on current page
+  // ==========================================
+  useEffect(() => {
+    switch (currentPage) {
+      case "home":
+        document.title = "Top IT Solutions & Tech Services | Karmyug IT Solutions";
+        break;
+      case "services":
+        document.title = "Expert IT Consulting & Tech Services | Karmyug IT Solutions";
+        break;
+      case "portfolio":
+        document.title = "Our Work & IT Project Portfolio | Karmyug IT Solutions";
+        break;
+      case "contact":
+        document.title = "Contact Karmyug IT Solutions | Let's Build Your Project";
+        break;
+      default:
+        document.title = "Top IT Solutions & Tech Services | Karmyug IT Solutions";
+    }
+  }, [currentPage]);
+
   // Track active section on scroll
   useEffect(() => {
     const handleScroll = () => {

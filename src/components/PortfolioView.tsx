@@ -57,77 +57,53 @@ export default function PortfolioView({ onStartProject, onViewAllProjects }: Por
       
       {/* Portfolio Header Section */}
       {/* FIXED: Removed overflow-hidden, drastically increased lg:pb and xl:pb to give the 3D base room */}
-      <section className="relative pt-12 pb-16 md:pt-20 md:pb-32 lg:pt-24 lg:pb-[250px] xl:pb-[300px] bg-gradient-to-b from-blue-50/15 via-white to-slate-50 select-none border-b border-slate-100">
+    <section className="relative pt-10 pb-12 md:pt-12 md:pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-blue-50/15 via-white to-slate-50 select-none border-b border-slate-100 overflow-hidden">
+  
+  {/* Curvy background wave path matching image layout */}
+  <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
+    <svg className="w-full h-full" viewBox="0 0 1440 400" fill="none" preserveAspectRatio="none">
+      <path d="M-80,180 C240,320 480,80 880,240 C1280,400 1380,220 1520,290" stroke="url(#waveGrad)" strokeWidth="1.5" />
+      <defs>
+        <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="#818CF8" stopOpacity="0.2" />
+          <stop offset="50%" stopColor="#34D399" stopOpacity="0.25" />
+          <stop offset="100%" stopColor="#60A5FA" stopOpacity="0.2" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
+      
+      {/* Left Content column */}
+      <div className="lg:col-span-6 text-left flex flex-col items-start select-none">
         
-        {/* Curvy background wave path matching image layout */}
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
-          <svg className="w-full h-full" viewBox="0 0 1440 400" fill="none" preserveAspectRatio="none">
-            <path d="M-80,180 C240,320 480,80 880,240 C1280,400 1380,220 1520,290" stroke="url(#waveGrad)" strokeWidth="1.5" />
-            <defs>
-              <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="#818CF8" stopOpacity="0.2" />
-                <stop offset="50%" stopColor="#34D399" stopOpacity="0.25" />
-                <stop offset="100%" stopColor="#60A5FA" stopOpacity="0.2" />
-              </linearGradient>
-            </defs>
-          </svg>
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50/60 border border-blue-100/35 text-blue-600 rounded-full text-[11px] font-bold mb-5 tracking-widest uppercase">
+          <span>OUR PORTFOLIO</span>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Left Content column */}
-            <div className="lg:col-span-6 text-left flex flex-col items-start select-none">
-              
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50/60 border border-blue-100/35 text-blue-600 rounded-full text-[11px] font-bold mb-5 tracking-widest uppercase">
-                <span>OUR PORTFOLIO</span>
-              </div>
+        {/* Title */}
+        <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-black tracking-tight text-slate-900 font-display leading-[1.12]">
+          Our Top <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 bg-clip-text text-transparent">Projects</span>
+        </h1>
 
-              {/* Title */}
-              <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-black tracking-tight text-slate-900 font-display leading-[1.12]">
-                Our Top <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 bg-clip-text text-transparent">Projects</span>
-              </h1>
+        {/* Subtitle description */}
+        <p className="mt-5 text-sm sm:text-[14.5px] text-slate-500 max-w-xl leading-relaxed font-semibold">
+          Explore websites and applications we have designed, built, and launched for brands across India and beyond.
+        </p>
 
-              {/* Subtitle description */}
-              <p className="mt-5 text-sm sm:text-[14.5px] text-slate-500 max-w-xl leading-relaxed font-semibold">
-                Explore websites and applications we have designed, built, and launched for brands across India and beyond.
-              </p>
+      </div>
 
-              {/* Left-Aligned Category Tabs */}
-              <div className="mt-10 flex flex-wrap items-center gap-3">
-                {[
-                  { label: 'All', value: 'all' },
-                  { label: 'Websites', value: 'website' },
-                  { label: 'Applications', value: 'application' }
-                ].map((tab) => {
-                  const isActive = activeTab === tab.value;
-                  return (
-                    <button
-                      key={tab.value}
-                      onClick={() => setActiveTab(tab.value as TabType)}
-                      className={`px-7 py-2.5 rounded-full text-xs sm:text-[13px] font-bold tracking-wide transition-all cursor-pointer ${
-                        isActive
-                          ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md shadow-blue-600/15 scale-[1.03]'
-                          : 'bg-white border border-slate-100 hover:border-slate-200 text-slate-600 hover:text-blue-600 hover:scale-[1.02] shadow-3xs'
-                      }`}
-                    >
-                      {tab.label}
-                    </button>
-                  );
-                })}
-              </div>
+      {/* Right isometric/3D elements column */}
+      <div className="lg:col-span-6 w-full flex items-center justify-center mt-8 lg:mt-0 relative z-20">
+        <PortfolioHeader3D />
+      </div>
 
-            </div>
-
-            {/* Right isometric/3D elements column */}
-            <div className="lg:col-span-6 w-full flex items-center justify-center mt-10 lg:mt-0 relative z-20">
-              <PortfolioHeader3D />
-            </div>
-
-          </div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
 
       {/* Alternating Project Layout items list */}
       <section id="portfolio" className="py-14 bg-gradient-to-b from-[#F8FAFC] to-white scroll-mt-12 relative overflow-hidden select-none border-t border-slate-100">
