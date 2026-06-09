@@ -15,7 +15,41 @@
   --color-brand-dark: #0f111a;
   --animate-marquee: marquee 25s linear infinite;
 }
+::selection {
+  background-color: #3b82f6 !important; /* Blue background */
+  color: white !important;              /* White text */
+}
+/* Force text to be strictly selectable on Desktop AND Mobile */
+body, p, h1, h2, h3, h4, h5, h6, span, div {
+  -webkit-user-select: text !important; 
+  -moz-user-select: text !important;    
+  -ms-user-select: text !important;     
+  user-select: text !important;         
+  
+  /* THIS IS THE FIX FOR MOBILE */
+  -webkit-touch-callout: default !important; 
+}
+/* 1. Remove the flashing gray/blue highlight box when tapping on mobile */
+* {
+  -webkit-tap-highlight-color: transparent !important;
+}
 
+/* 2. Hide the blinking text cursor everywhere... */
+body {
+  caret-color: transparent !important;
+}
+
+/* ...EXCEPT inside actual form inputs where people need to type */
+input, textarea {
+  caret-color: auto !important;
+}
+/* Add this to your global CSS file */
+body, * {
+  -webkit-user-select: auto !important; /* For Safari */
+  -moz-user-select: auto !important;    /* For Firefox */
+  -ms-user-select: auto !important;     /* For older IE/Edge */
+  user-select: auto !important;         /* Standard */
+}
 body {
   font-family: var(--font-sans);
   background-color: #fafafa;

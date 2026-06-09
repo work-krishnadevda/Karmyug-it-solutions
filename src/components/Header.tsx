@@ -57,13 +57,13 @@ export default function Header({
               className="group flex items-center gap-3 p-1 rounded-full transition-all duration-300"
               aria-label="karmyug Home"
             >
-        <div className="flex items-center justify-center">
-<img
-  src="/logo.png"
-  alt="karmyug Logo"
-  className="block h-8 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-/>
-</div>
+              <div className="flex items-center justify-center">
+                <img
+                  src="/logo.png"
+                  alt="karmyug Logo"
+                  className="block h-8 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
 
               <div className="flex flex-col text-left leading-tight">
                 <span className="font-display font-extrabold tracking-wider text-white text-[13.5px]">
@@ -112,22 +112,23 @@ export default function Header({
               onClick={(e) => handleNavClick("logo", e)}
               className="flex items-center gap-2.5 group"
             >
-              <div className="p-0.5 bg-white/5 rounded-full flex items-center justify-center">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 100 100"
-                  className="fill-none stroke-[8]"
-                >
-                  <path
-                    d="M50 5 L63 38 L98 38 L70 59 L81 92 L50 72 L19 92 L30 59 L2 38 L37 38 Z"
-                    stroke="url(#starGrad)"
-                  />
-                </svg>
+              <div className="flex items-center justify-center">
+                <img
+                  src="/logo.png"
+                  alt="karmyug Logo"
+                  className="block h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
-              <span className="text-white font-display font-extrabold tracking-wider text-[13px] uppercase">
-                karmyug
-              </span>
+              
+              {/* FIXED: Added the two-line text structure for mobile */}
+              <div className="flex flex-col text-left leading-tight">
+                <span className="font-display font-extrabold tracking-wider text-white text-[13px] uppercase">
+                  KARMYUG
+                </span>
+                <span className="text-[8px] tracking-widest text-[#a78bfa] font-black uppercase">
+                  IT Solutions
+                </span>
+              </div>
             </a>
 
             <button

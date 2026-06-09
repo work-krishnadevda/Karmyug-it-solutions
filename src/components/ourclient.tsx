@@ -2,12 +2,9 @@ import React from 'react';
 
 // Replace these with your actual client logo paths
 const clients = [
-  { id: 1, name: "Company One", logo: "/client-1.png" },
-  { id: 2, name: "Company Two", logo: "/client-2.png" },
-  { id: 3, name: "Company Three", logo: "/client-3.png" },
-  { id: 4, name: "Company Four", logo: "/client-4.png" },
-  { id: 5, name: "Company Five", logo: "/client-5.png" },
-  { id: 6, name: "Company Six", logo: "/client-6.png" },
+  { id: 1, name: "Company One", logo: "realapplelogo.png.jpeg" },
+  { id: 2, name: "Company Two", logo: "/Rcslogo.png" },
+
 ];
 
 export default function OurClients() {
@@ -36,18 +33,26 @@ export default function OurClients() {
           </p>
         </div>
 
-        {/* Responsive Logo Grid */}
-        <div className="grid grid-cols-2 gap-x-12 gap-y-16 md:grid-cols-3 lg:grid-cols-6 items-center justify-items-center">
-          {clients.map((client) => (
-            <div key={client.id} className="flex justify-center w-full">
-              <img
-                src={client.logo}
-                alt={`${client.name} logo`}
-                // Logos stay grayscale until hovered
-                className="h-14 w-auto shrink-0 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out"
-              />
-            </div>
-          ))}
+        {/* Swipeable Slider Container */}
+        <div className="relative w-full">
+          {/* Container handles the scrolling and hiding the scrollbar.
+            snap-x and snap-mandatory ensure the logos snap neatly into view when swiped.
+          */}
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-12 pb-4 pt-4 sm:justify-start lg:justify-center [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
+            {clients.map((client) => (
+              <div 
+                key={client.id} 
+                className="flex justify-center shrink-0 w-40 snap-center"
+              >
+                <img
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  draggable="false" // Prevents the browser's default drag behavior which can interrupt swiping
+                  className="h-14 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-grab active:cursor-grabbing"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>
