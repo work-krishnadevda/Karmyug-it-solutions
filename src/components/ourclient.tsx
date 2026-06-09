@@ -2,10 +2,10 @@ import React from 'react';
 
 // Replace these with your actual client logo paths
 const clients = [
-  { id: 1, name: "Company One", logo: "realapplelogo.png.jpeg" },
+  { id: 1, name: "Company One", logo: "realapplelogo.png" }, // Or .jpeg, whichever is correct
   { id: 2, name: "Company Two", logo: "/Rcslogo.png" },
-   { id: 3, name: "Company Three", logo: "/arynlogo.png.jpeg" },
-    { id: 4, name: "Company Four", logo: "/himvedalogo.png.jpeg" },
+  { id: 3, name: "Company Three", logo: "/arynlogo.png" }, 
+  { id: 4, name: "Company Four", logo: "/himvedalogo.png" },
 ];
 
 export default function OurClients() {
