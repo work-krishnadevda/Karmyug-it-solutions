@@ -154,11 +154,8 @@ export default function App() {
               <div className="mt-10 flex flex-wrap items-center justify-center sm:justify-start gap-4">
                 <div className="flex -space-x-3 overflow-hidden">
                   {[
-                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150",
-                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150",
-                    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
-                    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150",
-                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150",
+                    "/Rcslogo.png",
+                    "/realapplelogo.png.jpeg",
                   ].map((src, i) => (
                     <img
                       key={i}

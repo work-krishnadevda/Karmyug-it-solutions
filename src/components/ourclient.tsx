@@ -4,7 +4,6 @@ import React from 'react';
 const clients = [
   { id: 1, name: "Company One", logo: "realapplelogo.png.jpeg" },
   { id: 2, name: "Company Two", logo: "/Rcslogo.png" },
-
 ];
 
 export default function OurClients() {
@@ -33,23 +32,21 @@ export default function OurClients() {
           </p>
         </div>
 
-        {/* Swipeable Slider Container */}
+        {/* Centered Logo Container */}
         <div className="relative w-full">
-          {/* Container handles the scrolling and hiding the scrollbar.
-            snap-x and snap-mandatory ensure the logos snap neatly into view when swiped.
-          */}
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-12 pb-4 pt-4 sm:justify-start lg:justify-center [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
+          {/* flex-wrap and justify-center will always perfectly center any amount of logos */}
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 mx-auto max-w-4xl pt-4 pb-4">
             {clients.map((client) => (
               <div 
                 key={client.id} 
-                className="flex justify-center shrink-0 w-40 snap-center"
+                className="flex justify-center shrink-0 w-32 md:w-40"
               >
-                <img
-                  src={client.logo}
-                  alt={`${client.name} logo`}
-                  draggable="false" // Prevents the browser's default drag behavior which can interrupt swiping
-                  className="h-14 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-grab active:cursor-grabbing"
-                />
+               <img
+  src={client.logo}
+  alt={`${client.name} logo`}
+  draggable="false" 
+  className="h-12 md:h-16 w-auto object-contain"
+/>
               </div>
             ))}
           </div>
