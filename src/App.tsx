@@ -156,8 +156,8 @@ export default function App() {
                   {[
                     "/Rcslogo.png",
                     "/realapplelogo.png.jpeg",
-                    "/public/arynlogo.png.jpeg",
-                    "/public/himvedalogo.png.jpeg"
+                    "/arynlogo.png.jpeg",
+                    "/himvedalogo.png.jpeg"
                   ].map((src, i) => (
                     <img
                       key={i}
