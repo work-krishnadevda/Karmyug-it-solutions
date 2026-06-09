@@ -275,7 +275,7 @@ export default function ServicesView({ onOpenContact }: ServicesViewProps) {
     <div className="animate-[fadeIn_0.5s_ease-out]">
       
       {/* Premium Header Area themed blue & emerald */}
-      <section className="relative pt-24 pb-16 bg-gradient-to-b from-[#FAFBFD] to-white border-b border-slate-100 overflow-hidden select-none">
+      <section className="relative pt-12 pb-16 bg-gradient-to-b from-[#FAFBFD] to-white border-b border-slate-100 overflow-hidden select-none">
         {/* Ambient background soft light spot */}
         <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] bg-indigo-500/[0.03] rounded-full blur-[110px] pointer-events-none" />
