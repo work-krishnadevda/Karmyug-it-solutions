@@ -178,9 +178,6 @@ export default function Footer({ onScrollTo, onOpenContact, onNavigate }: Footer
           <div>
             @ {currentYear} karmyug IT Solution. All rights reserved.
           </div>
-          <div className="flex items-center gap-2 font-display font-black tracking-widest text-[10px] text-[#8b5cf6] uppercase">
-            <span>QUALITY ABOVE ALL</span>
-          </div>
         </div>
 
       </div>
