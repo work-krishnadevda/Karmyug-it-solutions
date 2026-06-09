@@ -364,10 +364,7 @@ export default function ServicesView({ onOpenContact }: ServicesViewProps) {
             {/* LEFT COLUMN: Human Wording & Stats Cards */}
             <div className="w-full lg:w-[46%] text-left flex flex-col justify-center">
               
-              {/* Blue Badge */}
-              <div className="inline-flex self-start items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100/40 text-blue-600 rounded-full text-[10.5px] font-black mb-5 tracking-widest uppercase">
-                <span>OUR SERVICES</span>
-              </div>
+
 
               {/* Title */}
               <h1 className="text-4xl sm:text-5xl md:text-[52px] font-black tracking-tight text-slate-900 leading-[1.08] mb-6 font-display">
@@ -539,7 +536,7 @@ export default function ServicesView({ onOpenContact }: ServicesViewProps) {
                 <Users className="w-6 h-6 text-[#2563EB] fill-[#2563EB]/10" strokeWidth={2.5} />
               </div>
               <div className="flex flex-col text-left leading-none">
-                <span className="text-[19px] sm:text-[20px] font-black text-slate-900">250+</span>
+                <span className="text-[19px] sm:text-[20px] font-black text-slate-900">10+</span>
                 <span className="text-[11px] sm:text-[11.5px] text-slate-400 font-bold mt-1.5 tracking-tight font-sans">Clients Served</span>
               </div>
             </div>
@@ -616,10 +613,7 @@ export default function ServicesView({ onOpenContact }: ServicesViewProps) {
           
           {/* Section Header as requested */}
           <div className="text-center max-w-3xl mx-auto mb-16 select-none flex flex-col items-center">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-100/40 text-blue-600 rounded-full text-[10.5px] font-black mb-4 tracking-widest uppercase animate-pulse">
-              <span>OUR SERVICES</span>
-            </div>
+
             
             <h2 className="text-4xl font-black tracking-tight text-slate-900 font-display sm:text-5xl">
               Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Services</span>
@@ -959,9 +953,7 @@ export default function ServicesView({ onOpenContact }: ServicesViewProps) {
             
             {/* Left Header Column */}
             <div className="lg:col-span-3 flex flex-col items-start select-none">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50/60 border border-blue-100/30 text-blue-600 rounded-full text-[11px] font-bold mb-4 tracking-wider uppercase">
-                <span>SERVICES FAQ</span>
-              </div>
+             
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A] font-display leading-[1.15]">
                 Services <br className="hidden lg:block" /> FAQ
               </h2>

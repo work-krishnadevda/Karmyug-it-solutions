@@ -298,7 +298,7 @@ export default function PortfolioHeader3D() {
             </div>
             <div className="text-left font-sans leading-none">
               <p className="text-[9px] sm:text-[9.5px] text-slate-500 font-extrabold tracking-wider uppercase">Clients Served</p>
-              <h5 className="text-[17px] sm:text-[19px] font-black tracking-tight text-slate-800 mt-1">500+</h5>
+              <h5 className="text-[17px] sm:text-[19px] font-black tracking-tight text-slate-800 mt-1">10+</h5>
             </div>
           </div>
 
@@ -315,7 +315,7 @@ export default function PortfolioHeader3D() {
             </div>
             <div className="text-left font-sans leading-none">
               <p className="text-[9px] sm:text-[9.5px] text-slate-500 font-extrabold tracking-wider uppercase">Industries</p>
-              <h5 className="text-[17px] sm:text-[19px] font-black tracking-tight text-slate-800 mt-1">12+</h5>
+              <h5 className="text-[17px] sm:text-[19px] font-black tracking-tight text-slate-800 mt-1">15+</h5>
             </div>
           </div>
 

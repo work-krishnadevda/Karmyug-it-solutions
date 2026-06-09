@@ -156,6 +156,8 @@ export default function App() {
                   {[
                     "/Rcslogo.png",
                     "/realapplelogo.png.jpeg",
+                    "/public/arynlogo.png.jpeg",
+                    "/public/himvedalogo.png.jpeg"
                   ].map((src, i) => (
                     <img
                       key={i}
@@ -738,7 +740,7 @@ export default function App() {
                   </div>
                   <div className="flex flex-col min-w-0">
                     <h4 className="text-xl sm:text-3xl font-black font-display tracking-tight text-slate-900 leading-none">
-                      250+
+                      10+
                     </h4>
                     <p className="text-[9px] sm:text-[12px] font-extrabold text-[#64748B] uppercase tracking-wider mt-1 sm:mt-1.5 font-mono break-words">
                       Clients Served

@@ -4,6 +4,8 @@ import React from 'react';
 const clients = [
   { id: 1, name: "Company One", logo: "realapplelogo.png.jpeg" },
   { id: 2, name: "Company Two", logo: "/Rcslogo.png" },
+   { id: 3, name: "Company Three", logo: "/public/arynlogo.png.jpeg" },
+    { id: 4, name: "Company Four", logo: "/public/himvedalogo.png.jpeg" },
 ];
 
 export default function OurClients() {

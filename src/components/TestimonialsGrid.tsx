@@ -126,7 +126,7 @@ export default function TestimonialsGrid() {
             <span>What Clients Say</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0F172A] font-display leading-tight">
-            Trusted by <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">250+ Businesses</span>
+            Trusted by <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">10+ Businesses</span>
           </h2>
           <p className="mt-4 text-xs sm:text-sm md:text-base text-slate-500 leading-relaxed font-semibold max-w-2xl mx-auto">
             We're proud to be the technology partner for startups and enterprises across e-commerce, fintech, healthcare, and SaaS.

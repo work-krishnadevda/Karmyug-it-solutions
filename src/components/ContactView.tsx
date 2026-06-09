@@ -212,7 +212,7 @@ export default function ContactView() {
                 className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 border-2 border-slate-200 hover:border-blue-400 text-[#2563EB] rounded-full font-extrabold text-[14px] active:scale-[0.985] transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shadow-3xs"
               >
                 <Phone className="w-4 h-4 text-[#2563EB]" strokeWidth={2.5} />
-                <span>Call+91 8962241437</span>
+                <span>Call +91 8962241437</span>
               </a>
             </div>
 
@@ -330,7 +330,7 @@ export default function ContactView() {
                   <Phone className="w-4 h-4 text-white fill-white" />
                 </span>
                 <div className="flex flex-col text-left leading-tight">
-                  <span className="text-[12px] font-black tracking-tight text-slate-800 font-sans">++91 8962241437</span>
+                  <span className="text-[12px] font-black tracking-tight text-slate-800 font-sans">+91 8962241437</span>
                   <span className="text-[9.5px] font-semibold text-slate-400 tracking-wide mt-0.5 font-sans">Incoming Call</span>
                 </div>
               </div>
@@ -466,182 +466,87 @@ export default function ContactView() {
         </div>
       </section>
 
-      {/* 4 HIGH CONTRAST BRAND CONTACT CARDS (Bottom row below Hero) */}
- <section className="relative py-8 select-none border-b border-slate-100 bg-[#F8FAFC]/30">
-  <div className="max-w-7xl mx-auto px-6">
-    {/* Grid setup */}
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 justify-items-center">
-      
-      {/* Contact Card 1: Call Us */}
-      <div className="relative bg-white border border-slate-200/80 p-5 sm:p-6 rounded-[24px] shadow-[0_8px_20px_rgba(15,17,26,0.02)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(15,17,26,0.06)] hover:border-blue-200/60 transition-all duration-300 flex flex-col justify-between items-start cursor-pointer select-none w-full max-w-[260px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3] group">
-        
-        {/* Blue Dot Badge on top right */}
-        <div className="absolute top-4 right-4 w-4 h-4 rounded-full bg-blue-50 border border-blue-100/50 flex items-center justify-center">
-          <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-        </div>
+      {/* 4 HIGH CONTRAST BRAND CONTACT CARDS (CLEAN & MODERN, NO "AI" BLUR) */}
+      <section className="relative py-8 select-none border-b border-slate-100 bg-[#F8FAFC]/30">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 justify-items-center">
+            
+            {/* Contact Card 1: Call Us */}
+            <div className="relative bg-white border border-slate-200/80 p-5 sm:p-6 rounded-[24px] shadow-[0_8px_20px_rgba(15,17,26,0.02)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(15,17,26,0.06)] hover:border-blue-200/60 transition-all duration-300 flex flex-col justify-between items-start cursor-pointer select-none w-full max-w-[260px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3] group">
+              
+              <div className="absolute top-4 right-4 w-4 h-4 rounded-full bg-blue-50 border border-blue-100/50 flex items-center justify-center">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+              </div>
 
-        {/* 3D Telephone Receiver Icon */}
-        <div className="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-start filter drop-shadow-[0_8px_14px_rgba(37,99,235,0.18)]">
-          <svg width="100%" height="100%" viewBox="0 0 56 56" fill="none">
-            <defs>
-              <linearGradient id="phone3D" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#93C5FD" />
-                <stop offset="50%" stopColor="#2563EB" />
-                <stop offset="100%" stopColor="#1E40AF" />
-              </linearGradient>
-              <linearGradient id="phone3DHigh" x1="0%" y1="0%" x2="100%" y2="50%">
-                <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.8" />
-                <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-            <path 
-              d="M13.8 8.8C15.1 7.2 17.5 7.2 18.8 8.8L22.2 13C23.3 14.4 23.3 16.4 22.2 17.8L19.4 21.2C19.1 21.6 19.1 22.2 19.4 22.6C21.6 25.8 24.8 29 28 31.2C28.4 31.5 29 31.5 29.4 31.2L32.8 28.4C34.2 27.3 36.2 27.3 37.6 28.4L41.8 31.8C43.4 33.1 43.4 35.5 41.8 36.8L38.2 40.4C35.2 43.4 30.2 41.4 25.2 38.2C20.2 35 15.2 30 12 25C8.8 20 6.8 15 9.8 12L13.8 8.8Z" 
-              fill="url(#phone3D)" 
-            />
-            <path 
-              d="M13.8 8.8C15.1 7.2 17.5 7.2 18.8 8.8L22.2 13C22.6 13.5 22.8 14.2 22.8 14.8" 
-              stroke="url(#phone3DHigh)" 
-              strokeWidth="2.5" 
-              strokeLinecap="round" 
-            />
-            <circle cx="16" cy="12" r="3" fill="#FFFFFF" opacity="0.3" filter="blur(0.5px)" />
-            <circle cx="38" cy="34" r="3.5" fill="#FFFFFF" opacity="0.25" filter="blur(0.5px)" />
-          </svg>
-        </div>
+              {/* Clean, Non-AI Container */}
+              <div className="mb-4 w-12 h-12 sm:w-14 sm:h-14 rounded-[14px] bg-blue-50 border border-blue-100/60 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                <Phone className="w-6 h-6 sm:w-7 sm:h-7 text-blue-600 group-hover:text-white group-hover:fill-white/20 transition-colors duration-300" fill="#BFDBFE" strokeWidth={2} />
+              </div>
 
-        {/* Text Section at Bottom */}
-        <div className="flex flex-col text-left gap-0.5 w-full mt-auto">
-          <span className="text-[15px] sm:text-[18px] font-extrabold text-slate-900 tracking-tight font-sans leading-none">+91 8962241437</span>
-          <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-400 uppercase mt-1">Call Us</span>
-        </div>
-      </div>
+              <div className="flex flex-col text-left gap-0.5 w-full mt-auto">
+                <span className="text-[15px] sm:text-[18px] font-extrabold text-slate-900 tracking-tight font-sans leading-none">+91 8962241437</span>
+                <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-400 uppercase mt-1">Call Us</span>
+              </div>
+            </div>
 
-      {/* Contact Card 2: Email Us */}
-      <div className="relative bg-white border border-slate-200/80 p-5 sm:p-6 rounded-[24px] shadow-[0_8px_20px_rgba(15,17,26,0.02)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(15,17,26,0.06)] hover:border-blue-200/60 transition-all duration-300 flex flex-col justify-between items-start cursor-pointer select-none w-full max-w-[260px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3] group">
-        
-        {/* Blue Dot Badge on top right */}
-        <div className="absolute top-4 right-4 w-4 h-4 rounded-full bg-blue-50 border border-blue-100/50 flex items-center justify-center">
-          <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-        </div>
+            {/* Contact Card 2: Email Us */}
+            <div className="relative bg-white border border-slate-200/80 p-5 sm:p-6 rounded-[24px] shadow-[0_8px_20px_rgba(15,17,26,0.02)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(15,17,26,0.06)] hover:border-blue-200/60 transition-all duration-300 flex flex-col justify-between items-start cursor-pointer select-none w-full max-w-[260px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3] group">
+              
+              <div className="absolute top-4 right-4 w-4 h-4 rounded-full bg-blue-50 border border-blue-100/50 flex items-center justify-center">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+              </div>
 
-        {/* 3D Envelope Icon */}
-        <div className="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-start filter drop-shadow-[0_8px_14px_rgba(37,99,235,0.18)]">
-          <svg width="100%" height="100%" viewBox="0 0 56 56" fill="none">
-            <defs>
-              <linearGradient id="mailBack3D" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3B82F6" />
-                <stop offset="100%" stopColor="#1D4ED8" />
-              </linearGradient>
-              <linearGradient id="mailFront3D" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#60A5FA" />
-                <stop offset="100%" stopColor="#2563EB" />
-              </linearGradient>
-              <linearGradient id="mailHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-            <rect x="8" y="14" width="40" height="28" rx="6" fill="url(#mailBack3D)" />
-            <path d="M8 17L28 32L48 17" fill="none" stroke="#172554" strokeWidth="2.5" opacity="0.15" />
-            <path d="M8 42L24.5 28C26.5 26.5 29.5 26.5 31.5 28L48 42H8Z" fill="url(#mailFront3D)" />
-            <path d="M8 15L25.8 28.5C27.1 29.5 28.9 29.5 30.2 28.5L48 15" stroke="url(#mailHighlight)" strokeWidth="2.5" strokeLinecap="round" />
-            <path d="M8 15H48" stroke="url(#mailHighlight)" strokeWidth="1.5" />
-          </svg>
-        </div>
+              {/* Clean, Non-AI Container */}
+              <div className="mb-4 w-12 h-12 sm:w-14 sm:h-14 rounded-[14px] bg-blue-50 border border-blue-100/60 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                <Mail className="w-6 h-6 sm:w-7 sm:h-7 text-blue-600 group-hover:text-white group-hover:fill-white/20 transition-colors duration-300" fill="#BFDBFE" strokeWidth={2} />
+              </div>
 
-        {/* Text Section at Bottom */}
-        <div className="flex flex-col text-left gap-0.5 w-full mt-auto">
-          <span className="text-[13px] sm:text-[15px] font-extrabold text-slate-900 tracking-tight font-sans leading-none truncate w-full">contact@karmyug.co</span>
-          <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-400 uppercase mt-1">Email Us</span>
-        </div>
-      </div>
+              <div className="flex flex-col text-left gap-0.5 w-full mt-auto">
+                <span className="text-[13px] sm:text-[15px] font-extrabold text-slate-900 tracking-tight font-sans leading-none truncate w-full">contact@karmyug.co</span>
+                <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-400 uppercase mt-1">Email Us</span>
+              </div>
+            </div>
 
-      {/* Contact Card 3: Global Reach */}
-      <div className="relative bg-white border border-slate-200/80 p-5 sm:p-6 rounded-[24px] shadow-[0_8px_20px_rgba(15,17,26,0.02)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(15,17,26,0.06)] hover:border-blue-200/60 transition-all duration-300 flex flex-col justify-between items-start cursor-pointer select-none w-full max-w-[260px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3] group">
-        
-        {/* Blue Dot Badge on top right */}
-        <div className="absolute top-4 right-4 w-4 h-4 rounded-full bg-blue-50 border border-blue-100/50 flex items-center justify-center">
-          <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-        </div>
+            {/* Contact Card 3: Global Reach */}
+            <div className="relative bg-white border border-slate-200/80 p-5 sm:p-6 rounded-[24px] shadow-[0_8px_20px_rgba(15,17,26,0.02)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(15,17,26,0.06)] hover:border-blue-200/60 transition-all duration-300 flex flex-col justify-between items-start cursor-pointer select-none w-full max-w-[260px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3] group">
+              
+              <div className="absolute top-4 right-4 w-4 h-4 rounded-full bg-blue-50 border border-blue-100/50 flex items-center justify-center">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+              </div>
 
-        {/* 3D Globe Icon */}
-        <div className="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-start filter drop-shadow-[0_8px_14px_rgba(37,99,235,0.18)]">
-          <svg width="100%" height="100%" viewBox="0 0 56 56" fill="none">
-            <defs>
-              <linearGradient id="globeBaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#60A5FA" />
-                <stop offset="50%" stopColor="#2563EB" />
-                <stop offset="100%" stopColor="#1E40AF" />
-              </linearGradient>
-              <linearGradient id="globeGlossHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.8" />
-                <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.05" />
-              </linearGradient>
-            </defs>
-            <circle cx="28" cy="28" r="20" fill="url(#globeBaseGrad)" />
-            <ellipse cx="28" cy="28" rx="14" ry="20" stroke="#93C5FD" strokeWidth="2" opacity="0.55" fill="none" />
-            <ellipse cx="28" cy="28" rx="7" ry="20" stroke="#93C5FD" strokeWidth="2" opacity="0.55" fill="none" />
-            <line x1="8" y1="28" x2="48" y2="28" stroke="#93C5FD" strokeWidth="2" opacity="0.55" />
-            <path d="M9.5 18H46.5" stroke="#93C5FD" strokeWidth="2" opacity="0.5" />
-            <path d="M9.5 38H46.5" stroke="#93C5FD" strokeWidth="2" opacity="0.5" />
-            <line x1="28" y1="8" x2="28" y2="48" stroke="#93C5FD" strokeWidth="2" opacity="0.55" />
-            <path d="M12 18C15 12 21 10 28 10C35 10 41 12 44 18C38 12 28 11 12 18Z" fill="url(#globeGlossHighlight)" />
-          </svg>
-        </div>
+              {/* Clean, Non-AI Container */}
+              <div className="mb-4 w-12 h-12 sm:w-14 sm:h-14 rounded-[14px] bg-blue-50 border border-blue-100/60 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                <Globe className="w-6 h-6 sm:w-7 sm:h-7 text-blue-600 group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+              </div>
 
-        {/* Text Section at Bottom */}
-        <div className="flex flex-col text-left gap-0.5 w-full mt-auto">
-          <span className="text-[15px] sm:text-[18px] font-extrabold text-slate-900 tracking-tight font-sans leading-none">Worldwide</span>
-          <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-400 uppercase mt-1">Global Reach</span>
-        </div>
-      </div>
+              <div className="flex flex-col text-left gap-0.5 w-full mt-auto">
+                <span className="text-[15px] sm:text-[18px] font-extrabold text-slate-900 tracking-tight font-sans leading-none">Worldwide</span>
+                <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-400 uppercase mt-1">Global Reach</span>
+              </div>
+            </div>
 
-      {/* Contact Card 4: Working Hours */}
-      <div className="relative bg-white border border-slate-200/80 p-5 sm:p-6 rounded-[24px] shadow-[0_8px_20px_rgba(15,17,26,0.02)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(15,17,26,0.06)] hover:border-blue-200/60 transition-all duration-300 flex flex-col justify-between items-start cursor-pointer select-none w-full max-w-[260px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3] group">
-        
-        {/* Blue Dot Badge on top right */}
-        <div className="absolute top-4 right-4 w-4 h-4 rounded-full bg-blue-50 border border-blue-100/50 flex items-center justify-center">
-          <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-        </div>
+            {/* Contact Card 4: Working Hours */}
+            <div className="relative bg-white border border-slate-200/80 p-5 sm:p-6 rounded-[24px] shadow-[0_8px_20px_rgba(15,17,26,0.02)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(15,17,26,0.06)] hover:border-blue-200/60 transition-all duration-300 flex flex-col justify-between items-start cursor-pointer select-none w-full max-w-[260px] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/3] group">
+              
+              <div className="absolute top-4 right-4 w-4 h-4 rounded-full bg-blue-50 border border-blue-100/50 flex items-center justify-center">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+              </div>
 
-        {/* 3D Clock Icon */}
-        <div className="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-start filter drop-shadow-[0_8px_14px_rgba(37,99,235,0.18)]">
-          <svg width="100%" height="100%" viewBox="0 0 56 56" fill="none">
-            <defs>
-              <linearGradient id="clockRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#93C5FD" />
-                <stop offset="40%" stopColor="#2563EB" />
-                <stop offset="100%" stopColor="#1D4ED8" />
-              </linearGradient>
-              <linearGradient id="clockFaceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#FFFFFF" />
-                <stop offset="100%" stopColor="#EFF6FF" />
-              </linearGradient>
-            </defs>
-            <circle cx="28" cy="28" r="21" fill="url(#clockRingGrad)" />
-            <circle cx="28" cy="28" r="17.5" fill="url(#clockFaceGrad)" />
-            <line x1="28" y1="28" x2="28" y2="17" stroke="#1E40AF" strokeWidth="3" strokeLinecap="round" />
-            <line x1="28" y1="28" x2="36" y2="28" stroke="#3B82F6" strokeWidth="3" strokeLinecap="round" />
-            <circle cx="28" cy="28" r="2.5" fill="#1D4ED8" />
-            <circle cx="28" cy="28" r="1" fill="#FFFFFF" />
-            <line x1="28" y1="12" x2="28" y2="14" stroke="#94A3B8" strokeWidth="1.5" />
-            <line x1="28" y1="42" x2="28" y2="44" stroke="#94A3B8" strokeWidth="1.5" />
-            <line x1="12" y1="28" x2="14" y2="28" stroke="#94A3B8" strokeWidth="1.5" />
-            <line x1="42" y1="28" x2="44" y2="28" stroke="#94A3B8" strokeWidth="1.5" />
-            <path d="M11 20C13 14 19 11.5 28 11.5C37 11.5 43 14 45 20C41 15 35 13 28 13C21 13 15 15 11 20Z" fill="#FFFFFF" opacity="0.75" />
-          </svg>
-        </div>
+              {/* Clean, Non-AI Container */}
+              <div className="mb-4 w-12 h-12 sm:w-14 sm:h-14 rounded-[14px] bg-blue-50 border border-blue-100/60 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                <Clock className="w-6 h-6 sm:w-7 sm:h-7 text-blue-600 group-hover:text-white group-hover:fill-white/20 transition-colors duration-300" fill="#BFDBFE" strokeWidth={2} />
+              </div>
 
-        {/* Text Section at Bottom */}
-        <div className="flex flex-col text-left gap-0.5 w-full mt-auto">
-          <span className="text-[15px] sm:text-[18px] font-extrabold text-slate-900 tracking-tight font-sans leading-none">10AM - 7PM</span>
-          <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-400 uppercase mt-1">Working Hours</span>
-        </div>
-      </div>
+              <div className="flex flex-col text-left gap-0.5 w-full mt-auto">
+                <span className="text-[15px] sm:text-[18px] font-extrabold text-slate-900 tracking-tight font-sans leading-none">10AM - 7PM</span>
+                <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-400 uppercase mt-1">Working Hours</span>
+              </div>
+            </div>
 
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
+
       {/* COHESIVE PHYSICAL PROPOSAL MESSAGE FORM */}
       <section className="py-20 bg-[#F8FAFC]/65 scroll-mt-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
@@ -660,7 +565,7 @@ export default function ContactView() {
               {/* Direct interactive buttons */}
               <div className="w-full space-y-4">
                 <a
-                  href="tel:+919669555811"
+                  href="tel:+918962241437"
                   className="flex items-center gap-4 p-4 border border-slate-150 bg-white hover:bg-slate-50 rounded-2xl transition-all w-full shadow-3xs hover:shadow-xs"
                 >
                   <span className="flex-shrink-0 w-10 h-10 bg-blue-50 text-[#2563EB] flex items-center justify-center rounded-xl border border-blue-100/50">
