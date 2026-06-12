@@ -172,8 +172,8 @@ export const TEAM_DATA: TeamMember[] = [
    {
     id: 'Shubham Pandey',
     name: 'Shubham Pandey',
-    role: 'co-founder',
-    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    role: 'co-founder | CEO',
+    description: 'Drives strategic decisions, balances priorities, and keeps every effort aligned with goals.',
     imageUrl: '/8.jpg',
     linkedinUrl:"https://www.linkedin.com/in/shubham-pandey-cofounder",
   },
@@ -181,7 +181,7 @@ export const TEAM_DATA: TeamMember[] = [
     id: 'krishna Singh Devda',
     name: 'krishna Singh Devda',
     role: 'Co - Founder | Full Stack Product Engineer',
-    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    description: 'Diagnoses issues quickly and delivers reliable solutions that keep projects moving forward.',
     imageUrl: '/4.jpg',
     linkedinUrl:"https://www.linkedin.com/in/krishna-singh-devda",
   },
@@ -189,7 +189,7 @@ export const TEAM_DATA: TeamMember[] = [
     id: 'Vijay Singh Sisodiya',
     name: 'Vijay Singh Sisodiya',
     role: 'Forward Deployed Engineer',
-    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    description: 'Adaptable professional who contributes across multiple domains and handles diverse challenges confidently.',
     imageUrl: '/7.jpg',
     linkedinUrl:"https://www.linkedin.com/in/vijay-singh-b97469369",
   },
@@ -197,15 +197,24 @@ export const TEAM_DATA: TeamMember[] = [
     id: 'ashish pandey',
     name: 'Ashish Pandey',
     role: ' Director of Creative & Digital Media',
-    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    description: 'Transforms setbacks into strength, facing challenges fearlessly and emerging stronger every time.',
     imageUrl: '/9.jpg',
     linkedinUrl:"https://www.linkedin.com/in/aashishpandeycreative"
   },
+    {
+    id: 'tamanna parihar',
+    name: 'Tamanna Parihar',
+    role: 'HR Manager',
+    description: 'Finds great people, unlocks potential, and helps every team member bring their best forward.',
+    imageUrl: '/tamanhHR.png',
+    linkedinUrl:"https://www.linkedin.com/in/tamanna-parihar-768461403",
+  },
+  
   {
     id: 'Dharmraj-patidar',
     name: 'Dharmraj patidar',
     role: 'junior Java Script Developer',
-    description: 'Leads product vision and client strategy with 8+ years in IT consulting.',
+    description: 'Focused on action, solving problems efficiently and delivering fixes without unnecessary discussion.',
     imageUrl: '/1.jpg',
     linkedinUrl:"https://www.linkedin.com/in/dharmarajpatidar"
   },
@@ -213,7 +222,7 @@ export const TEAM_DATA: TeamMember[] = [
     id: 'deepak keer',
     name: 'Deepak keer',
     role: 'junior Java Script Developer',
-    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    description: "Always exploring, learning, and discovering valuable knowledge to strengthen the team's capabilities.",
     imageUrl: '/6.jpg',
     linkedinUrl:"https://www.linkedin.com/in/deepak-keer-1276a4361",
   },
@@ -221,7 +230,7 @@ export const TEAM_DATA: TeamMember[] = [
     id: 'Neha Gandhi',
     name: 'Neha Gandhi',
     role: 'junior Java Script Developer',
-    description: 'Architects scalable web and cloud solutions for startups and enterprises.',
+    description: 'Analyzes every detail, asks the right questions, and uncovers what others overlook.',
     imageUrl: '/3.jpg',
     linkedinUrl:"https://www.linkedin.com/in/neha-gandhi-103529399",
   },
@@ -229,7 +238,7 @@ export const TEAM_DATA: TeamMember[] = [
     id: 'Pawan-chouhan',
     name: 'Pawan chouhan',
     role: 'junior Java Script Developer',
-    description: 'Drives brand growth through data-led campaigns and creative storytelling.',
+    description: 'Turns complex challenges into simple solutions through determination, speed, and sharp thinking.',
     imageUrl: '/2.jpg',
     linkedinUrl:"https://www.linkedin.com/in/pawan-chouhan31",
   },
@@ -239,17 +248,9 @@ export const TEAM_DATA: TeamMember[] = [
     id: 'rishabh sharma',
     name: 'Rishabh Sharma',
     role: 'junior Java Script Developer',
-    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
+    description: 'Quietly exceeds expectations, delivering impactful results while letting achievements speak for themselves.',
     imageUrl: '/5.jpg',
     linkedinUrl:"https://www.linkedin.com/in/rishabh-sharma-63a439366",
-  },
-    {
-    id: 'tamanna parihar',
-    name: 'Tamanna Parihar',
-    role: 'HR Manager',
-    description: 'Crafts intuitive interfaces that convert visitors into loyal customers.',
-    imageUrl: '/tamanhHR.png',
-    linkedinUrl:"https://www.linkedin.com/in/tamanna-parihar-768461403",
   },
   
   
@@ -260,46 +261,19 @@ export const TEAM_DATA: TeamMember[] = [
 export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: '1',
-    text: 'The ValuXpert platform transformed the way we manage property valuation operations. From automated case allocation to real-time field inspections and comprehensive MIS reporting, everything is now streamlined in one place. The system has significantly improved efficiency, transparency, and turnaround times across our organization.',
-    author: '— Operations Head,',
-    company: ' ValuXpert',
+    text: "Karmyug HRMS has made managing our workforce much easier. The software is user-friendly, and our team was able to adapt to it quickly. What stands out most is the dedicated support provided by Karmyug—they assigned a dedicated resource to assist us, and their response time has always been prompt and helpful. We appreciate their commitment to ensuring a smooth and efficient experience.",
+    author: '– Aslam, Assistant Manager',
+    company: ' HRMS Crane – Workforce Management System',
     stars: 5
   },
   {
     id: '2',
-    text: 'HRMS Crane has completely modernized our workforce management process. Attendance tracking, payroll calculations, expense approvals, and employee management are now handled effortlessly through a single platform. The reliability, security, and ease of use have made it an essential part of our daily operations.',
-    author: '— HR Director',
+    text: "We are extremely satisfied with Karmyug Team Services. Their prompt response, clear communication, and efficient support have made a significant difference to our operations. A reliable and professional team that consistently delivers excellent service.",
+    author: ' - Manish ( CTO )',
     company: 'HRMS Crane – Workforce Management System',
     stars: 5
   },
-  {
-    id: '3',
-    text: "Managing thousands of students, staff, fees, and academic activities was challenging until we adopted Quixivo. The platform provides everything we need in one dashboard, from attendance and fee management to online learning and communication. It has helped us improve operational efficiency while delivering a better experience for students and parents.",
-    author: '— Founder,',
-    company: ' Educational Institute',
-    stars: 5
-  },
-  {
-    id: '4',
-    text: "Our new website perfectly reflects the quality and care we provide to pets. It has made it easier for pet owners to learn about our services, book consultations, and connect with us. We've seen a noticeable increase in inquiries and customer trust since launching the platform.",
-    author: '— Owner,',
-    company: ' Sagar Pet Care Center',
-    stars: 5
-  },
-  {
-    id: '5',
-    text: "The GPS-enabled field inspection system and automated approval workflows have dramatically reduced manual effort. Our teams can now track every case in real time and deliver reports faster than ever before.",
-    author: '— Regional Operations Manager',
-    company: 'ValuXpert',
-    stars: 5
-  },
-  {
-    id: '6',
-    text: "What impressed us most was the seamless integration of attendance, advances, expenses, and payroll into one unified system. It has significantly improved our workforce management process.",
-    author: '— Chief Operations Officer',
-    company: 'HRMS Crane – Workforce Management System',
-    stars: 5
-  }
+ 
 ];
 
 export const FAQS_DATA: FAQItem[] = [

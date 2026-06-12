@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PROJECTS_DATA } from '../data';
-import { ArrowUpRight, Plus, Minus, ArrowRight } from 'lucide-react';
+// Added ChevronDown and ChevronUp for the Read More button
+import { ArrowUpRight, Plus, Minus, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 import FAQ3DFigure from './FAQ3DFigure';
 import PortfolioHeader3D from './PortfolioHeader3D';
 
@@ -10,6 +11,158 @@ interface PortfolioViewProps {
 }
 
 type TabType = 'all' | 'website' | 'application';
+
+// Extracted the single card into a sub-component to handle the "Read More" state independently
+const ProjectCard = ({ project, index, onStartProject }: { project: any; index: number; onStartProject: (name: string) => void }) => {
+  const isEven = index % 2 === 0;
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // If expanded show all bullets, otherwise show only the first 2
+  const visibleBullets = isExpanded ? project.bullets : project.bullets.slice(0, 2);
+
+  return (
+    <div
+      className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 xl:gap-20 ${
+        isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
+      }`}
+    >
+      {/* Visual Image Screen Container */}
+      <div className="w-full lg:w-1/2 flex items-center justify-center">
+        <div 
+          className="relative w-full overflow-visible preserve-3d group cursor-pointer"
+          style={{ perspective: '1200px' }}
+        >
+          {/* Perspective card boundary box */}
+          <div className="relative overflow-hidden rounded-[2rem] border border-slate-150/80 bg-white shadow-lg shadow-slate-200 project-card-3d flex">
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/12 via-white/5 to-transparent opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-500 z-10" />
+            <div className="absolute -top-12 -right-12 w-28 h-28 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-400/12 to-transparent rounded-full blur-xl pointer-events-none group-hover:scale-125 transition-all duration-500" />
+
+            {/* Using w-full h-auto object-contain so image never gets cut */}
+            <img
+              src={project.imageUrl}
+              alt={project.title}
+              referrerPolicy="no-referrer"
+              className="w-full h-auto object-contain group-hover:scale-[1.04] transition-transform duration-700"
+            />
+            
+            <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-slate-950/20 to-transparent pointer-events-none" />
+          </div>
+
+          {/* INTERACTIVE FLOATING 3D ELEMENTS */}
+          {isEven ? (
+            <div 
+              className="absolute -right-5 -bottom-5 w-16 h-16 preserve-3d pointer-events-none z-20 transition-all duration-500 ease-out group-hover:scale-125 group-hover:translate-x-3 group-hover:-translate-y-5 filter drop-shadow-[0_12px_24px_rgba(245,158,11,0.28)]"
+              style={{ transform: 'translateZ(45px)' }}
+            >
+              <div className="relative w-full h-full preserve-3d anime-float-normal">
+                <div className="absolute inset-0 preserve-3d animate-[slowSpinRight_10s_linear_infinite]">
+                  <div className="absolute inset-0 bg-amber-500/35 border border-white/65 backdrop-blur-[2px] rounded-md" style={{ transform: 'translateZ(16px)' }} />
+                  <div className="absolute inset-0 bg-yellow-400/20 border border-white/45 backdrop-blur-[2px] rounded-md" style={{ transform: 'rotateY(90deg) translateZ(16px)' }} />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white/40 to-amber-300/30 border border-white/60 backdrop-blur-[2px] rounded-md" style={{ transform: 'rotateX(90deg) translateZ(16px)' }} />
+                  <div className="absolute inset-0 bg-amber-600/30 border border-white/20 rounded-md" style={{ transform: 'translateZ(-16px) rotateY(180deg)' }} />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div 
+              className="absolute -left-5 -bottom-5 w-16 h-16 preserve-3d pointer-events-none z-20 transition-all duration-500 ease-out group-hover:scale-125 group-hover:-translate-x-3 group-hover:-translate-y-5 filter drop-shadow-[0_12px_24px_rgba(59,130,246,0.28)]"
+              style={{ transform: 'translateZ(55px)' }}
+            >
+              <div className="relative w-full h-full preserve-3d anime-float-reverse">
+                <div className="absolute inset-0 preserve-3d animate-[slowSpinLeft_12s_linear_infinite]">
+                  <div className="absolute inset-0 bg-blue-500/35 border border-white/70 backdrop-blur-[2px] rounded-xl" style={{ transform: 'translateZ(14px)' }} />
+                  <div className="absolute inset-1 bg-indigo-600/20 border border-white/30 rounded-xl" style={{ transform: 'translateZ(-14px) rotateY(180deg)' }} />
+                  <div className="absolute inset-0 border border-emerald-400/40 rounded-full bg-emerald-400/5" style={{ transform: 'rotateX(45deg)' }} />
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div 
+            className="absolute top-10 right-8 w-5.5 h-5.5 bg-gradient-to-br from-indigo-400/25 to-purple-400/25 border border-white/35 backdrop-blur-[2px] rounded-full pointer-events-none z-20 transition-all duration-700 ease-out group-hover:translate-y-[-12px] group-hover:scale-125"
+            style={{ transform: 'translateZ(25px)' }}
+          />
+          <div 
+            className="absolute bottom-1/4 left-10 w-4 h-4 bg-gradient-to-tr from-emerald-400/25 to-teal-400/25 border border-white/35 backdrop-blur-[2px] rounded-full pointer-events-none z-20 transition-all duration-750 ease-out group-hover:translate-x-[-15px] group-hover:scale-125"
+            style={{ transform: 'translateZ(35px)' }}
+          />
+
+          <div className="absolute -bottom-4 inset-x-8 h-4 bg-slate-950/5 rounded-full blur-md -z-10 group-hover:scale-x-[1.03] group-hover:bg-slate-950/8 transition-all duration-500" />
+        </div>
+      </div>
+
+      {/* Content Side - Added justify-center to vertically center text parallel to image */}
+      <div className="w-full lg:w-1/2 flex flex-col items-start justify-center select-none relative z-10 py-4 lg:py-6">
+        
+        {/* Category badge */}
+        <span className="text-[10.5px] font-black tracking-widest text-blue-600 bg-blue-50 border border-blue-100/30 px-3.5 py-1.5 rounded-full mb-4 uppercase">
+          {project.category}
+        </span>
+
+        {/* Title */}
+        <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mb-3 font-display leading-tight">
+          {project.title}
+        </h3>
+
+        {/* Main Paragraph - Added line-clamp-3 when not expanded */}
+        <p className={`text-slate-500 mb-5 leading-relaxed font-semibold text-sm sm:text-[14.5px] transition-all duration-300 ${!isExpanded ? 'line-clamp-3' : ''}`}>
+          {project.description}
+        </p>
+
+        {/* Bullets grid - Uses visibleBullets array */}
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-4 w-full">
+          {visibleBullets.map((bullet: string, idx: number) => (
+            <li key={idx} className="flex items-start gap-3">
+              <span className="flex-shrink-0 flex items-center justify-center p-1 bg-blue-50 text-blue-600 text-[10px] sm:text-xs font-mono font-black w-6 h-6 rounded-md border border-blue-100/40 shadow-sm">
+                {String(idx + 1).padStart(2, '0')}
+              </span>
+              <span className="text-sm font-semibold text-slate-600 leading-snug">
+                {bullet}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Read More Toggle Button */}
+        {(project.bullets.length > 2 || project.description.length > 150) && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="inline-flex items-center gap-1.5 text-blue-600 hover:text-indigo-600 font-bold text-[13px] mb-8 transition-colors group/btn"
+          >
+            {isExpanded ? 'Read Less' : 'Read More'}
+            {isExpanded ? (
+              <ChevronUp className="w-4 h-4 transition-transform group-hover/btn:-translate-y-0.5" />
+            ) : (
+              <ChevronDown className="w-4 h-4 transition-transform group-hover/btn:translate-y-0.5" />
+            )}
+          </button>
+        )}
+
+        {/* Buttons */}
+        <div className="flex flex-wrap items-center gap-4">
+          <button
+            onClick={() => onStartProject(project.title)}
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-black text-sm shadow-md shadow-blue-600/15 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 hover:shadow-lg hover:shadow-indigo-600/20 cursor-pointer"
+          >
+            <span>Start Your Project</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </button>
+
+          <a
+            href={project.projecturl || '#'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white border border-slate-200 text-slate-700 rounded-full font-black text-sm shadow-sm hover:border-blue-500 hover:text-blue-600 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+          >
+            <span>View Project Details</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
+        </div>
+
+      </div>
+    </div>
+  );
+};
 
 export default function PortfolioView({ onStartProject, onViewAllProjects }: PortfolioViewProps) {
   const [activeTab, setActiveTab] = useState<TabType>('all');
@@ -52,11 +205,10 @@ export default function PortfolioView({ onStartProject, onViewAllProjects }: Por
   };
 
   return (
-    // ADDED overflow-x-hidden here to prevent horizontal scroll
+    // overflow-x-hidden here to prevent horizontal scroll
     <div className="animate-[fadeIn_0.5s_ease-out] overflow-x-hidden">
       
       {/* Portfolio Header Section */}
-      {/* FIXED: Removed overflow-hidden, drastically increased lg:pb and xl:pb to give the 3D base room */}
     <section className="relative pt-10 pb-12 md:pt-12 md:pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-blue-50/15 via-white to-slate-50 select-none border-b border-slate-100 overflow-hidden">
   
   {/* Curvy background wave path matching image layout */}
@@ -199,10 +351,6 @@ export default function PortfolioView({ onStartProject, onViewAllProjects }: Por
         <div className="absolute top-10 left-10 w-96 h-96 bg-emerald-400/[0.015] rounded-full blur-[90px] pointer-events-none -z-10" />
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/[0.02] rounded-full blur-[85px] pointer-events-none -z-10" />
 
-        {/* ==========================================
-            DYNAMIC 3D ELEMENTS ON SIDES
-           ========================================== */}
-        
         {/* Left Margin: Glass 3D Diamond/Prism Shape */}
         <div className="hidden xl:flex absolute top-[18%] left-8 w-24 h-24 items-center justify-center anime-3d-float-1 pointer-events-none z-10 opacity-70">
           <div className="relative w-16 h-16 preserve-3d anime-spin-3d-left">
@@ -267,147 +415,16 @@ export default function PortfolioView({ onStartProject, onViewAllProjects }: Por
             </div>
           </div>
 
-          {/* Projects List with Alternating Layout */}
+          {/* Projects List with Alternating Layout mapped using the extracted ProjectCard */}
           <div className="space-y-24 sm:space-y-28">
-            {filteredProjects.map((project, index) => {
-              const isEven = index % 2 === 0;
-              return (
-                <div
-                  key={project.id}
-                  className={`flex flex-col lg:flex-row items-stretch gap-10 lg:gap-16 xl:gap-20 ${
-                    isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  }`}
-                >
-                  
-                  {/* Visual Image Screen Container */}
-                  <div className="w-full lg:w-1/2 flex relative min-h-[320px] sm:min-h-[400px]">
-                    <div 
-                      className="relative w-full h-full overflow-visible preserve-3d group cursor-pointer"
-                      style={{ perspective: '1200px' }}
-                    >
-                      
-                      {/* Perspective card boundary box */}
-                      <div 
-                        className="relative w-full h-full overflow-hidden rounded-[2rem] border border-slate-150/80 bg-white shadow-lg shadow-slate-200 project-card-3d"
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-tr from-white/12 via-white/5 to-transparent opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-500 z-10" />
-
-                        <div className="absolute -top-12 -right-12 w-28 h-28 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-400/12 to-transparent rounded-full blur-xl pointer-events-none group-hover:scale-125 transition-all duration-500" />
-
-                        {/* Absolute image scaling matches the stretched div height automatically */}
-                        <img
-                          src={project.imageUrl}
-                          alt={project.title}
-                          referrerPolicy="no-referrer"
-                          className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-700"
-                        />
-                        
-                        <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-slate-950/20 to-transparent pointer-events-none" />
-
-                      </div>
-
-                      {/* INTERACTIVE FLOATING 3D ELEMENTS */}
-                       {isEven ? (
-                        <div 
-                          className="absolute -right-5 -bottom-5 w-16 h-16 preserve-3d pointer-events-none z-20 transition-all duration-500 ease-out group-hover:scale-125 group-hover:translate-x-3 group-hover:-translate-y-5 filter drop-shadow-[0_12px_24px_rgba(245,158,11,0.28)]"
-                          style={{ transform: 'translateZ(45px)' }}
-                        >
-                          <div className="relative w-full h-full preserve-3d anime-float-normal">
-                            <div className="absolute inset-0 preserve-3d animate-[slowSpinRight_10s_linear_infinite]">
-                              <div className="absolute inset-0 bg-amber-500/35 border border-white/65 backdrop-blur-[2px] rounded-md" style={{ transform: 'translateZ(16px)' }} />
-                              <div className="absolute inset-0 bg-yellow-400/20 border border-white/45 backdrop-blur-[2px] rounded-md" style={{ transform: 'rotateY(90deg) translateZ(16px)' }} />
-                              <div className="absolute inset-0 bg-gradient-to-tr from-white/40 to-amber-300/30 border border-white/60 backdrop-blur-[2px] rounded-md" style={{ transform: 'rotateX(90deg) translateZ(16px)' }} />
-                              <div className="absolute inset-0 bg-amber-600/30 border border-white/20 rounded-md" style={{ transform: 'translateZ(-16px) rotateY(180deg)' }} />
-                            </div>
-                          </div>
-                        </div>
-                      ) : (
-                        <div 
-                          className="absolute -left-5 -bottom-5 w-16 h-16 preserve-3d pointer-events-none z-20 transition-all duration-500 ease-out group-hover:scale-125 group-hover:-translate-x-3 group-hover:-translate-y-5 filter drop-shadow-[0_12px_24px_rgba(59,130,246,0.28)]"
-                          style={{ transform: 'translateZ(55px)' }}
-                        >
-                          <div className="relative w-full h-full preserve-3d anime-float-reverse">
-                            <div className="absolute inset-0 preserve-3d animate-[slowSpinLeft_12s_linear_infinite]">
-                              <div className="absolute inset-0 bg-blue-500/35 border border-white/70 backdrop-blur-[2px] rounded-xl" style={{ transform: 'translateZ(14px)' }} />
-                              <div className="absolute inset-1 bg-indigo-600/20 border border-white/30 rounded-xl" style={{ transform: 'translateZ(-14px) rotateY(180deg)' }} />
-                              <div className="absolute inset-0 border border-emerald-400/40 rounded-full bg-emerald-400/5" style={{ transform: 'rotateX(45deg)' }} />
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      <div 
-                        className="absolute top-10 right-8 w-5.5 h-5.5 bg-gradient-to-br from-indigo-400/25 to-purple-400/25 border border-white/35 backdrop-blur-[2px] rounded-full pointer-events-none z-20 transition-all duration-700 ease-out group-hover:translate-y-[-12px] group-hover:scale-125"
-                        style={{ transform: 'translateZ(25px)' }}
-                      />
-                      <div 
-                        className="absolute bottom-1/4 left-10 w-4 h-4 bg-gradient-to-tr from-emerald-400/25 to-teal-400/25 border border-white/35 backdrop-blur-[2px] rounded-full pointer-events-none z-20 transition-all duration-750 ease-out group-hover:translate-x-[-15px] group-hover:scale-125"
-                        style={{ transform: 'translateZ(35px)' }}
-                      />
-
-                      <div className="absolute -bottom-4 inset-x-8 h-4 bg-slate-950/5 rounded-full blur-md -z-10 group-hover:scale-x-[1.03] group-hover:bg-slate-950/8 transition-all duration-500" />
-
-                    </div>
-                  </div>
-
-                  {/* Content Side */}
-                  <div className="w-full lg:w-1/2 flex flex-col items-start justify-center select-none relative z-10 py-4 lg:py-6">
-                    
-                    {/* Category badge */}
-                    <span className="text-[10.5px] font-black tracking-widest text-blue-600 bg-blue-50 border border-blue-100/30 px-3.5 py-1.5 rounded-full mb-4 uppercase">
-                      {project.category}
-                    </span>
-
-                    {/* Title */}
-                    <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mb-3 font-display leading-tight">
-                      {project.title}
-                    </h3>
-
-                    {/* Main Paragraph */}
-                    <p className="text-slate-500 mb-6 leading-relaxed font-semibold text-sm sm:text-[14.5px]">
-                      {project.description}
-                    </p>
-
-                    {/* Bullets grid */}
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-7 w-full">
-                      {project.bullets.map((bullet, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <span className="flex-shrink-0 flex items-center justify-center p-1 bg-blue-50 text-blue-600 text-[10px] sm:text-xs font-mono font-black w-6 h-6 rounded-md border border-blue-100/40 shadow-sm">
-                            {String(idx + 1).padStart(2, '0')}
-                          </span>
-                          <span className="text-sm font-semibold text-slate-600 leading-snug">
-                            {bullet}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Buttons */}
-                    <div className="flex flex-wrap items-center gap-4">
-                      <button
-                        onClick={() => onStartProject(project.title)}
-                        className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-black text-sm shadow-md shadow-blue-600/15 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 hover:shadow-lg hover:shadow-indigo-600/20 cursor-pointer"
-                      >
-                        <span>Start Your Project</span>
-                        <ArrowUpRight className="w-4 h-4" />
-                      </button>
-
-                      <a
-                        href={project.projecturl || '#'}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white border border-slate-200 text-slate-700 rounded-full font-black text-sm shadow-sm hover:border-blue-500 hover:text-blue-600 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
-                      >
-                        <span>View Project Details</span>
-                        <ArrowUpRight className="w-4 h-4" />
-                      </a>
-                    </div>
-
-                  </div>
-
-                </div>
-              );
-            })}
+            {filteredProjects.map((project, index) => (
+              <ProjectCard 
+                key={project.id} 
+                project={project} 
+                index={index} 
+                onStartProject={onStartProject} 
+              />
+            ))}
           </div>
 
           {/* View All Projects link */}
