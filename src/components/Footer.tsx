@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, ChevronRight, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, ChevronRight, Heart, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 interface FooterProps {
   onScrollTo: (sectionId: string) => void;
@@ -173,10 +173,41 @@ export default function Footer({ onScrollTo, onOpenContact, onNavigate }: Footer
 
         </div>
 
-        {/* Content footer copyright details */}
+        {/* Content footer copyright details & Social Links */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-mono">
           <div>
             @ {currentYear} karmyug IT Solution. All rights reserved.
+          </div>
+          
+          {/* Social Links Added Here */}
+          <div className="flex items-center gap-5">
+            <a 
+              href="https://x.com/KarmyugTechz" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-slate-400 hover:text-white hover:scale-110 transition-all"
+              aria-label="Twitter / X"
+            >
+              <Twitter className="w-4 h-4" />
+            </a>
+            <a 
+              href="https://www.instagram.com/karmyug.co/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-slate-400 hover:text-[#E1306C] hover:scale-110 transition-all"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-4 h-4" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/company/karmyugtechzone/posts/?feedView=all" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-slate-400 hover:text-[#0A66C2] hover:scale-110 transition-all"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
           </div>
         </div>
 
